@@ -1,0 +1,5 @@
+integrations:
+  forge:
+    misk.marine-co.online:
+      site-id: 2504550
+      server-id: 683914
