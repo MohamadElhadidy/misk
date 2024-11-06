@@ -23,6 +23,10 @@ Route::middleware(['auth'])->group(function () {
 
 
 
+//links
+Route::view('/about', 'pages.about');
+Route::view('/contact', 'pages.contact');
+Route::view('/locations', 'pages.locations');
 
 //guest users
 Route::middleware('guest')->group(function () {
