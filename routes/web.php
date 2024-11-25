@@ -5,6 +5,9 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
@@ -21,6 +24,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/email/verification-notification', [VerifyEmailController::class, 'sendVerificationEmail'])->middleware('throttle:6,1')->name('verification.send');
 });
 
+
+Route::resource('products', ProductController::class);
+Route::resource('categories', CategoryController::class);
+Route::resource('orders', OrderController::class);
+
+//admin
+Route::view('/admin/dashboard', 'admin.dashboard');
 
 
 //links
