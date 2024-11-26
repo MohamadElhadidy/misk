@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
+use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerifyEmailController;
@@ -12,11 +14,25 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
 
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+
+    Route::resource('/products', AdminProductController::class);
+    Route::resource('/categories', AdminCategoryController::class);
+});
+
+
+
+
+
+
+
 //authenticated users
 Route::middleware(['auth'])->group(function () {
     Route::view('/profile', 'user.profile')->middleware('verified');
     Route::post('/logout', LogoutController::class);
-
 
     // Email verification
     Route::get('/email/verify', fn() => view('auth.verify-email'))->name('verification.notice');
@@ -28,9 +44,6 @@ Route::middleware(['auth'])->group(function () {
 Route::resource('products', ProductController::class);
 Route::resource('categories', CategoryController::class);
 Route::resource('orders', OrderController::class);
-
-//admin
-Route::view('/admin/dashboard', 'admin.dashboard');
 
 
 //links

@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class);
-            $table->double('total_price');
+            $table->decimal('total_price', 10, 2);
             $table->string('status');
             $table->timestamps();
         });

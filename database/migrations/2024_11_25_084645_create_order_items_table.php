@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignIdFor(Order::class);
             $table->foreignIdFor(Product::class);
             $table->string('size');
-            $table->double('price');
+            $table->decimal('price', 10, 2);
             $table->timestamps();
         });
     }
