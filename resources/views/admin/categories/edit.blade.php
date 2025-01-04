@@ -1,4 +1,8 @@
 <x-adminLayout>
+    <x-slot:header>
+        <x-admin.heading>Edit Category</x-admin.heading>
+    </x-slot>
+
     <form method="POST" action="/admin/categories/{{ $category->id }}">
         @csrf
         @method('PUT')

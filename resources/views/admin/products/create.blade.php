@@ -1,4 +1,7 @@
 <x-adminLayout>
+    <x-slot:header>
+        <x-admin.heading>Create Product</x-admin.heading>
+    </x-slot>
     <form method="POST" action="/admin/products">
         @csrf
         <input type="text" name="name" value="{{ old('name') }}" placeholder="Enter Product Name"

@@ -1,5 +1,8 @@
 <x-adminLayout>
-    <a href="/admin/products/create">Create Product</a>
+    <x-slot:header>
+        <x-admin.heading>Products Management</x-admin.heading>
+        <x-admin.button href="/admin/products/create">Create Product</x-admin.button>
+    </x-slot>
 
     <h1 class="text-green-600">{{ session('message') }}</h1>
     <table>

@@ -37,7 +37,7 @@ class CategoryController extends Controller
 
         Category::create($validated);
 
-        return redirect('/admin/categories')->with('message', 'Category created successfully!');
+        return back()->with('success', 'Category created successfully!');
     }
 
     /**

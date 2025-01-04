@@ -1,7 +1,10 @@
 <x-adminLayout>
-    <a href="/admin/categories/create">Create Category</a>
+    <x-slot:header>
+        <x-admin.heading>Categories Management</x-admin.heading>
+        <x-admin.button href="/admin/categories/create">Create Category</x-admin.button>
+    </x-slot>
 
-    <h1 class="text-green-600">{{ session('message') }}</h1>
+
     <table>
 
         <head>
