@@ -14,7 +14,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
 
-Route::prefix('admin')->group(function () {
+
+
+Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('/', function () {
         return view('admin.dashboard');
     })->name('admin');
@@ -22,16 +24,6 @@ Route::prefix('admin')->group(function () {
     Route::resource('/products', AdminProductController::class);
     Route::resource('/categories', AdminCategoryController::class);
 });
-
-
-// Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
-//     Route::get('/', function () {
-//         return view('admin.dashboard');
-//     })->name('admin');
-
-//     Route::resource('/products', AdminProductController::class);
-//     Route::resource('/categories', AdminCategoryController::class);
-// });
 
 
 
