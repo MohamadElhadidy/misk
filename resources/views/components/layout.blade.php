@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/dist/output-scss.css" />
     <link rel="stylesheet" href="/dist/output-tailwind.css" />
+    @vite('resources/css/app.css')
+
 </head>
 
 <body>

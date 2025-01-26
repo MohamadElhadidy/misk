@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
     <title>Admin</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    @vite('resources/css/app.css')
 </head>
 
 <body class="h-full">
@@ -166,6 +166,7 @@
             </div>
         </main>
     </div>
+    @stack('scripts')
 </body>
 
 </html>

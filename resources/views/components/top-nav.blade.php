@@ -39,6 +39,12 @@
                  <a href="https://www.instagram.com/" target="_blank">
                      <i class="icon-instagram"></i>
                  </a>
+
+
+                 @admin
+                     <a href="{{ route('admin') }}" target="_blank"
+                         class="rounded-md bg-black px-3 py-2 text-sm font-semibold text-gray-200 shadow-xs hover:bg-gray-800 focus-visible:outline-2 ">Admin</a>
+                 @endadmin
              </div>
          </div>
      </div>

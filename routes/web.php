@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home');
 
-Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
+Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/', function () {
         return view('admin.dashboard');
     })->name('admin');
