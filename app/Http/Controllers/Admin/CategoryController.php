@@ -13,7 +13,11 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        if(request()->has('q')){
+            $categories = Category::where('name', 'like', '%' . request('q') . '%')->paginate(10);
+        }else{
+            $categories = Category::paginate(10);
+        }
 
         return view('admin.categories.index', compact('categories'));
     }
@@ -67,7 +71,7 @@ class CategoryController extends Controller
 
         $category->update($validated);
 
-        return redirect('/admin/categories')->with('message', 'Category updated successfully!');
+        return back()->with('success', 'Category updated successfully!');
     }
 
     /**
@@ -77,6 +81,6 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return redirect('/admin/categories')->with('message', 'Category deleted successfully!');
+        return back()->with('success', 'Category deleted successfully!');
     }
 }
