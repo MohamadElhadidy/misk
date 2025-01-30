@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CategoryController extends Controller
 {
@@ -13,10 +14,10 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        if(request()->has('q')){
-            $categories = Category::where('name', 'like', '%' . request('q') . '%')->paginate(10);
-        }else{
-            $categories = Category::paginate(10);
+        if (request()->has('q')) {
+            $categories = Category::where('name', 'like', '%' . request('q') . '%')->paginate(5);
+        } else {
+            $categories = Category::paginate(5);
         }
 
         return view('admin.categories.index', compact('categories'));
@@ -35,11 +36,17 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $request->validate([
             'name' => 'unique:categories|required|max:255',
+            'image' => 'image|required',
         ]);
 
-        Category::create($validated);
+        $image = $request->file('image')->storePublicly('categories');
+
+        Category::create([
+            'name' => $request->name,
+            'image' => $image
+        ]);
 
         return back()->with('success', 'Category created successfully!');
     }
@@ -65,11 +72,28 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        $validated = $request->validate([
+        $validated =  $request->validate([
             'name' => 'required|max:255|unique:categories,name,' . $category->id
         ]);
 
-        $category->update($validated);
+        if ($request->image) {
+            $request->validate([
+                'image' => 'image'
+            ]);
+
+            $image = $request->file('image')->storePublicly('categories');
+
+            Storage::delete($category->image);
+
+            $category->update([
+                'name' => $request->name,
+                'image' => $image
+            ]);
+        } else {
+            $category->update($validated);
+        }
+
+
 
         return back()->with('success', 'Category updated successfully!');
     }

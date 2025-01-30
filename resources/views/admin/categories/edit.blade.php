@@ -2,15 +2,26 @@
     <x-slot:header>
         <x-admin.heading>Edit Category</x-admin.heading>
     </x-slot>
-    <form method="POST" action="/admin/categories/{{ $category->id }}">
+    <form method="POST" action="/admin/categories/{{ $category->id }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="space-y-12">
             <div class="border-b border-gray-900/10 pb-12">
 
                 <h2 class="text-base/7 font-semibold text-gray-900">Update category</h2>
+                 <div class="sm:col-span-2 col-span-2 sm:col-start-1">
+                     <label for="image" class="block text-sm/6 font-medium text-gray-900">Category Image</label>
+                     <img src="{{'/storage/' . $category->image}}" class="w-96 "/>
+                    <div class="mt-2">
+                        <input type="file" name="image" id="image" autocomplete="image" accept="image/*"
+                            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline cursor-pointer outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                        @error('image')
+                            <div style="color: red;font-size: 1rem">{{ $message }}</div>
+                        @enderror
+                    </div>
+                </div>
                 <div class="sm:col-span-2 col-span-2 sm:col-start-1">
-                    <label for="name" class="block text-sm/6 font-medium text-gray-900">Category</label>
+                    <label for="name" class="block text-sm/6 font-medium text-gray-900">Category Name</label>
                     <div class="mt-2">
                         <input type="text" name="name" id="name" autocomplete="name"
                             value="{{ old('name', $category->name) }}"

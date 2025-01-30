@@ -33,6 +33,9 @@
                         id
                     </th>
                     <th scope="col" class="px-6 py-3">
+                        image
+                    </th>
+                    <th scope="col" class="px-6 py-3">
                         Category name
                     </th>
                     <th scope="col" class="px-6 py-3">
@@ -45,9 +48,9 @@
                     <tr
                         class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600">
 
-                        <th colspan="3"
+                        <th colspan="4"
                             class=" text-center px-6 py-4 text-lg font-semibold text-gray-900 whitespace-nowrap dark:text-white">
-                           No categories available
+                            No categories available
                         </th>
 
                     </tr>
@@ -62,11 +65,17 @@
                             </th>
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                                <img src="{{ '/storage/' . $category->image }}" class="w-24 " />
+
+                            </th>
+                            <th scope="row"
+                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {{ $category->name }}
                             </th>
 
-                            <td class="px-6 py-4 flex space-x-4">
-                                <a href="/admin/categories/{{ $category->id }}/edit"
+                            <th scope="row" class="px-6 py-4   whitespace-nowrap">
+                                <div class="flex space-x-4">
+                                    <a href="/admin/categories/{{ $category->id }}/edit"
                                     class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
                                 <form action="/admin/categories/{{ $category->id }}" method="POST"
                                     onsubmit="return confirm('Are you sure you want to delete {{ $category->name }}?')">
@@ -76,7 +85,8 @@
                                         class="cursor-pointer font-medium text-red-600 dark:text-red-500 hover:underline"
                                         value="Delete">
                                 </form>
-                            </td>
+                                </div>
+                            </th>
                         </tr>
                     @endforeach
                 @endif
@@ -84,8 +94,8 @@
 
             </tbody>
         </table>
-       <div class="m-3">
-         {{ $categories->links() }}
-       </div>
+        <div class="m-3">
+            {{ $categories->links() }}
+        </div>
     </div>
 </x-adminLayout>
