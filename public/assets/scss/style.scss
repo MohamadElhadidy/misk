@@ -1,64 +1,91 @@
-/********* Table of contents *********/
-/*** custom-swiper ***/
-/****** Slider - Swiper Pagination ***/
-/****** Swiper Navigation ***/
-/****** Swiper Scrollbar ***/
-/*** Main color ***/
-/*** Reset ***/
-/*** Main class used in Anvogue ***/
-/*** Modal ***/
-/*** top nav header ***/
-/*** menu header ***/
-/*** menu-mobile ***/
-/*** menu-department ***/
-/*** Banner top ***/
-/*** slider ***/
-/*** footer ***/
-/*** Product Item ***/
-/****** Style Lookbook Cosmetic ***/
-/*** Product Detail ***/
-/*** blog-item ***/
-/*** Shop page ***/
-/*** Faqs page ***/
-/*** Cart page ***/
-/*** Checkout page ***/
-/*** Compare page ***/
-/*** Scroll to top ***/
-/*** Category active ***/
-/*** Video tutorial block ***/
-/*** Text has line before ***/
-/*** Collection ***/
-/*** Tab features block ***/
-/*** Banner ***/
-/*** Before after ***/
-/*** Testimonial ***/
-/*** Instagram ***/
-/*** Benefit watch ***/
-/*** Newsletter ***/
-/*** Feature product ***/
+/*----------------------------------------------------------------------------------- 
+
+Template Name: Pesco - eCommerce HTML Template
+URI: site.com 
+Description: Pesco is a clean, modern, and elegant fashion e-commerce HTML template. It allows you to easily create a well-designed e-commerce website that is easily customizable to fit your brand colors and requirements.
+Author: Pixelfit
+Author URI: https://themeforest.net/user/pixelfit
+Version: 1.0 
 
 
-@import 'custom-swiper.scss';
-@import 'globals.scss';
-@import 'modal.scss';
-@import 'header.scss';
-@import 'slider.scss';
-@import 'footer.scss';
-@import 'product.scss';
-@import 'blog.scss';
-@import 'shop.scss';
-@import 'faqs.scss';
-@import 'cart.scss';
-@import 'checkout.scss';
-@import 'compare.scss';
-@import 'scroll-to-top.scss';
-@import 'layout/category-active.scss';
-@import 'layout/text-has-line-before.scss';
-@import 'layout/collection.scss';
-@import 'layout/tab-features.scss';
-@import 'layout/banner.scss';
-@import 'layout/testimonial.scss';
-@import 'layout/instagram.scss';
-@import 'layout/benefit.scss';
-@import 'layout/newsletter.scss';
-@import 'layout/featured-product.scss';
+------------------------------------------------------
+   CSS INDEX
+-----------------------------------------------------
+
+   01. Base css 
+
+   02. Elements 
+     # Common css
+     # Header css
+     # Hero css
+     # Banner css
+     # Category css
+     # Iconic Box css
+     # Products css
+     # Tabs css
+     # Team css
+     # Testimonial css
+     # Faq css
+     # Shop css
+     # Cart css
+     # Checkout css
+
+   03. Post
+     # post css
+     # Sidebar css
+
+   04. Sections
+     # Sliders css
+     # Wrapper css
+     # Footer css
+     
+   05 Contact css
+-------------------------------------------------------    */
+
+
+
+
+
+
+// Import All SASS Directory Files
+
+// Global Version
+
+@import 'variable';
+
+@import 'mixin';
+
+// Base Directions
+
+@import 'extend';
+
+@import 'base';
+
+// All sections CSS
+
+@import 'elements/common';
+@import 'elements/header';
+@import 'elements/hero';
+@import 'elements/banner';
+@import 'elements/category';
+@import 'elements/iconic-box';
+@import 'elements/products';
+@import 'elements/tabs';
+@import 'elements/team';
+@import 'elements/testimonial';
+@import 'elements/faq';
+@import 'elements/shop';
+@import 'elements/cart';
+@import 'elements/checkout';
+
+// Post
+@import 'post/post';
+@import 'post/sidebar';
+
+// Sections
+@import 'sections/sliders';
+@import 'sections/wrapper';
+@import 'sections/footer';
+
+// Contact
+@import 'contact';

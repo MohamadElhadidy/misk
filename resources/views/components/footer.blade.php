@@ -1,141 +1,134 @@
-    <div id="footer" class="footer">
-        <div class="footer-main bg-surface">
-            <div class="container">
-                <div class="content-footer md:py-[60px] py-10 flex justify-between flex-wrap gap-y-8">
-                    <div class="company-infor basis-1/4 max-lg:basis-full pr-7">
-                        <a href="index.html" class="logo inline-block">
-                            <div class="heading3 w-fit">Misk</div>
-                        </a>
-                        <div class="flex gap-3 mt-3">
-                            <div class="flex flex-col">
-                                <span class="text-button">Mail:</span>
-                                <span class="text-button mt-3">Phone:</span>
-                                <span class="text-button mt-3">Address:</span>
+ <footer class="footer-main">
+            <!--=== Footer Bg Wrapper  ===-->
+            <div class="footer-bg-wrapper gray-bg">
+                <div class="footer-shape shape-one"><span><img src="/assets/images/footer/shape-1.png" alt="shape"></span></div>
+                <svg id="footer-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 75" fill="none">
+                    <path d="M1888.99 40.9061C1901.65 33.5506 1917.87 10.0999 1920 0.000160217L2.48878 0.110695C-18.5686 5.37782 100.829 31.8098 104.136 32.5745C126.908 37.8407 182.163 45.7157 196.02 59.5798C199.049 62.6106 214.802 72.2205 222.15 72.2205C228.696 72.2205 237.893 62.3777 241.388 59.5798C254.985 48.6964 317.621 62.748 338.154 55.5577C378.089 41.5729 396.6 21.3246 452.148 27.4033C469.55 29.3076 497.787 39.4201 516.467 36.022C529.695 33.6155 539.612 26.7953 554.369 23.9558C576.978 19.6057 584.786 12.6555 612.371 13.0388C629.18 13.2724 648.084 27.6499 658.6 33.8673C672.059 41.8242 673.268 47.0554 692.77 41.4805C711.954 35.9964 746.756 38.27 766.852 40.0441C779.483 41.1593 819.866 52.3111 831.458 47.8009C837.236 45.5528 840.64 43.5162 847.537 41.3369C869.486 34.402 905.397 34.0022 929.946 38.6077C947.224 41.8489 987.666 45.9365 999.721 52.9722C1005.16 56.1489 1004.78 60.6539 1010.35 63.6019C1018.09 67.7037 1021.56 68.3083 1029.01 67.4803C1042.77 65.9505 1045.29 61.7272 1056.86 58.1434C1090.94 47.59 1121.71 32.7536 1160.52 26.5415C1182.98 22.9457 1193.92 36.1401 1209.04 41.4806C1240.16 52.468 1262.92 57.9972 1299.78 49.2374C1331.73 41.6466 1369.13 23.3813 1405.73 23.3813C1419.55 23.3813 1427.96 32.734 1435.31 37.4585C1451.38 47.7919 1467 56.9943 1493.89 56.9943C1532.36 56.9943 1544.2 49.9853 1574.29 39.0386C1588.58 33.8384 1616.86 22.826 1635.73 23.3813C1651.4 23.8424 1656.97 43.603 1667.89 48.6629C1683.26 55.7835 1710.61 49.5903 1723.88 43.7789C1736.22 38.3771 1758.43 20.6985 1777.29 30.1327C1788.48 35.7274 1794.71 53.9926 1801.12 61.5909C1815.62 78.7687 1819.96 77.5598 1843.05 68.4859C1861.58 61.2028 1873.63 49.8315 1888.99 40.9061Z" fill="#FFFAF3"/>
+                </svg>
+                <!--=== Footer Widget Area  ===-->
+                <div class="footer-widget-area pb-80">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-3 col-sm-6">
+                                <!--=== Footer Widget  ===-->
+                                <div class="footer-widget about-company-widget mb-40" data-aos="fade-up" data-aos-delay="10" data-aos-duration="1000">
+                                    <div class="widget-content">
+                                        <a href="index.html" class="footer-logo"><img src="/assets/images/logo/logo-main.png" alt="Brand Logo"></a>
+                                        <p>Pesco is an exciting International brand we provide high quality cloths</p>
+                                        <ul class="ct-info-list mb-30">
+                                            <li>
+                                                <i class="fas fa-envelope"></i>
+                                                <a href="mailto:info@mydomain.com">info@mydomain.com</a>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-phone-alt"></i>
+                                                <a href="mailto:info@mydomain.com">info@mydomain.com</a>
+                                            </li>
+                                        </ul>
+                                        <ul class="social-link">
+                                            <li>
+                                                <span>Find Us:</span>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex flex-col">
-                                <span class="">hi.avitex@gmail.com</span>
-                                <span class="mt-[14px]">1-333-345-6868</span>
-                                <span class="mt-3 pt-1">549 Oak St.Crystal Lake, IL 60014</span>
+                            <div class="col-xl-3 col-md-6 col-sm-6">
+                                <!--=== Footer Widget ===-->
+                                <div class="footer-widget footer-nav-widget mb-40" data-aos="fade-up" data-aos-delay="15" data-aos-duration="1200">
+                                    <div class="widget-content">
+                                        <h4 class="widget-title">Customer Services</h4>
+                                        <ul class="widget-menu">
+                                            <li><img src="/assets/images/icon/star-3.svg" alt="star icon"><a href="#">Collections & Delivery</a></li>
+                                            <li><img src="/assets/images/icon/star-3.svg" alt="star icon"><a href="#">Returns & Refunds</a></li>
+                                            <li><img src="/assets/images/icon/star-3.svg" alt="star icon"><a href="#">Terms & Conditions</a></li>
+                                            <li><img src="/assets/images/icon/star-3.svg" alt="star icon"><a href="#">Delivery Return</a></li>
+                                            <li><img src="/assets/images/icon/star-3.svg" alt="star icon"><a href="#">Store Locations</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="right-content flex flex-wrap gap-y-8 basis-3/4 max-lg:basis-full">
-                        <div class="list-nav flex justify-between basis-2/3 max-md:basis-full gap-4">
-                            <div class="item flex flex-col basis-1/3">
-                                <div class="text-button-uppercase pb-3">Infomation</div>
-                                <a class="caption1 has-line-before duration-300 w-fit" href="contact.html">Contact
-                                    us </a>
-                                <a class="caption1 has-line-before duration-300 w-fit pt-2" href="#!"> Career
-                                </a>
-                                <a class="caption1 has-line-before duration-300 w-fit pt-2" href="my-account.html">
-                                    My Account</a>
-                                <a class="caption1 has-line-before duration-300 w-fit pt-2"
-                                    href="order-tracking.html"> Order & Returns</a>
-                                <a class="caption1 has-line-before duration-300 w-fit pt-2" href="faqs.html">FAQs
-                                </a>
+                            <div class="col-xl-3 col-md-6 col-sm-6">
+                                <!--=== Footer Widget ===-->
+                                <div class="footer-widget footer-nav-widget mb-40" data-aos="fade-up" data-aos-delay="20" data-aos-duration="1400">
+                                    <div class="widget-content">
+                                        <h4 class="widget-title">Quick Link</h4>
+                                        <ul class="widget-menu">
+                                            <li><img src="/assets/images/icon/star-3.svg" alt="star icon"><a href="#">Privacy Policy</a></li>
+                                            <li><img src="/assets/images/icon/star-3.svg" alt="star icon"><a href="#">Terms Of Use</a></li>
+                                            <li><img src="/assets/images/icon/star-3.svg" alt="star icon"><a href="#">FAQ</a></li>
+                                            <li><img src="/assets/images/icon/star-3.svg" alt="star icon"><a href="#">Contact</a></li>
+                                            <li><img src="/assets/images/icon/star-3.svg" alt="star icon"><a href="#">Login / Register</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="item flex flex-col basis-1/3">
-                                <div class="text-button-uppercase pb-3">Quick Shop</div>
-                                <a class="caption1 has-line-before duration-300 w-fit"
-                                    href="shop-breadcrumb1.html">Women</a>
-                                <a class="caption1 has-line-before duration-300 w-fit pt-2"
-                                    href="shop-breadcrumb1.html">Men </a>
-                                <a class="caption1 has-line-before duration-300 w-fit pt-2"
-                                    href="shop-breadcrumb1.html">Clothes </a>
-                                <a class="caption1 has-line-before duration-300 w-fit pt-2"
-                                    href="shop-breadcrumb1.html"> Accessories </a>
-                                <a class="caption1 has-line-before duration-300 w-fit pt-2"
-                                    href="blog-default.html">Blog </a>
-                            </div>
-                            <div class="item flex flex-col basis-1/3">
-                                <div class="text-button-uppercase pb-3">Customer Services</div>
-                                <a class="caption1 has-line-before duration-300 w-fit" href="faqs.html">FAQs </a>
-                                <a class="caption1 has-line-before duration-300 w-fit pt-2"
-                                    href="faqs.html">Shipping </a>
-                                <a class="caption1 has-line-before duration-300 w-fit pt-2" href="faqs.html">Privacy
-                                    Policy</a>
-                                <a class="caption1 has-line-before duration-300 w-fit pt-2"
-                                    href="order-tracking.html">Return & Refund</a>
-                            </div>
-                        </div>
-                        <div class="newsletter basis-1/3 pl-7 max-md:basis-full max-md:pl-0">
-                            <div class="text-button-uppercase">Newletter</div>
-                            <div class="caption1 mt-3">Sign up for our newsletter and get 10% off your first purchase
-                            </div>
-                            <div class="input-block w-full h-[52px] mt-4">
-                                <form class="w-full h-full relative" action="post">
-                                    <input type="email" placeholder="Enter your e-mail"
-                                        class="caption1 w-full h-full pl-4 pr-14 rounded-xl border border-line"
-                                        required />
-                                    <button
-                                        class="w-[44px] h-[44px] bg-black flex items-center justify-center rounded-xl absolute top-1 right-1">
-                                        <i class="ph ph-arrow-right text-xl text-white"></i>
-                                    </button>
-                                </form>
-                            </div>
-                            <div class="list-social flex items-center gap-6 mt-4">
-                                <a href="https://www.facebook.com/" target="_blank">
-                                    <div class="icon-facebook text-2xl text-black"></div>
-                                </a>
-                                <a href="https://www.instagram.com/" target="_blank">
-                                    <div class="icon-instagram text-2xl text-black"></div>
-                                </a>
-                                <a href="https://www.twitter.com/" target="_blank">
-                                    <div class="icon-twitter text-2xl text-black"></div>
-                                </a>
-                                <a href="https://www.youtube.com/" target="_blank">
-                                    <div class="icon-youtube text-2xl text-black"></div>
-                                </a>
-                                <a href="https://www.pinterest.com/" target="_blank">
-                                    <div class="icon-pinterest text-2xl text-black"></div>
-                                </a>
+                            <div class="col-xl-3 col-sm-6">
+                                <!--=== Footer Widget  ===-->
+                                <div class="footer-widget footer-recent-post-widget" data-aos="fade-up" data-aos-delay="25" data-aos-duration="1600">
+                                    <h4 class="widget-title">Recent Post</h4>
+                                    <div class="widget-content">
+                                        <div class="recent-post-item">
+                                            <div class="thumb">
+                                                <img src="/assets/images/footer/recent-post-1.png" alt="post thumb">
+                                            </div>
+                                            <div class="content">
+                                                <h4><a href="blog-details.html">Tips on Finding Affordable Fashion Gems Online</a></h4>
+                                                <span><a href="blog-details.html">July 11, 2023</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="recent-post-item">
+                                            <div class="thumb">
+                                                <img src="/assets/images/footer/recent-post-2.png" alt="post thumb">
+                                            </div>
+                                            <div class="content">
+                                                <h4><a href="blog-details.html">Mastering the Art of Fashion E-commerce Marketing</a></h4>
+                                                <span><a href="blog-details.html">JUly 11, 2024</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="recent-post-item">
+                                            <div class="thumb">
+                                                <img src="/assets/images/footer/recent-post-3.png" alt="post thumb">
+                                            </div>
+                                            <div class="content">
+                                                <h4><a href="blog-details.html">Must-Have Trends You Can Shop Online Now</a></h4>
+                                                <span><a href="blog-details.html">July 11, 2024</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div
-                    class="footer-bottom py-3 flex items-center justify-between gap-5 max-lg:justify-center max-lg:flex-col border-t border-line">
-                    <div class="left flex items-center gap-8">
-                        <div class="copyright caption1 text-secondary">©2024 Misk. All Rights Reserved.</div>
-                        <div class="select-block flex items-center gap-5 max-md:hidden">
-                            <div class="choose-language flex items-center gap-1.5">
-                                <select name="language" id="chooseLanguageFooter" class="caption2 bg-transparent">
-                                    <option value="English">English</option>
-                                </select>
-                                <i class="ph ph-caret-down text-xs text-[#1F1F1F]"></i>
+                <!--=== Footer Copyright  ===-->
+                <div class="copyright-area">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="copyright-text">
+                                    <p>&copy; 2024. All rights reserved by <span>Pixelfit</span></p>
+                                </div>
                             </div>
-                            <div class="choose-currency flex items-center gap-1.5">
-                                <select name="currency" id="chooseCurrencyFooter" class="caption2 bg-transparent">
-                                    <option value="USD">USD</option>
-                                </select>
-                                <i class="ph ph-caret-down text-xs text-[#1F1F1F]"></i>
+                            <div class="col-lg-6">
+                                <div class="payment-method text-lg-end">
+                                    <a href="#"><img src="/assets/images/footer/payment-method.png" alt="payment-method"></a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="right flex items-center gap-2">
-                        <div class="caption1 text-secondary">Payment:</div>
-                        <div class="payment-img">
-                            <img src="/assets/images/payment/Frame-0.png" alt="payment" class="w-9" />
-                        </div>
-                        <div class="payment-img">
-                            <img src="/assets/images/payment/Frame-1.png" alt="payment" class="w-9" />
-                        </div>
-                        <div class="payment-img">
-                            <img src="/assets/images/payment/Frame-2.png" alt="payment" class="w-9" />
-                        </div>
-                        <div class="payment-img">
-                            <img src="/assets/images/payment/Frame-3.png" alt="payment" class="w-9" />
-                        </div>
-                        <div class="payment-img">
-                            <img src="/assets/images/payment/Frame-4.png" alt="payment" class="w-9" />
-                        </div>
-                        <div class="payment-img">
-                            <img src="/assets/images/payment/Frame-5.png" alt="payment" class="w-9" />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <a class="scroll-to-top-btn" href="#top-nav"><i class="ph-bold ph-caret-up"></i></a>
+        </footer>

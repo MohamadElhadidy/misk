@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Product;
+use App\Models\ProductImage;
+use App\Models\ProductSize;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -23,7 +27,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('admin.products.create');
+        $categories = Category::all();
+        return view('admin.products.create', compact('categories'));
     }
 
     /**
@@ -31,7 +36,59 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+    //    dd($request->all());
+
+       //validate product data (name - category - descriprion)
+       //validate price and sizes
+       //validate images
+
+
+       try {
+            DB::beginTransaction();
+
+            $product = Product::create([
+                'name' => $request->name,
+                'category_id' => $request->category_id,
+                'description' => $request->description,
+            ]);
+
+
+            for ($i=0; $i < count($request->sizes); $i++) {
+                ProductSize::create([
+                    'product_id' => $product->id,
+                    'size' => $request->sizes[$i],
+                    'price' => $request->prices[$i],
+                ]);
+            }
+
+
+            for ($i = 0; $i < count($request->images); $i++) {
+                $path = $request->images[$i]->storePublicly('products');
+
+
+                ProductImage::create([
+                    'product_id' => $product->id,
+                    'path' => $path,
+                ]);
+            }
+
+            DB::commit();
+
+            return back()->with('success', 'Product created successfully!');
+
+       } catch (\Throwable $th) {
+            DB::rollBack();
+            dd($th);
+       }
+
+
+
+
+       //begin transacyiom
+       //insert product
+       //insert price and sizes
+       //insert images
+
     }
 
     /**
