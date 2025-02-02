@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-    <title>Admin</title>
+    <title>{{$title ?? 'Admin'}} </title>
+
     @vite('resources/css/app.css')
 </head>
 
@@ -157,7 +158,7 @@
 
         <header class="bg-white shadow">
             <div class="mx-auto max-w-7xl px-4 py-6  sm:px-6 lg:px-8 sm:flex sm:justify-between">
-                {{$header}}
+                {{ $header }}
             </div>
         </header>
         <main>

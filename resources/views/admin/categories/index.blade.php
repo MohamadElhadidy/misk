@@ -1,4 +1,8 @@
 <x-adminLayout>
+    <x-slot:title>
+        Categories Management
+    </x-slot>
+
     <x-slot:header>
         <x-admin.heading>Categories Management</x-admin.heading>
         <x-admin.button href="/admin/categories/create">Create Category</x-admin.button>
@@ -76,15 +80,15 @@
                             <th scope="row" class="px-6 py-4   whitespace-nowrap">
                                 <div class="flex space-x-4">
                                     <a href="/admin/categories/{{ $category->id }}/edit"
-                                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-                                <form action="/admin/categories/{{ $category->id }}" method="POST"
-                                    onsubmit="return confirm('Are you sure you want to delete {{ $category->name }}?')">
-                                    @csrf
-                                    @method('DELETE')
-                                    <input type="submit"
-                                        class="cursor-pointer font-medium text-red-600 dark:text-red-500 hover:underline"
-                                        value="Delete">
-                                </form>
+                                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
+                                    <form action="/admin/categories/{{ $category->id }}" method="POST"
+                                        onsubmit="return confirm('Are you sure you want to delete {{ $category->name }}?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <input type="submit"
+                                            class="cursor-pointer font-medium text-red-600 dark:text-red-500 hover:underline"
+                                            value="Delete">
+                                    </form>
                                 </div>
                             </th>
                         </tr>

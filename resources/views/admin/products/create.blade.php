@@ -41,25 +41,33 @@
         }
     </style>
 
+    <x-slot:title>
+        Create Product
+    </x-slot>
+
     <x-slot:header>
         <x-admin.heading>Create Product</x-admin.heading>
     </x-slot>
+
+
     <form method="POST" action="/admin/products" enctype="multipart/form-data">
         @csrf
+
         <div class="space-y-12">
             <div class="border-b border-gray-900/10 pb-12">
                 <h2 class="text-base/7 font-semibold text-gray-900">Create a new Product</h2>
                 <p class="mt-1 text-sm/6 text-gray-600">We need some info from you.</p>
+                <h1 class="text-green-600 my-6">{{ session('success') }}</h1>
 
                 <div x-data="imageUploader()" class="max-w-3xl  p-6 bg-white shadow-md rounded-lg">
                     <h2 class="text-xl font-semibold mb-4">Product Images</h2>
 
                     <!-- File Input (Hidden and triggered by the button) -->
                     <input type="file" multiple @change="uploadImages" x-ref="fileInput" class="hidden"
-                        accept="image/*" name="images[]">
+                        accept="image/*">
 
                     <!-- Upload Button -->
-                    <button @click="$refs.fileInput.click()" class="upload-btn">
+                    <button type="button" @click="$refs.fileInput.click()" class="upload-btn">
                         Upload
                     </button>
 
@@ -68,11 +76,14 @@
                         <template x-for="(image, index) in images" :key="index">
                             <div class="relative">
                                 <img :src="image" class="image-preview" alt="Preview">
+                                <input type="hidden" :name="'images[]'" :value="image">
                                 <!-- Remove Button -->
-                                <button @click="removeImage(index)" class="remove-btn">X</button>
+                                <button type="button" @click="removeImage(index)" class="remove-btn">X</button>
                             </div>
                         </template>
                     </div>
+
+
                 </div>
 
                 <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
@@ -86,7 +97,7 @@
                     <div class="sm:col-span-3">
                         <label for="category_id" class="block text-sm/6 font-medium text-gray-900">Category</label>
                         <div class="mt-2 grid grid-cols-1">
-                            <select id="category_id" name="category_id" autocomplete="category_id" required
+                            <select id="category_id" name="category_id" autocomplete="category_id"
                                 class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                                 <option value="" disabled selected>Choose a category</option>
 
@@ -238,7 +249,7 @@
             </div>
 
             <div class="mt-6 flex items-center justify-end gap-x-6">
-                <a href="/admin/categories" class="text-sm/6 font-semibold text-gray-900">Cancel</a>
+                <a href="/admin/products" class="text-sm/6 font-semibold text-gray-900">Cancel</a>
                 <button type="submit"
                     class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
             </div>
@@ -292,6 +303,8 @@
                         };
                         reader.readAsDataURL(files[i]);
                     }
+
+
                 },
 
                 // Remove selected image

@@ -1,4 +1,7 @@
 <x-adminLayout>
+     <x-slot:title>
+       Create Category
+    </x-slot>
     <x-slot:header>
         <x-admin.heading>Create Category</x-admin.heading>
     </x-slot>
