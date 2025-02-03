@@ -73,6 +73,12 @@ class ProductController extends Controller
 
 
             if ($request->has('images')) {
+
+                if (! File::exists(storage_path('app/public/products'))) {
+                    File::makeDirectory(storage_path('app/public/products'), 0777, true);
+                }
+
+
                 try {
                     // Process images
                     foreach ($request->input('images') as $base64Image) {
