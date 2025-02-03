@@ -10,6 +10,7 @@ use App\Models\ProductSize;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -181,22 +182,22 @@ class ProductController extends Controller
             $newImages = array_diff($request->images, $existingImages) ?? [];
 
 
-            if($newImages){
-            try {
-                foreach ($newImages as $base64Image) {
-                    $image = $this->base64ToUploadedFile($base64Image);
+            if ($newImages) {
+                try {
+                    foreach ($newImages as $base64Image) {
+                        $image = $this->base64ToUploadedFile($base64Image);
 
-                    $path = $image->store('products');
+                        $path = $image->store('products');
 
-                    ProductImage::create([
-                        'product_id' => $product->id,
-                        'path' => $path,
-                    ]);
+                        ProductImage::create([
+                            'product_id' => $product->id,
+                            'path' => $path,
+                        ]);
+                    }
+                } finally {
+                    $this->cleanTempFiles();
                 }
-            } finally {
-                $this->cleanTempFiles();
             }
-        }
 
 
 
@@ -273,6 +274,10 @@ class ProductController extends Controller
         $filename = Str::random(40) . '.' . $extension;
 
         // Store the file in Laravel's temporary directory
+        if (! File::exists(storage_path('app/temp'))) {
+            File::makeDirectory(storage_path('app/temp'), 0777, true);
+        }
+
         $tempPath = storage_path('app/temp/' . $filename);
         file_put_contents($tempPath, $imageContent);
 
