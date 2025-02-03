@@ -75,7 +75,7 @@
                     <div class="flex flex-wrap gap-2 mt-4 space-y-10">
                         <template x-for="(image, index) in images" :key="index">
                             <div class="relative">
-                                <img :src="image.startsWith('products') ? '/' + image : image" class="image-preview"
+                                <img :src="image.startsWith('products') ? '/storage/' + image : image" class="image-preview"
                                     alt="Preview">
                                 <input type="hidden" :name="'images[]'" :value="image">
                                 <!-- Remove Button -->
