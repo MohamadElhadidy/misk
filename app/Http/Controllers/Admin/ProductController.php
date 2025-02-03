@@ -10,6 +10,7 @@ use App\Models\ProductSize;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 class ProductController extends Controller
@@ -57,6 +58,7 @@ class ProductController extends Controller
                 'name' => $request->name,
                 'category_id' => $request->category_id,
                 'description' => $request->description,
+                'featured' => $request->featured
             ]);
 
 
@@ -69,26 +71,28 @@ class ProductController extends Controller
             }
 
 
-            try {
-                // Process images
-                foreach ($request->input('images') as $base64Image) {
-                    // Convert base64 to UploadedFile instance
-                    $image = $this->base64ToUploadedFile($base64Image);
+            if ($request->has('images')) {
+                try {
+                    // Process images
+                    foreach ($request->input('images') as $base64Image) {
+                        // Convert base64 to UploadedFile instance
+                        $image = $this->base64ToUploadedFile($base64Image);
 
-                    // Store the image
-                    $path = $image->store('products');
+                        // Store the image
+                        $path = $image->store('products');
 
-                    ProductImage::create([
-                        'product_id' => $product->id,
-                        'path' => $path,
-                    ]);
+                        ProductImage::create([
+                            'product_id' => $product->id,
+                            'path' => $path,
+                        ]);
+                    }
+
+                    // Process other data...
+
+                } finally {
+                    // Clean up temporary files
+                    $this->cleanTempFiles();
                 }
-
-                // Process other data...
-
-            } finally {
-                // Clean up temporary files
-                $this->cleanTempFiles();
             }
 
 
@@ -131,14 +135,9 @@ class ProductController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($productId)
+    public function edit(Product $product)
     {
         $categories = Category::all();
-
-        $product = Product::with(['sizes' => function ($query) {
-            $query->select('size', 'price', 'product_id');
-        }])->find($productId);
-
 
         return view('admin.products.edit', compact('product', 'categories'));
     }
@@ -146,9 +145,106 @@ class ProductController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Product $product)
     {
-        //
+        // dd($request->all());
+
+        try {
+            DB::beginTransaction();
+
+            $product->update([
+                'name' => $request->name,
+                'category_id' => $request->category_id,
+                'description' => $request->description,
+                'featured' => $request->featured
+            ]);
+
+
+
+            $existingImages = array_filter($request->images, function ($image) {
+                return strpos($image, 'products/') === 0;
+            }) ?? [];
+
+
+
+            $deletedImages = $product->images()
+                ->whereNotIn('path', $existingImages)
+                ->get();
+
+
+            foreach ($deletedImages as $image) {
+                Storage::delete('public/' . $image->image_path);
+                $image->delete();
+            }
+
+
+            $newImages = array_diff($request->images, $existingImages) ?? [];
+
+
+            if($newImages){
+            try {
+                foreach ($newImages as $base64Image) {
+                    $image = $this->base64ToUploadedFile($base64Image);
+
+                    $path = $image->store('products');
+
+                    ProductImage::create([
+                        'product_id' => $product->id,
+                        'path' => $path,
+                    ]);
+                }
+            } finally {
+                $this->cleanTempFiles();
+            }
+        }
+
+
+
+
+
+            // Find sizes to delete (sizes in database but not in the new data)
+            $deletedSizes = $product->sizes()->whereNotIn('id', $request->size_ids)->get();
+
+            foreach ($deletedSizes as $size) {
+                $size->delete();
+            }
+
+
+            for ($i = 0; $i < count($request->sizes); $i++) {
+                $size_id = $request->size_ids[$i];
+                if ($size_id) {
+                    $size = $product->sizes()->find($size_id);
+                    if ($size) {
+                        $size->update([
+                            'size' => $request->sizes[$i],
+                            'price' => $request->prices[$i],
+                        ]);
+                    }
+                } else {
+                    ProductSize::create([
+                        'product_id' => $product->id,
+                        'size' => $request->sizes[$i],
+                        'price' => $request->prices[$i],
+                    ]);
+                }
+            }
+
+            DB::commit();
+
+            return back()->with('success', 'Product updated successfully!');
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            dd($th);
+        }
+
+
+
+
+        //begin transacyiom
+        //insert product
+        //insert price and sizes
+        //insert images
+
     }
 
     /**

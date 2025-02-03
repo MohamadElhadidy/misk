@@ -1,1850 +1,1439 @@
 <x-layout>
-       <main class="main-bg">
-            <!--====== Start Hero Section ======-->
-            <section class="hero-section">
-                <!--=== Hero Wrapper ===-->
-                <div class="hero-wrapper-one">
-                    <div class="container">
-                        <div class="hero-dots"></div>
-                        <div class="hero-slider-one">
-                            <!--=== Single Slider ===-->
-                            <div class="single-hero-slider">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-6">
-                                        <!--=== Hero Content ===-->
-                                        <div class="hero-content style-one mb-50">
-                                            <span class="sub-heading">Best for your categories</span>
-                                            <h1>Exclusive Collection <br>
-                                                in <span>Our Online</span>  Store</h1>
-                                            <p>Discover our exclusive collection available only in our online store. Shop now for unique and premium items that you won't find anywhere else.</p>
-                                            <ul>
-                                                <li>
-                                                    <div class="price-box">
-                                                        <div class="currency">$</div>
-                                                        <div class="text">
-                                                            <span class="discount">Discount Price</span>
-                                                            <h3>140.00</h3>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <img src="/assets/images/hero/line-1.png" alt="">
-                                                </li>
-                                                <li>
-                                                    <a href="shops.html" class="theme-btn style-one">Shop Now</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <!--=== Hero Image ===-->
-                                        <div class="hero-image-box">
-                                            <div class="hero-image">
-                                                <img src="/assets/images/hero/hero-one_img1.jpg" alt="Hero Image">
-                                                <div class="hero-shape bg_cover" style="background-image: url(assets/images/hero/hero-one-shape1.png);"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--=== Single Slider ===-->
-                            <div class="single-hero-slider">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-6">
-                                        <!--=== Hero Content ===-->
-                                        <div class="hero-content style-one mb-50">
-                                            <span class="sub-heading">Best for your categories</span>
-                                            <h1>Exclusive Collection <br>
-                                                in <span>Our Online</span>  Store</h1>
-                                            <p>Discover our exclusive collection available only in our online store. Shop now for unique and premium items that you won't find anywhere else.</p>
-                                            <ul>
-                                                <li>
-                                                    <div class="price-box">
-                                                        <div class="currency">$</div>
-                                                        <div class="text">
-                                                            <span class="discount">Discount Price</span>
-                                                            <h3>140.00</h3>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <img src="/assets/images/hero/line-1.png" alt="">
-                                                </li>
-                                                <li>
-                                                    <a href="shops.html" class="theme-btn style-one">Shop Now</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <!--=== Hero Image ===-->
-                                        <div class="hero-image-box">
-                                            <div class="hero-image">
-                                                <img src="/assets/images/hero/hero-one_img1.jpg" alt="Hero Image">
-                                                <div class="hero-shape bg_cover" style="background-image: url(assets/images/hero/hero-one-shape1.png);"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--=== Single Slider ===-->
-                            <div class="single-hero-slider">
-                                <div class="row align-items-center">
-                                    <div class="col-lg-6">
-                                        <!--=== Hero Content ===-->
-                                        <div class="hero-content style-one mb-50">
-                                            <span class="sub-heading">Best for your categories</span>
-                                            <h1>Exclusive Collection <br>
-                                                in <span>Our Online</span>  Store</h1>
-                                            <p>Discover our exclusive collection available only in our online store. Shop now for unique and premium items that you won't find anywhere else.</p>
-                                            <ul>
-                                                <li>
-                                                    <div class="price-box">
-                                                        <div class="currency">$</div>
-                                                        <div class="text">
-                                                            <span class="discount">Discount Price</span>
-                                                            <h3>140.00</h3>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <img src="/assets/images/hero/line-1.png" alt="">
-                                                </li>
-                                                <li>
-                                                    <a href="shops.html" class="theme-btn style-one">Shop Now</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <!--=== Hero Image ===-->
-                                        <div class="hero-image-box">
-                                            <div class="hero-image">
-                                                <img src="/assets/images/hero/hero-one_img1.jpg" alt="Hero Image">
-                                                <div class="hero-shape bg_cover" style="background-image: url(assets/images/hero/hero-one-shape1.png);"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <main class="main-bg">
+        <!--====== Start Hero Section ======-->
+        <section class="hero-section">
+            <!--=== Hero Wrapper ===-->
+            <div class="hero-wrapper-two">
+                <!--=== Hero shape ===-->
+                <div class="hero-shape bg_cover d-none d-xl-block"
+                    style="background-image: url(assets/images/hero/hero-two-shape1.png);"></div>
+                <!--=== Hero Image ===-->
+                <div class="hero-image d-none d-xl-block">
+                    <img src="assets/images/hero/hero-two_img1.jpg" alt="Hero Image">
+                    <div class="hero-img-shape"><img src="assets/images/hero/hero-two-img-shape1.png" alt="Image Shape">
                     </div>
                 </div>
-            </section><!--====== End Hero Section ======-->
-            <!--====== Start Animated-headline Section ======-->
-            <section class="animated-headline-area primary-dark-bg pt-25 pb-25">
-                <div class="headline-wrap style-one">
-                    <span class="marquee-wrap">
-                        <span class="marquee-inner left">
-                            <span class="marquee-item"><b>Women</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Shirts</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Jackets</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Jeans</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Blazer</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Men</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Jackets</b><i class="fas fa-bahai"></i></span>
-                        </span>
-                        <span class="marquee-inner left">
-                            <span class="marquee-item"><b>Women</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Shirts</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Jackets</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Jeans</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Blazer</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Men</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Jackets</b><i class="fas fa-bahai"></i></span>
-                        </span>
-                        <span class="marquee-inner left">
-                            <span class="marquee-item"><b>Women</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Shirts</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Jackets</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Jeans</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Blazer</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Men</b><i class="fas fa-bahai"></i></span>
-                            <span class="marquee-item"><b>Jackets</b><i class="fas fa-bahai"></i></span>
-                        </span>
-                    </span>
-                </div>
-            </section><!--====== End Animated-headline Section ======-->
-            <!--====== Start Features Section ======-->
-            <section class="features-section pt-130">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
-                            <!--=== Features Wrapper ===-->
-                            <div class="features-wrapper" data-aos="fade-up" data-aos-delay="10" data-aos-duration="1000">
-                                <!--=== Iconic Box Item ===-->
-                                <div class="iconic-box-item icon-left-box mb-25">
-                                    <div class="icon">
-                                        <i class="fas fa-shipping-fast"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h5>Free Shipping</h5>
-                                        <p>You get your items delivered without any extra cost.</p>
-                                    </div>
-                                </div>
-                                <!--=== Divider ===-->
-                                <div class="divider mb-25">
-                                    <img src="/assets/images/divider.png" alt="divider">
-                                </div>
-                                <!--=== Iconic Box Item ===-->
-                                <div class="iconic-box-item icon-left-box mb-25">
-                                    <div class="icon">
-                                        <i class="fas fa-microphone"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h5>Great Support 24/7</h5>
-                                        <p>Our customer support team is available around the clock </p>
+                        <div class="col-xl-6">
+                            <!--=== hero Post Slider ===-->
+                            <div class="hero-post-slider mb-100">
+                                <!--=== Single Post Slider ===-->
+                                <div class="single-hero-post">
+                                    <div class="hero-content style-two">
+                                        <span class="tag-line"><i class="flaticon-star-2"></i><b>Best for your
+                                                categories</b><i class="flaticon-star-2"></i></span>
+                                        <h1><span>Get 20% Off</span> Women Cloth Collections</h1>
+                                        <p>Enjoy 20% off on our entire Women’s Clothing Collection! Discover stylish
+                                            outfits for every occasion and save on your favorite pieces. </p>
+                                        <a href="shops.html" class="theme-btn style-one">Shop Now</a>
                                     </div>
                                 </div>
-                                <!--=== Divider ===-->
-                                <div class="divider mb-25">
-                                    <img src="/assets/images/divider.png" alt="divider">
-                                </div>
-                                <!--=== Iconic Box Item ===-->
-                                <div class="iconic-box-item icon-left-box mb-25">
-                                    <div class="icon">
-                                        <i class="far fa-handshake"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h5>Return Available</h5>
-                                        <p>Making it easy to return any items if you're not satisfied.</p>
+                                <!--=== Single Post Slider ===-->
+                                <div class="single-hero-post">
+                                    <div class="hero-content style-two">
+                                        <span class="tag-line"><i class="flaticon-star-2"></i><b>Best for your
+                                                categories</b><i class="flaticon-star-2"></i></span>
+                                        <h1><span>Get 20% Off</span> Women Cloth Collections</h1>
+                                        <p>Enjoy 20% off on our entire Women’s Clothing Collection! Discover stylish
+                                            outfits for every occasion and save on your favorite pieces. </p>
+                                        <a href="shops.html" class="theme-btn style-one">Shop Now</a>
                                     </div>
                                 </div>
-                                <!--=== Divider ===-->
-                                <div class="divider mb-25">
-                                    <img src="/assets/images/divider.png" alt="divider">
-                                </div>
-                                <!--=== Iconic Box Item ===-->
-                                <div class="iconic-box-item icon-left-box mb-25">
-                                    <div class="icon">
-                                        <i class="fas fa-sack-dollar"></i>
-                                    </div>
-                                    <div class="content">
-                                        <h5>Secure Payment</h5>
-                                        <p>Shop with confidence knowing that our secure payment</p>
+                                <!--=== Single Post Slider ===-->
+                                <div class="single-hero-post">
+                                    <div class="hero-content style-two">
+                                        <span class="tag-line"><i class="flaticon-star-2"></i><b>Best for your
+                                                categories</b><i class="flaticon-star-2"></i></span>
+                                        <h1><span>Get 20% Off</span> Women Cloth Collections</h1>
+                                        <p>Enjoy 20% off on our entire Women’s Clothing Collection! Discover stylish
+                                            outfits for every occasion and save on your favorite pieces. </p>
+                                        <a href="shops.html" class="theme-btn style-one">Shop Now</a>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!--====== End Features Section ======-->
-            <!--====== Start Category Section ======-->
-            <section class="category-section pt-125 overflow-hidden">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6 col-md-8">
-                            <!--=== Section Title ===-->
-                            <div class="section-title mb-50" data-aos="fade-right" data-aos-delay="10" data-aos-duration="800">
-                                <div class="sub-heading d-inline-flex align-items-center">
-                                    <i class="flaticon-sparkler"></i>
-                                    <span class="sub-title">Categories</span>
-                                </div>
-                                <h2>Browse Top Category</h2>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-4">
-                            <!--=== Arrows ===-->
-                            <div class="category-arrows style-one mb-60" data-aos="fade-left" data-aos-delay="15" data-aos-duration="1000"></div>
-                        </div>
-                    </div>
-                </div>
-                <!--=== Category Slider ===-->
-                <div class="category-slider-one" data-aos="fade-up" data-aos-delay="20" data-aos-duration="1200">
-                    <!--=== Category Item ===-->
-                    <div class="category-item style-one text-center">
-                        <div class="category-img">
-                            <img src="/assets/images/category/category-1.png" alt="category image">
-                        </div>
-                        <div class="category-content">
-                            <a href="index.html" class="category-btn">Man Shirts</a>
-                        </div>
-                    </div>
-                    <!--=== Category Item ===-->
-                    <div class="category-item style-one text-center">
-                        <div class="category-img">
-                            <img src="/assets/images/category/category-2.png" alt="category image">
-                        </div>
-                        <div class="category-content">
-                            <a href="index.html" class="category-btn">Denim Jeans</a>
-                        </div>
-                    </div>
-                    <!--=== Category Item ===-->
-                    <div class="category-item style-one text-center">
-                        <div class="category-img">
-                            <img src="/assets/images/category/category-3.png" alt="category image">
-                        </div>
-                        <div class="category-content">
-                            <a href="index.html" class="category-btn">Casual Suit</a>
-                        </div>
-                    </div>
-                    <!--=== Category Item ===-->
-                    <div class="category-item style-one text-center">
-                        <div class="category-img">
-                            <img src="/assets/images/category/category-4.png" alt="category image">
-                        </div>
-                        <div class="category-content">
-                            <a href="index.html" class="category-btn">Summer Dress</a>
-                        </div>
-                    </div>
-                    <!--=== Category Item ===-->
-                    <div class="category-item style-one text-center">
-                        <div class="category-img">
-                            <img src="/assets/images/category/category-5.png" alt="category image">
-                        </div>
-                        <div class="category-content">
-                            <a href="index.html" class="category-btn">Sweaters</a>
-                        </div>
-                    </div>
-                    <!--=== Category Item ===-->
-                    <div class="category-item style-one text-center">
-                        <div class="category-img">
-                            <img src="/assets/images/category/category-6.png" alt="category image">
-                        </div>
-                        <div class="category-content">
-                            <a href="index.html" class="category-btn">Jackets</a>
-                        </div>
-                    </div>
-                    <!--=== Category Item ===-->
-                    <div class="category-item style-one text-center">
-                        <div class="category-img">
-                            <img src="/assets/images/category/category-4.png" alt="category image">
-                        </div>
-                        <div class="category-content">
-                            <a href="index.html" class="category-btn">Summer Dress</a>
-                        </div>
-                    </div>
-                </div>
-            </section><!--====== End Category Section ======-->
-            <!--====== Start Banner Section ======-->
-            <section class="banner-section pt-130">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <!--=== Banner Item ===-->
-                            <div class="banner-item style-one bg-one mb-40" data-aos="fade-up" data-aos-delay="10" data-aos-duration="900">
-                                <div class="shape shape-one"><span><img src="/assets/images/banner/discount.png" alt="shape"></span></div>
-                                <div class="shape shape-two"><span><img src="/assets/images/banner/line.png" alt="shape"></span></div>
-                                <div class="banner-img"><img src="/assets/images/banner/banner-1.png" alt="banner image"></div>
-                                <div class="banner-content">
-                                    <span>UP TO <span class="off">50%</span></span>
-                                    <h4>Exclusive Kids & Adults Summer Outfits</h4>
-                                    <a href="shops.html" class="theme-btn style-one">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <!--=== Banner Item ===-->
-                            <div class="banner-item style-one bg-two mb-40" data-aos="fade-up" data-aos-delay="20" data-aos-duration="1100">
-                                <div class="shape shape-one"><span><img src="/assets/images/banner/discount.png" alt="shape"></span></div>
-                                <div class="shape shape-two"><span><img src="/assets/images/banner/line.png" alt="shape"></span></div>
-                                <div class="banner-img"><img src="/assets/images/banner/banner-2.png" alt="banner image"></div>
-                                <div class="banner-content">
-                                    <span>UP TO <span class="off">70%</span></span>
-                                    <h4>Exclusive Kids & Adults Summer Outfits</h4>
-                                    <a href="shops.html" class="theme-btn style-one">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!--====== End Banner Section ======-->
-            <!--====== Start Features Section ======-->
-            <section class="features-products pt-90">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <!--=== Section Title ===-->
-                            <div class="section-title mb-50 text-center text-lg-start" data-aos="fade-right" data-aos-delay="10" data-aos-duration="1000">
-                                <div class="sub-heading d-inline-flex align-items-center">
-                                    <i class="flaticon-sparkler"></i>
-                                    <span class="sub-title">Feature Products</span>
-                                </div>
-                                <h2>Our Features Collection</h2>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <!--=== Pesco Tabs ===-->
-                            <div class="pesco-tabs style-one mb-50" data-aos="fade-left" data-aos-delay="15" data-aos-duration="1200">
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li>
-                                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#cat1" role="tab">Best Sellers</button>
-                                    </li>
-                                    <li>
-                                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cat2" role="tab">New Products</button>
-                                    </li>
-                                    <li>
-                                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cat3" role="tab">Sale Products</button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <!--=== Tab Content ===-->
-                            <div class="tab-content" data-aos="fade-up" data-aos-duration="1200">
-                                <!--=== Tab Pane  ===-->
-                                <div class="tab-pane fade show active" id="cat1">
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-1.png" alt="Products">
-                                                    <div class="discount">10% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Lightweight linen summer dress with belt</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>80.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-2.png" alt="Products">
-                                                    <div class="discount">40% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Cozy knit sweater with pockets</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-3.png" alt="Products">
-                                                    <div class="discount">10% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Athletic leggings with mesh panels</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>80.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-4.png" alt="Products">
-                                                    <div class="discount">40% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Classic leather biker jacket with zippers</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-4.png" alt="Products">
-                                                    <div class="discount">80% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Floral print sundress with adjustable straps</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>80.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-3.png" alt="Products">
-                                                    <div class="discount">40% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Relaxed fit denim jeans with distressing</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-2.png" alt="Products">
-                                                    <div class="discount">40% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Cargo shorts with pockets and drawstring</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>80.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-1.png" alt="Products">
-                                                    <div class="discount">80% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Elegant silk dress with sequins</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="cat2">
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-1.png" alt="Products">
-                                                    <div class="discount">10% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Lightweight linen summer dress with belt</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>80.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-2.png" alt="Products">
-                                                    <div class="discount">40% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Cozy knit sweater with pockets</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-3.png" alt="Products">
-                                                    <div class="discount">10% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Athletic leggings with mesh panels</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>80.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-4.png" alt="Products">
-                                                    <div class="discount">40% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Classic leather biker jacket with zippers</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-4.png" alt="Products">
-                                                    <div class="discount">80% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-4.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Floral print sundress with adjustable straps</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>80.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-3.png" alt="Products">
-                                                    <div class="discount">40% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-3.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Relaxed fit denim jeans with distressing</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-2.png" alt="Products">
-                                                    <div class="discount">40% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Cargo shorts with pockets and drawstring</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>80.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-1.png" alt="Products">
-                                                    <div class="discount">80% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Elegant silk dress with sequins</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="cat3">
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-1.png" alt="Products">
-                                                    <div class="discount">10% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Lightweight linen summer dress with belt</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>80.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-2.png" alt="Products">
-                                                    <div class="discount">40% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Cozy knit sweater with pockets</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-3.png" alt="Products">
-                                                    <div class="discount">10% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-3.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Athletic leggings with mesh panels</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>80.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-4.png" alt="Products">
-                                                    <div class="discount">40% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-4.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Classic leather biker jacket with zippers</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-4.png" alt="Products">
-                                                    <div class="discount">80% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-4.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Floral print sundress with adjustable straps</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>80.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-3.png" alt="Products">
-                                                    <div class="discount">40% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-3.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Relaxed fit denim jeans with distressing</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-2.png" alt="Products">
-                                                    <div class="discount">40% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Cargo shorts with pockets and drawstring</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>80.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3 col-lg-4 col-sm-6">
-                                            <!--=== Product Item  ===-->
-                                            <div class="product-item style-one mb-40">
-                                                <div class="product-thumbnail">
-                                                    <img src="/assets/images/products/feature-product-1.png" alt="Products">
-                                                    <div class="discount">80% Off</div>
-                                                    <div class="hover-content">
-                                                        <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                                        <a href="/assets/images/products/feature-product-1.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                                    </div>
-                                                    <div class="cart-button">
-                                                        <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="product-info-wrap">
-                                                    <div class="product-info">
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><a href="#">(80)</a></li>
-                                                        </ul>
-                                                        <h4 class="title"><a href="shop-details.html">Elegant silk dress with sequins</a></h4>
-                                                    </div>
-                                                    <div class="product-price">
-                                                        <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                                        <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!--====== End Features Section ======-->
-            <!--====== Start Features Products Section  ======-->
-            <section class="features-products-section pt-85 pb-60">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <!--=== Section Title  ===-->
-                            <div class="section-title mb-50" data-aos="fade-right" data-aos-delay="10" data-aos-duration="1000">
-                                <div class="sub-heading d-inline-flex align-items-center">
-                                    <i class="flaticon-sparkler"></i>
-                                    <span class="sub-title">Feature Products</span>
-                                </div>
-                                <h2>Our Features Collection</h2>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <!--=== Arrows ===-->
-                            <div class="feature-arrows style-one mb-60" data-aos="fade-left" data-aos-delay="15" data-aos-duration="1200"></div>
-                        </div>
-                    </div>
-                    <!--=== Feature Slider  ===-->
-                    <div class="feature-slider-one" data-aos="fade-up" data-aos-delay="20" data-aos-duration="1400">
-                        <!--=== Project Item  ===-->
-                        <div class="product-item style-one mb-40">
-                            <div class="product-thumbnail">
-                                <img src="/assets/images/products/feature-product-1.png" alt="Products">
-                                <div class="discount">80% Off</div>
-                                <div class="hover-content">
-                                    <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                    <a href="/assets/images/products/feature-product-1.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                </div>
-                                <div class="cart-button">
-                                    <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                </div>
-                            </div>
-                            <div class="product-info-wrap">
-                                <div class="product-info">
-                                    <ul class="ratings rating4">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><a href="#">(50)</a></li>
-                                    </ul>
-                                    <h4 class="title"><a href="shop-details.html">Cozy knit sweater with pockets</a></h4>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                    <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--=== Project Item  ===-->
-                        <div class="product-item style-one mb-40">
-                            <div class="product-thumbnail">
-                                <img src="/assets/images/products/feature-product-2.png" alt="Products">
-                                <div class="discount">80% Off</div>
-                                <div class="hover-content">
-                                    <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                    <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                </div>
-                                <div class="cart-button">
-                                    <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                </div>
-                            </div>
-                            <div class="product-info-wrap">
-                                <div class="product-info">
-                                    <ul class="ratings rating5">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><a href="#">(80)</a></li>
-                                    </ul>
-                                    <h4 class="title"><a href="shop-details.html">Elegant silk dress with sequins</a></h4>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                    <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--=== Project Item  ===-->
-                        <div class="product-item style-one mb-40">
-                            <div class="product-thumbnail">
-                                <img src="/assets/images/products/feature-product-3.png" alt="Products">
-                                <div class="discount">40% Off</div>
-                                <div class="hover-content">
-                                    <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                    <a href="/assets/images/products/feature-product-3.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                </div>
-                                <div class="cart-button">
-                                    <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                </div>
-                            </div>
-                            <div class="product-info-wrap">
-                                <div class="product-info">
-                                    <ul class="ratings rating2">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><a href="#">(47)</a></li>
-                                    </ul>
-                                    <h4 class="title"><a href="shop-details.html">Cargo shorts with pockets and drawstring</a></h4>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                    <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--=== Project Item  ===-->
-                        <div class="product-item style-one mb-40">
-                            <div class="product-thumbnail">
-                                <img src="/assets/images/products/feature-product-4.png" alt="Products">
-                                <div class="discount">10% Off</div>
-                                <div class="hover-content">
-                                    <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                    <a href="/assets/images/products/feature-product-4.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                </div>
-                                <div class="cart-button">
-                                    <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                </div>
-                            </div>
-                            <div class="product-info-wrap">
-                                <div class="product-info">
-                                    <ul class="ratings rating4">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><a href="#">(47)</a></li>
-                                    </ul>
-                                    <h4 class="title"><a href="shop-details.html">Athletic leggings with mesh panels</a></h4>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price prev-price"><span class="currency">$</span>80.00</span>
-                                    <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--=== Project Item  ===-->
-                        <div class="product-item style-one mb-40">
-                            <div class="product-thumbnail">
-                                <img src="/assets/images/products/feature-product-2.png" alt="Products">
-                                <div class="discount">80% Off</div>
-                                <div class="hover-content">
-                                    <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                    <a href="/assets/images/products/feature-product-2.png" class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
-                                </div>
-                                <div class="cart-button">
-                                    <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span class="text">Add To Cart</span></a>
-                                </div>
-                            </div>
-                            <div class="product-info-wrap">
-                                <div class="product-info">
-                                    <ul class="ratings rating5">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><a href="#">(80)</a></li>
-                                    </ul>
-                                    <h4 class="title"><a href="shop-details.html">Elegant silk dress with sequins</a></h4>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                    <span class="price new-price"><span class="currency">$</span>23.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!--====== End Features Products Section  ======-->
-            <!--====== Start Working Section  ======-->
-            <section class="work-processing-section pt-30 pb-90">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <!--=== Section Title  ===-->
-                            <div class="section-title text-center mb-60" data-aos="fade-up" data-aos-delay="10" data-aos-duration="800">
-                                <div class="sub-heading d-inline-flex align-items-center">
-                                    <i class="flaticon-sparkler"></i>
-                                    <span class="sub-title">Work Processing</span>
-                                    <i class="flaticon-sparkler"></i>
-                                </div>
-                                <h2>How it Work processing</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xl-3 col-sm-6">
-                            <!--=== Iconic Box Item  ===-->
-                            <div class="iconic-box-item style-two mb-40" data-aos="fade-up" data-aos-duration="1000">
-                                <div class="sn-number">01</div>
-                                <div class="icon">
-                                    <i class="flaticon-searching"></i>
-                                </div>
-                                <div class="content">
-                                    <h6>Browsing & Choosing</h6>
-                                    <p>This is where customers visit your online store, browse your products.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-sm-6">
-                            <!--=== Iconic Box Item  ===-->
-                            <div class="iconic-box-item style-two mb-40" data-aos="fade-up" data-aos-duration="1200">
-                                <div class="sn-number">02</div>
-                                <div class="icon">
-                                    <i class="flaticon-payment-method"></i>
-                                </div>
-                                <div class="content">
-                                    <h6>Checkout & Payment</h6>
-                                    <p>Once they have picked their items, customers proceed to checkout.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-sm-6">
-                            <!--=== Iconic Box Item  ===-->
-                            <div class="iconic-box-item style-two mb-40" data-aos="fade-up" data-aos-duration="1400">
-                                <div class="sn-number">03</div>
-                                <div class="icon">
-                                    <i class="flaticon-currency"></i>
-                                </div>
-                                <div class="content">
-                                    <h6>Order Fulfillment</h6>
-                                    <p>After the order is placed, it's sent to your fulfillment team.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-sm-6">
-                            <!--=== Iconic Box Item  ===-->
-                            <div class="iconic-box-item style-two mb-40" data-aos="fade-up" data-aos-duration="1600">
-                                <div class="sn-number">04</div>
-                                <div class="icon">
-                                    <i class="flaticon-delivery"></i>
-                                </div>
-                                <div class="content">
-                                    <h6>Delivery to Customer</h6>
-                                    <p>The packed order is then sent off with a shipping carrier</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!--====== End Working Section  ======-->
-            <!--====== Start Trending Products Sections  ======-->
-            <section class="trending-products-section pb-40 pb-130">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <!--=== Section Title  ===-->
-                            <div class="section-title mb-50" data-aos="fade-right" data-aos-duration="1000">
-                                <div class="sub-heading d-inline-flex align-items-center">
-                                    <i class="flaticon-sparkler"></i>
-                                    <span class="sub-title">Trending Products</span>
-                                </div>
-                                <h2>What's Trending Now</h2>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <!--=== Arrows ===-->
-                            <div class="trending-product-arrows style-one mb-60" data-aos="fade-left" data-aos-duration="1200"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-fluid">
-                    <div class="trending-products-slider" data-aos="fade-up" data-aos-duration="1400">
-                        <!--=== Product Item ===-->
-                        <div class="product-item style-two">
-                            <div class="product-thumbnail">
-                                <img src="/assets/images/products/trending-product-1.png" alt="Products">
-                            </div>
-                            <div class="product-info-wrap">
-                                <div class="product-info">
-                                    <ul class="ratings rating5">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><a href="#">(80)</a></li>
-                                    </ul>
-                                    <h4 class="title"><a href="shop-details.html">Women Red & White Striped Crepe Top</a></h4>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price prev-price"><span class="currency">$</span>90.00</span>
-                                    <span class="price new-price"><span class="currency">$</span>10.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--=== Product Item ===-->
-                        <div class="product-item style-two">
-                            <div class="product-thumbnail">
-                                <img src="/assets/images/products/trending-product-2.png" alt="Products">
-                            </div>
-                            <div class="product-info-wrap">
-                                <div class="product-info">
-                                    <ul class="ratings rating5">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><a href="#">(80)</a></li>
-                                    </ul>
-                                    <h4 class="title"><a href="shop-details.html">Cozy knit sweater with pockets</a></h4>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                    <span class="price new-price"><span class="currency">$</span>40.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--=== Product Item ===-->
-                        <div class="product-item style-two">
-                            <div class="product-thumbnail">
-                                <img src="/assets/images/products/trending-product-3.png" alt="Products">
-                            </div>
-                            <div class="product-info-wrap">
-                                <div class="product-info">
-                                    <ul class="ratings rating5">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><a href="#">(80)</a></li>
-                                    </ul>
-                                    <h4 class="title"><a href="shop-details.html">Striped cotton t-shirt with crew neck</a></h4>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price prev-price"><span class="currency">$</span>59.00</span>
-                                    <span class="price new-price"><span class="currency">$</span>47.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--=== Product Item ===-->
-                        <div class="product-item style-two">
-                            <div class="product-thumbnail">
-                                <img src="/assets/images/products/trending-product-4.png" alt="Products">
-                            </div>
-                            <div class="product-info-wrap">
-                                <div class="product-info">
-                                    <ul class="ratings rating5">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><a href="#">(80)</a></li>
-                                    </ul>
-                                    <h4 class="title"><a href="shop-details.html">Cashmere v-neck sweater with ribbed cuffs</a></h4>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                    <span class="price new-price"><span class="currency">$</span>20.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--=== Product Item ===-->
-                        <div class="product-item style-two">
-                            <div class="product-thumbnail">
-                                <img src="/assets/images/products/trending-product-5.png" alt="Products">
-                            </div>
-                            <div class="product-info-wrap">
-                                <div class="product-info">
-                                    <ul class="ratings rating5">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><a href="#">(80)</a></li>
-                                    </ul>
-                                    <h4 class="title"><a href="shop-details.html">Quilted puffer vest with faux fur collar</a></h4>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price prev-price"><span class="currency">$</span>90.00</span>
-                                    <span class="price new-price"><span class="currency">$</span>10.00</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--=== Product Item ===-->
-                        <div class="product-item style-two">
-                            <div class="product-thumbnail">
-                                <img src="/assets/images/products/trending-product-4.png" alt="Products">
-                            </div>
-                            <div class="product-info-wrap">
-                                <div class="product-info">
-                                    <ul class="ratings rating5">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><a href="#">(80)</a></li>
-                                    </ul>
-                                    <h4 class="title"><a href="shop-details.html">Cashmere v-neck sweater with ribbed cuffs</a></h4>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price prev-price"><span class="currency">$</span>67.00</span>
-                                    <span class="price new-price"><span class="currency">$</span>20.00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!--====== End Trending Products Sections  ======-->
-            <!--====== Start Blog Sections  ======-->
-            <section class="best-deal-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="offer-deal-wrapper bg_cover" data-aos="fade-up" data-aos-duration="1400" style="background-image: url(assets/images/bg/deal-bg-1.png);">
-                                <div class="deal-img">
-                                    <span><img src="/assets/images/banner/deal-1.png" alt="Image"></span>
-                                </div>
-                                <div class="deal-content">
-                                    <span class="sub-heading"><i class="fas fa-tags"></i>Deal of the Week</span>
-                                    <h2>Hurry Up! Offer ends in. Get <span>UP TO 80% OFF</span></h2>
-                                    <div class="simply-countdown mb-60"></div>
-                                    <div class="shop-button">
+                                <!--=== Single Post Slider ===-->
+                                <div class="single-hero-post">
+                                    <div class="hero-content style-two">
+                                        <span class="tag-line"><i class="flaticon-star-2"></i><b>Best for your
+                                                categories</b><i class="flaticon-star-2"></i></span>
+                                        <h1><span>Get 20% Off</span> Women Cloth Collections</h1>
+                                        <p>Enjoy 20% off on our entire Women’s Clothing Collection! Discover stylish
+                                            outfits for every occasion and save on your favorite pieces. </p>
                                         <a href="shops.html" class="theme-btn style-one">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
+                            <!--=== Hero Dots ===-->
+                            <div class="hero-dots text-center text-xl-start"></div>
                         </div>
                     </div>
                 </div>
-            </section><!--====== End Blog Sections  ======-->
-            <!--====== Start Testimonial Sections  ======-->
-            <section class="testimonial-section">
-                <div class="testimonial-wrapper overflow-x-hidden pt-190 pb-90 white-bg">
-                    <div class="shape svg-shape1"><img src="/assets/images/testimonial/tl-svgTop.svg" alt="svg shape"></div>
-                    <div class="shape svg-shape2"><img src="/assets/images/testimonial/tl-svgBottom.svg" alt="svg shape"></div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <!--=== Section Content Box ===-->
-                                <div class="section-content-box mb-40" data-aos="fade-right" data-aos-delay="30" data-aos-duration="800">
-                                    <div class="section-title mb-50">
-                                        <h2>What Our Clients Say About Us</h2>
-                                    </div>
-                                    <div class="testimonial-arrows style-one"></div>
-                                </div>
+            </div>
+        </section><!--====== End Hero Section ======-->
+        <!--===== Start Banner Section  ======-->
+        <section class="banner-promo-section pt-130">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!--=== Section Title  ===-->
+                        <div class="section-title text-center mb-60" data-aos="fade-up" data-aos-delay="10"
+                            data-aos-duration="1000">
+                            <div class="sub-heading d-inline-flex align-items-center">
+                                <i class="flaticon-sparkler"></i>
+                                <span class="sub-title">New Collection</span>
+                                <i class="flaticon-sparkler"></i>
                             </div>
-                            <div class="col-lg-8">
-                                <!--=== Testimonial Slider ===-->
-                                <div class="testimonial-slider-one" data-aos="fade-left" data-aos-delay="50" data-aos-duration="1000">
-                                    <!--=== Testimonial Item ===-->
-                                    <div class="testimonial-item style-one mb-40">
-                                        <div class="testimonial-content">
-                                            <p>This inflatable dragon costume seemed perfect for Halloween! But upon inflating, it became clear the wings were uneven, causing me to spin uncontrollably like a rogue pool float. </p>
-                                            <div class="author-quote-item d-flex justify-content-between align-items-center">
-                                                <div class="author-item">
-                                                    <div class="author-thumb">
-                                                        <img src="/assets/images/testimonial/author-1.png" alt="author image">
-                                                    </div>
-                                                    <div class="author-info">
-                                                        <h5>Rhodes Jhon</h5>
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="quote-icon">
-                                                    <i class="flaticon flaticon-right-quote"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--=== Testimonial Item ===-->
-                                    <div class="testimonial-item style-one mb-40">
-                                        <div class="testimonial-content">
-                                            <p>This inflatable dragon costume seemed perfect for Halloween! But upon inflating, it became clear the wings were uneven, causing me to spin uncontrollably like a rogue pool float. </p>
-                                            <div class="author-quote-item d-flex justify-content-between align-items-center">
-                                                <div class="author-item">
-                                                    <div class="author-thumb">
-                                                        <img src="/assets/images/testimonial/author-2.png" alt="author image">
-                                                    </div>
-                                                    <div class="author-info">
-                                                        <h5>Rhodes Jhon</h5>
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="quote-icon">
-                                                    <i class="flaticon flaticon-right-quote"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--=== Testimonial Item ===-->
-                                    <div class="testimonial-item style-one mb-40">
-                                        <div class="testimonial-content">
-                                            <p>This inflatable dragon costume seemed perfect for Halloween! But upon inflating, it became clear the wings were uneven, causing me to spin uncontrollably like a rogue pool float. </p>
-                                            <div class="author-quote-item d-flex justify-content-between align-items-center">
-                                                <div class="author-item">
-                                                    <div class="author-thumb">
-                                                        <img src="/assets/images/testimonial/author-1.png" alt="author image">
-                                                    </div>
-                                                    <div class="author-info">
-                                                        <h5>Rhodes Jhon</h5>
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="quote-icon">
-                                                    <i class="flaticon flaticon-right-quote"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--=== Testimonial Item ===-->
-                                    <div class="testimonial-item style-one mb-40">
-                                        <div class="testimonial-content">
-                                            <p>This inflatable dragon costume seemed perfect for Halloween! But upon inflating, it became clear the wings were uneven, causing me to spin uncontrollably like a rogue pool float. </p>
-                                            <div class="author-quote-item d-flex justify-content-between align-items-center">
-                                                <div class="author-item">
-                                                    <div class="author-thumb">
-                                                        <img src="/assets/images/testimonial/author-2.png" alt="author image">
-                                                    </div>
-                                                    <div class="author-info">
-                                                        <h5>Rhodes Jhon</h5>
-                                                        <ul class="ratings rating5">
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                            <li><i class="fas fa-star"></i></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="quote-icon">
-                                                    <i class="flaticon flaticon-right-quote"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <h2>Shop New Collection</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--=== Banner Item  ===-->
+                    <div class="col-xl-5">
+                        <div class="banner-item style-two mb-40 bg_cover" data-aos="fade-up" data-aos-delay="15"
+                            data-aos-duration="1200"
+                            style="background-image: url(assets/images/banner/banner-bg1.jpg);">
+                            <div class="banner-img"><img src="assets/images/banner/banner-img1.png" alt="banner image">
+                            </div>
+                            <div class="banner-content">
+                                <span>Up to 40% Off</span>
+                                <h4>Shop new Collection For Women</h4>
+                                <div class="separator"></div>
+                                <a href="shops.html" class="theme-btn style-two">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7">
+                        <!--=== Banner Item  ===-->
+                        <div class="banner-item style-three mb-40 bg_cover" data-aos="fade-up" data-aos-delay="20"
+                            data-aos-duration="1400"
+                            style="background-image: url(assets/images/banner/banner-bg2.jpg);">
+                            <div class="banner-img"><img src="assets/images/banner/banner-img2.png" alt="banner image">
+                            </div>
+                            <div class="banner-content">
+                                <span>45% Off</span>
+                                <div class="separator"></div>
+                                <h4>Discover the Latest
+                                    Women's Collection</h4>
+                                <a href="shops.html" class="theme-btn style-one">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-7">
+                        <!--=== Banner Item  ===-->
+                        <div class="banner-item style-three mb-40 bg_cover" data-aos="fade-up" data-aos-delay="25"
+                            data-aos-duration="1600"
+                            style="background-image: url(assets/images/banner/banner-bg3.jpg);">
+                            <div class="banner-img"><img src="assets/images/banner/banner-img3.png" alt="banner image">
+                            </div>
+                            <div class="banner-content">
+                                <span>35% Off</span>
+                                <div class="separator"></div>
+                                <h4>Explore Fresh Arrivals
+                                    in Women’s Fashion</h4>
+                                <a href="shops.html" class="theme-btn style-one">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5">
+                        <!--=== Banner Item  ===-->
+                        <div class="banner-item style-two mb-40 bg_cover" data-aos="fade-up" data-aos-delay="30"
+                            data-aos-duration="1800"
+                            style="background-image: url(assets/images/banner/banner-bg4.jpg);">
+                            <div class="banner-img"><img src="assets/images/banner/banner-img4.png"
+                                    alt="banner image"></div>
+                            <div class="banner-content">
+                                <span>Up to 40% Off</span>
+                                <h4>Unveil New Trends in Women's Clothing</h4>
+                                <div class="separator"></div>
+                                <a href="shops.html" class="theme-btn style-two">Shop Now</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section><!--====== End Testimonial Sections  ======-->
-            <!--====== Start Blog Sections  ======-->
-            <section class="blogs-section pt-125 pb-95">
+            </div>
+        </section><!--===== End Banner Section  ======-->
+        <!--===== Start Category Section  ======-->
+        <section class="category-section pt-90 pb-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <!--=== Section Title  ===-->
+                        <div class="section-title  text-center text-md-start mb-50" data-aos="fade-right"
+                            data-aos-delay="10" data-aos-duration="1000">
+                            <div class="sub-heading d-inline-flex align-items-center">
+                                <i class="flaticon-sparkler"></i>
+                                <span class="sub-title">Categories</span>
+                            </div>
+                            <h2>Browse Top Category</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!--=== Category Button  ===-->
+                        <div class="category-button text-center float-md-end mb-60" data-aos="fade-left"
+                            data-aos-delay="15" data-aos-duration="1200">
+                            <a href="shops.html" class="theme-btn style-one">View All <i
+                                    class="far fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--====== Start Category Wrapper ======-->
+                <div class="category-wrapper">
+                    <div class="row justify-content-center">
+
+                        @foreach ($categories as $category)
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                            <!--=== Category Item  ===-->
+                            <div class="category-item style-two mb-110" data-aos="fade-up" data-aos-delay="10"
+                                data-aos-duration="800">
+                                <a href='/' class="category-img">
+                                    <img src="{{ '/storage/' . $category->image }}" alt="Category Thumbnail">
+                                </a>
+                                <div class="category-content">
+                                    <a href='/' class="category-btn">{{$category->name}}</a>
+                                    {{-- <span>10 items</span> --}}
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+
+                    </div>
+                </div>
+            </div>
+        </section><!--===== End Category Section  ======-->
+        <!--===== Start Features Section  ======-->
+        <section class="features-products-section pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!--=== Section Title  ===-->
+                        <div class="section-title text-center mb-20" data-aos="fade-up" data-aos-delay="10"
+                            data-aos-duration="800">
+                            <div class="sub-heading d-inline-flex align-items-center">
+                                <i class="flaticon-sparkler"></i>
+                                <span class="sub-title">Feature Products</span>
+                                <i class="flaticon-sparkler"></i>
+                            </div>
+                            <h2>Our Features Collection</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="products-item-wrapper">
+                    <!--=== Product Item  ===-->
+                    @foreach ($featured as $product)
+                    <div class="product-item style-three" data-aos="fade-up" data-aos-duration="1100">
+                        <div class="product-thumbnail">
+                            <img src="{{ '/storage/' . $product->images->first()?->path }}" alt="Products">
+                            {{-- <div class="discount">20% Off</div> --}}
+                            <div class="hover-content">
+                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i></a>
+                                <a href="assets/images/products/feature-product-7.png" class="img-popup icon-btn"><i
+                                        class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                        @php
+                            $sizes = $product->sizes()->orderBy('price')->get()
+                        @endphp
+                        <div class="product-info-wrap">
+                            <div class="product-info">
+                                <div class="product-meta d-flex">
+                                    <span><a href="#">{{$product->category->name}}</a></span>
+                                    {{-- <ul class="ratings rating4">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul> --}}
+                                </div>
+                                <h4 class="title"><a href="shop-details.html">{{$product->name}}
+                                    </a></h4>
+                            </div>
+                            <div class="product-price">
+                                <span class="price new-price">{{$sizes->first()->price}} <span class="currency">SAR</span></span>
+                                <span class="price new-price">-</span>
+                                <span class="price new-price">{{$sizes->last()->price}} <span class="currency">SAR</span></span>
+                                {{-- <span class="price prev-price"><span class="currency">$</span>{{$sizes->last()->price}}</span> --}}
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+
+                </div>
+            </div>
+        </section><!--===== End Features Section  ======-->
+        <!--=== Start Deals Section  ===-->
+        {{-- <section class="today-deals-section white-bg pb-130 pt-130">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <!--=== Section Title  ===-->
+                        <div class="section-title mb-50" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="sub-heading d-inline-flex align-items-center">
+                                <i class="flaticon-sparkler"></i>
+                                <span class="sub-title">Today Deals</span>
+                            </div>
+                            <h2>Hurry Up. offer in End</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!--=== Today deals Arrow  ===-->
+                        <div class="today-deals-arrows style-one mb-60" data-aos="fade-left"
+                            data-aos-duration="1200"></div>
+                    </div>
+                </div>
+            </div>
+            <!--=== Today deals Slider  ===-->
+            <div class="today-deals-slider" data-aos="fade-up" data-aos-duration="1400">
+                <!--=== Product Item  ===-->
+                <div class="product-item style-four">
+                    <div class="product-thumbnail">
+                        <img src="assets/images/products/deal-1.png" alt="Products">
+                    </div>
+                    <div class="product-info-wrap">
+                        <div class="product-info">
+                            <div class="product-meta d-flex">
+                                <span>Brand: <a href="#">SOFOLI</a></span>
+                                <ul class="ratings rating4">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                            </div>
+                            <h4 class="title"><a href="shop-details.html">Cozy women knit sweater with pockets </a>
+                            </h4>
+                        </div>
+                        <div class="product-countdown">
+                            <div class="simply-countdown"></div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price new-price"><span class="currency">$</span>15.60</span>
+                            <span class="price prev-price"><span class="currency">$</span>34.00</span>
+                        </div>
+                    </div>
+                </div>
+                <!--=== Product Item  ===-->
+                <div class="product-item style-four">
+                    <div class="product-thumbnail">
+                        <img src="assets/images/products/deal-2.png" alt="Products">
+                    </div>
+                    <div class="product-info-wrap">
+                        <div class="product-info">
+                            <div class="product-meta d-flex">
+                                <span>Brand: <a href="#">SOFOLI</a></span>
+                                <ul class="ratings rating4">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                            </div>
+                            <h4 class="title"><a href="shop-details.html">Cozy women knit sweater with pockets </a>
+                            </h4>
+                        </div>
+                        <div class="product-countdown">
+                            <div class="simply-countdown"></div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price new-price"><span class="currency">$</span>15.60</span>
+                            <span class="price prev-price"><span class="currency">$</span>34.00</span>
+                        </div>
+                    </div>
+                </div>
+                <!--=== Product Item  ===-->
+                <div class="product-item style-four">
+                    <div class="product-thumbnail">
+                        <img src="assets/images/products/deal-3.png" alt="Products">
+                    </div>
+                    <div class="product-info-wrap">
+                        <div class="product-info">
+                            <div class="product-meta d-flex">
+                                <span>Brand: <a href="#">SOFOLI</a></span>
+                                <ul class="ratings rating4">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                            </div>
+                            <h4 class="title"><a href="shop-details.html">Cozy women knit sweater with pockets </a>
+                            </h4>
+                        </div>
+                        <div class="product-countdown">
+                            <div class="simply-countdown"></div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price new-price"><span class="currency">$</span>15.60</span>
+                            <span class="price prev-price"><span class="currency">$</span>34.00</span>
+                        </div>
+                    </div>
+                </div>
+                <!--=== Product Item  ===-->
+                <div class="product-item style-four">
+                    <div class="product-thumbnail">
+                        <img src="assets/images/products/deal-2.png" alt="Products">
+                    </div>
+                    <div class="product-info-wrap">
+                        <div class="product-info">
+                            <div class="product-meta d-flex">
+                                <span>Brand: <a href="#">SOFOLI</a></span>
+                                <ul class="ratings rating4">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                            </div>
+                            <h4 class="title"><a href="shop-details.html">Cozy women knit sweater with pockets </a>
+                            </h4>
+                        </div>
+                        <div class="product-countdown">
+                            <div class="simply-countdown"></div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price new-price"><span class="currency">$</span>15.60</span>
+                            <span class="price prev-price"><span class="currency">$</span>34.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> --}}
+        <!--=== End Deals Section  ===-->
+        <!--===== Start Week Deal Section  ======-->
+        <section class="week-deal-section">
+            <div class="week-deal-wrapper overflow-hidden pt-130 pb-100">
+                <div class="shape svg-shape1"><img src="assets/images/banner/week-svg.svg" alt="svg shape"></div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-xl-5">
+                            <!--=== Week Deals Content ===-->
+                            <div class="week-deals-box mb-30" data-aos="fade-right" data-aos-delay="10"
+                                data-aos-duration="1000">
+                                <span class="sub-heading"><i class="fas fa-tags"></i>Deal of the Week</span>
+                                <h2>UP TO 80% OFF</h2>
+                                <p>Don't miss out on our biggest sale! Enjoy up to 80% off on a wide range of products.
+                                </p>
+                                <div class="week-deals-countdown mb-30">
+                                    <h5>Hurry Up! Offer ends in. </h5>
+                                    <div class="simply-countdown-two"></div>
+                                </div>
+                                <div class="shop-button">
+                                    <a href="shops.html" class="theme-btn style-one">Shop Now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-7">
+                            <!--=== Week Top Product Slider ===-->
+                            <div class="weekly-top-product-slider" data-aos="fade-up" data-aos-delay="15"
+                                data-aos-duration="1200">
+                                <!--=== Product Item ===-->
+                                <div class="product-item style-five mb-30">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-5.png" alt="product Thumbnail">
+                                        <div class="hover-content">
+                                            <div class="product-info">
+                                                <h4 class="title"><a href="shop-details.html">Women’s Georgette
+                                                        Traditional Stunning Outfit</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--=== Product Item ===-->
+                                <div class="product-item style-five mb-30">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-6.png" alt="product Thumbnail">
+                                        <div class="hover-content">
+                                            <div class="product-info">
+                                                <h4 class="title"><a href="shop-details.html">Women’s Georgette
+                                                        Traditional Stunning Outfit</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--=== Product Item ===-->
+                                <div class="product-item style-five mb-30">
+                                    <div class="product-thumbnail">
+                                        <img src="assets/images/products/product-7.png" alt="product Thumbnail">
+                                        <div class="hover-content">
+                                            <div class="product-info">
+                                                <h4 class="title"><a href="shop-details.html">Women’s Georgette
+                                                        Traditional Stunning Outfit</a></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section><!--===== End Week Deal Section  ======-->
+        <!--===== Start Shop Products Section  ======-->
+        <section class="shop-products-section pt-125">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <!--=== Section Title  ===-->
+                        <div class="section-title text-center text-lg-start mb-14" data-aos="fade-right"
+                            data-aos-duration="1000">
+                            <div class="sub-heading d-inline-flex align-items-center">
+                                <i class="flaticon-sparkler"></i>
+                                <span class="sub-title">Shop Prodcucts</span>
+                            </div>
+                            <h2>Our Shop all Products</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <!--=== Pesco Tabs ===-->
+                        <div class="pesco-tabs style-one mb-50" data-aos="fade-left" data-aos-duration="1200">
+                            <ul class="nav nav-tabs">
+                                <li>
+                                    <a href='#' class="nav-link active" data-bs-toggle="tab" data-bs-target="#cat1">See More</a>
+                                </li>
+                                {{-- <li>
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cat2">New
+                                        Products</button>
+                                </li>
+                                <li>
+                                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cat3">Sale
+                                        Products</button>
+                                </li> --}}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!--=== Tab Content ===-->
+                        <div class="tab-content" data-aos="fade-up" data-aos-duration="1400">
+                            <!--=== Tab Pane  ===-->
+                            <div class="tab-pane fade show active" id="cat1">
+                                <!--=== Product Item Wrapper  ===-->
+                                <div class="products-item-wrapper">
+                                    <!--=== Product Item  ===-->
+                                    @foreach ($products as $product)
+                    <div class="product-item style-three" data-aos="fade-up" data-aos-duration="1100">
+                        <div class="product-thumbnail">
+                            <img src="{{ '/storage/' . $product->images->first()?->path }}" alt="Products">
+                            {{-- <div class="discount">20% Off</div> --}}
+                            <div class="hover-content">
+                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i></a>
+                                <a href="assets/images/products/feature-product-7.png" class="img-popup icon-btn"><i
+                                        class="fa fa-eye"></i></a>
+                            </div>
+                        </div>
+                        @php
+                            $sizes = $product->sizes()->orderBy('price')->get()
+                        @endphp
+                        <div class="product-info-wrap">
+                            <div class="product-info">
+                                <div class="product-meta d-flex">
+                                    <span><a href="#">{{$product->category->name}}</a></span>
+                                    {{-- <ul class="ratings rating4">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul> --}}
+                                </div>
+                                <h4 class="title"><a href="shop-details.html">{{$product->name}}
+                                    </a></h4>
+                            </div>
+                            <div class="product-price">
+                                <span class="price new-price">{{$sizes->first()->price}} <span class="currency">SAR</span></span>
+                                <span class="price new-price">-</span>
+                                <span class="price new-price">{{$sizes->last()->price}} <span class="currency">SAR</span></span>
+                                {{-- <span class="price prev-price"><span class="currency">$</span>{{$sizes->last()->price}}</span> --}}
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                                </div>
+                            </div>
+                            <!--=== Tab Pane  ===-->
+                            {{-- <div class="tab-pane fade" id="cat2">
+                                <!--=== Product Item Wrapper  ===-->
+                                <div class="products-item-wrapper">
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-9.png" alt="Products">
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-9.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">SUAGAN</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Relaxed fit denim
+                                                        jeans with distressing </a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>25.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>34.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-5.png" alt="Products">
+                                            <div class="discount">20% Off</div>
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-5.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">SOFOLI</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Cozy women knit
+                                                        sweater with pockets </a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>15.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>34.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-6.png" alt="Products">
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-6.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">SOFOLI</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Lightweight linen
+                                                        summer dress with belt</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>45.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>64.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-7.png" alt="Products">
+                                            <div class="discount">30% Off</div>
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-7.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">CARDIGO</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Classic leather biker
+                                                        jacket with zippers</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>05.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>34.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-11.png" alt="Products">
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-11.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">PLOTO</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Adidas Sports With a
+                                                        slim design, a vibrant entertainment</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>15.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>34.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-8.png" alt="Products">
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-18.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">CARDIGO</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Vintage wool peacoat
+                                                        (a type of short coat)</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>35.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>74.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-13.png" alt="Products">
+                                            <div class="discount">20% Off</div>
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-13.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">Lioness</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Sequins are shiny
+                                                        beads sewn on clothes</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>15.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>34.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-10.png" alt="Products">
+                                            <div class="discount">30% Off</div>
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-10.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">SOFOLI</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Vintage wool peacoat
+                                                        (a type of short coat)</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>44.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>66.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-12.png" alt="Products">
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-12.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">SUGAN</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Striped cotton
+                                                        t-shirt with crew neck (crew neck means)</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>34.00</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>44.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-14.png" alt="Products">
+                                            <div class="discount">20% Off</div>
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-14.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">Lioness</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Floral print sundress
+                                                        with adjustable straps</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>50.00</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>94.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> --}}
+                            <!--=== Tab Pane  ===-->
+                            {{-- <div class="tab-pane fade" id="cat3">
+                                <!--=== Product Item Wrapper  ===-->
+                                <div class="products-item-wrapper">
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-11.png" alt="Products">
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-11.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">PLOTO</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Adidas Sports With a
+                                                        slim design, a vibrant entertainment</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>15.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>34.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-5.png" alt="Products">
+                                            <div class="discount">20% Off</div>
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-5.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">SOFOLI</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Cozy women knit
+                                                        sweater with pockets </a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>15.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>34.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-6.png" alt="Products">
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-6.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">SOFOLI</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Lightweight linen
+                                                        summer dress with belt</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>45.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>64.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-7.png" alt="Products">
+                                            <div class="discount">30% Off</div>
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-7.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">CARDIGO</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Classic leather biker
+                                                        jacket with zippers</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>05.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>34.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-8.png" alt="Products">
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-18.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">CARDIGO</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Vintage wool peacoat
+                                                        (a type of short coat)</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>35.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>74.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-13.png" alt="Products">
+                                            <div class="discount">20% Off</div>
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-13.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">Lioness</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Sequins are shiny
+                                                        beads sewn on clothes</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>15.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>34.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-9.png" alt="Products">
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-9.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">SUAGAN</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Relaxed fit denim
+                                                        jeans with distressing </a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>25.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>34.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-10.png" alt="Products">
+                                            <div class="discount">30% Off</div>
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-10.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">SOFOLI</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Vintage wool peacoat
+                                                        (a type of short coat)</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>44.60</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>66.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-12.png" alt="Products">
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-12.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">SUGAN</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Striped cotton
+                                                        t-shirt with crew neck (crew neck means)</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>34.00</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>44.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--=== Product Item  ===-->
+                                    <div class="product-item style-three">
+                                        <div class="product-thumbnail">
+                                            <img src="assets/images/products/feature-product-14.png" alt="Products">
+                                            <div class="discount">20% Off</div>
+                                            <div class="hover-content">
+                                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
+                                                <a href="#" class="cart-btn"><i
+                                                        class="far fa-shopping-basket"></i></a>
+                                                <a href="assets/images/products/feature-product-14.png"
+                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-info-wrap">
+                                            <div class="product-info">
+                                                <div class="product-meta d-flex">
+                                                    <span>Brand: <a href="#">Lioness</a></span>
+                                                    <ul class="ratings rating4">
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                        <li><i class="fas fa-star"></i></li>
+                                                    </ul>
+                                                </div>
+                                                <h4 class="title"><a href="shop-details.html">Floral print sundress
+                                                        with adjustable straps</a></h4>
+                                            </div>
+                                            <div class="product-price">
+                                                <span class="price new-price"><span
+                                                        class="currency">$</span>50.00</span>
+                                                <span class="price prev-price"><span
+                                                        class="currency">$</span>94.00</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> --}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--===== End Shop Products Section  ======-->
+        <!--===== Start Brand Section  ======-->
+        {{-- <section class="brand-section pt-125 pb-130">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <div class="section-title text-center text-lg-start mb-50" data-aos="fade-right"
+                            data-aos-duration="1000">
                             <!--=== Section Title  ===-->
-                            <div class="section-title text-center mb-60" data-aos="fade-up" data-aos-duration="1000">
+                            <h2>We continue to expand with <br> the trust of 10+ brand.</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="brand-button float-lg-end d-none d-lg-block mb-14" data-aos="fade-left"
+                            data-aos-duration="1200">
+                            <a href="index-2.html"><img src="assets/images/brand/brand-btn.png"
+                                    alt="Button"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="brands-row">
+                    <!--=== Brand Item  ===-->
+                    <div class="single-brand-item" data-aos="fade-up" data-aos-duration="800">
+                        <a href="#" class="brand-img">
+                            <img src="assets/images/brand/brand-1.png" alt="Brand Image">
+                        </a>
+                    </div>
+                    <!--=== Brand Item  ===-->
+                    <div class="single-brand-item" data-aos="fade-up" data-aos-duration="900">
+                        <a href="#" class="brand-img">
+                            <img src="assets/images/brand/brand-2.png" alt="Brand Image">
+                        </a>
+                    </div>
+                    <!--=== Brand Item  ===-->
+                    <div class="single-brand-item" data-aos="fade-up" data-aos-duration="1000">
+                        <a href="#" class="brand-img">
+                            <img src="assets/images/brand/brand-3.png" alt="Brand Image">
+                        </a>
+                    </div>
+                    <!--=== Brand Item  ===-->
+                    <div class="single-brand-item" data-aos="fade-up" data-aos-duration="1100">
+                        <a href="#" class="brand-img">
+                            <img src="assets/images/brand/brand-4.png" alt="Brand Image">
+                        </a>
+                    </div>
+                    <!--=== Brand Item  ===-->
+                    <div class="single-brand-item" data-aos="fade-up" data-aos-duration="1200">
+                        <a href="#" class="brand-img">
+                            <img src="assets/images/brand/brand-5.png" alt="Brand Image">
+                        </a>
+                    </div>
+                    <!--=== Brand Item  ===-->
+                    <div class="single-brand-item" data-aos="fade-up" data-aos-duration="1300">
+                        <a href="#" class="brand-img">
+                            <img src="assets/images/brand/brand-6.png" alt="Brand Image">
+                        </a>
+                    </div>
+                    <!--=== Brand Item  ===-->
+                    <div class="single-brand-item" data-aos="fade-up" data-aos-duration="1400">
+                        <a href="#" class="brand-img">
+                            <img src="assets/images/brand/brand-7.png" alt="Brand Image">
+                        </a>
+                    </div>
+                    <!--=== Brand Item  ===-->
+                    <div class="single-brand-item" data-aos="fade-up" data-aos-duration="1500">
+                        <a href="#" class="brand-img">
+                            <img src="assets/images/brand/brand-8.png" alt="Brand Image">
+                        </a>
+                    </div>
+                    <!--=== Brand Item  ===-->
+                    <div class="single-brand-item" data-aos="fade-up" data-aos-duration="1600">
+                        <a href="#" class="brand-img">
+                            <img src="assets/images/brand/brand-9.png" alt="Brand Image">
+                        </a>
+                    </div>
+                    <!--=== Brand Item  ===-->
+                    <div class="single-brand-item" data-aos="fade-up" data-aos-duration="1700">
+                        <a href="#" class="brand-img">
+                            <img src="assets/images/brand/brand-10.png" alt="Brand Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section> --}}
+        <!--===== End Brand Section  ======-->
+        <!--===== Start Testimonial Section  ======-->
+        {{-- <section class="testimonial-section pt-120 pb-120 p-r z-1">
+            <div class="testimonial-bg-img" data-aos="fade-right" data-aos-duration="1000">
+                <img src="assets/images/testimonial/testimonial-img1.png" alt="Testimonial Image">
+            </div>
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-lg-8">
+                        <div class="testimonial-wrapper-two" data-aos="fade-up" data-aos-duration="1200">
+                            <!--=== Section Title  ===-->
+                            <div class="section-title text-center mb-60">
                                 <div class="sub-heading d-inline-flex align-items-center">
                                     <i class="flaticon-sparkler"></i>
-                                    <span class="sub-title">Our Blogs</span>
-                                    <i class="flaticon-sparkler"></i>
+                                    <span class="sub-title">Testimonial</span>
                                 </div>
-                                <h2>Explore our Articles</h2>
+                                <h2>What’s our clients say</h2>
                             </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <!--=== Blog Post Item  ===-->
-                            <div class="blog-post-item style-one mb-25" data-aos="fade-up" data-aos-duration="1200">
-                                <div class="post-thumbnail">
-                                    <img src="/assets/images/blog/blog-big-1.png" alt="Post Thumbnail">
-                                </div>
-                                <div class="post-content">
-                                    <h3 class="title"><a href="blog-details.html">From Clicks to Closets: Mastering the Art of Fashion E-commerce Marketing</a></h3>
-                                    <p>dives into the world of fashion e-commerce marketing, guiding readers on how to turn online interest into sales. It likely explores strategies to attract potential customers, showcase products effectively, and create a smooth buying journey that converts clicks into clothes hanging in closets</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <!--=== Blog Post Item  ===-->
-                                    <div class="blog-post-item style-two mb-25" data-aos="fade-up" data-aos-duration="1400">
-                                        <div class="post-thumbnail">
-                                            <img src="/assets/images/blog/blog-sm-1.png" alt="Post Thumbnail">
-                                        </div>
-                                        <div class="post-content">
-                                            <h3 class="title"><a href="blog-details.html">Slay the Summer Style Game Must-Have Trends You Can Shop Online</a></h3>
-                                            <div class="post-meta">
-                                                <span><a href="#">WordPress</a></span>
-                                                <span><a href="#">Jan 12, 2024</a></span>
+                            <div class="testimonial-slider-two">
+                                <div class="testimonial-item style-two">
+                                    <div class="testimonial-content">
+                                        <ul class="ratings rating5 mb-25">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                        <p class="mb-35">I recently ordered a few items from Fashionista Boutique,
+                                            and I couldn't be happier with my purchase! The quality of the clothes is
+                                            outstanding, and the fit is perfect. My order arrived promptly, beautifully
+                                            packaged.</p>
+                                        <div class="author-item">
+                                            <div class="author-thumb">
+                                                <img src="assets/images/testimonial/author-2.png"
+                                                    alt="author image">
+                                            </div>
+                                            <div class="author-info">
+                                                <h5>Rhodes Jhon</h5>
+                                                <span class="position">Manager and CEO</span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-sm-6">
-                                    <!--=== Blog Post Item  ===-->
-                                    <div class="blog-post-item style-two mb-25" data-aos="fade-up" data-aos-duration="1600">
-                                        <div class="post-thumbnail">
-                                            <img src="/assets/images/blog/blog-sm-2.png" alt="Post Thumbnail">
-                                        </div>
-                                        <div class="post-content">
-                                            <h3 class="title"><a href="blog-details.html">Insider Tips on Finding Affordable Fashion Gems Online</a></h3>
-                                            <div class="post-meta">
-                                                <span><a href="#">WordPress</a></span>
-                                                <span><a href="#">May 4, 2024</a></span>
+                                <div class="testimonial-item style-two">
+                                    <div class="testimonial-content">
+                                        <ul class="ratings rating5 mb-25">
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                            <li><i class="fas fa-star"></i></li>
+                                        </ul>
+                                        <p class="mb-35">I recently ordered a few items from Fashionista Boutique,
+                                            and I couldn't be happier with my purchase! The quality of the clothes is
+                                            outstanding, and the fit is perfect. My order arrived promptly, beautifully
+                                            packaged.</p>
+                                        <div class="author-item">
+                                            <div class="author-thumb">
+                                                <img src="assets/images/testimonial/author-2.png"
+                                                    alt="author image">
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <!--=== Blog Post Item  ===-->
-                                    <div class="blog-post-item style-two mb-25" data-aos="fade-up" data-aos-duration="1800">
-                                        <div class="post-thumbnail">
-                                            <img src="/assets/images/blog/blog-sm-3.png" alt="Post Thumbnail">
-                                        </div>
-                                        <div class="post-content">
-                                            <h3 class="title"><a href="blog-details.html">Eco-Friendly Fashion E-commerce You Can Feel Good About</a></h3>
-                                            <div class="post-meta">
-                                                <span><a href="#">WordPress</a></span>
-                                                <span><a href="#">Feb 10, 2024</a></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="blog-post-item style-two mb-25" data-aos="fade-up" data-aos-duration="2000">
-                                        <div class="post-thumbnail">
-                                            <img src="/assets/images/blog/blog-sm-4.png" alt="Post Thumbnail">
-                                        </div>
-                                        <div class="post-content">
-                                            <h3 class="title"><a href="blog-details.html">A Guide to Streamlining the Online Fashion Shopping Experience</a></h3>
-                                            <div class="post-meta">
-                                                <span><a href="#">WordPress</a></span>
-                                                <span><a href="#">Aug 29, 2024</a></span>
+                                            <div class="author-info">
+                                                <h5>Rhodes Jhon</h5>
+                                                <span class="position">Manager and CEO</span>
                                             </div>
                                         </div>
                                     </div>
@@ -1853,37 +1442,195 @@
                         </div>
                     </div>
                 </div>
-            </section><!--====== End Blog Sections  ======-->
-            <!--====== Start Newsletter Sections  ======-->
-            <section class="newsletter-section pb-95">
-                <div class="container">
-                    <!--=== Newsletter Wrapper  ===-->
-                    <div class="newsletter-wrapper white-bg p-r z-1" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="newsletter-shape pattern-one"><span><img src="/assets/images/newsletter/pattern-1.png" alt="Pattern Shape"></span></div>
-                        <div class="newsletter-shape pattern-two"><span><img src="/assets/images/newsletter/pattern-2.png" alt="Pattern Shape"></span></div>
-                        <div class="newsletter-shape shape-one"><span><img src="/assets/images/newsletter/shape-1.png" alt="Shape"></span></div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="newsletter-content-box">
-                                    <span class="sub-text">Our Newsletter</span>
-                                    <h3>Get weekly update. Sign up and get up to <span>20% off</span> your first purchase</h3>
-                                    <form>
-                                        <div class="form-group">
-                                            <input type="email" class="form_control" placeholder="Write your Email Address" name="email">
-                                            <button class="theme-btn style-one">Subscribe</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="newsletter-image">
-                                    <img src="/assets/images/newsletter/newsletter-1.png" alt="Image">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section><!--====== End Newsletter Sections  ======-->
-        </main>
+            </div>
+        </section> --}}
+        <!--===== End Testimonial Section  ======-->
+        <!--====== End Header Section ======-->
 
+        {{-- <section class="blogs-section pt-110 pb-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <!--=== Section Title  ===-->
+                        <div class="section-title mb-50" data-aos="fade-right" data-aos-duration="1000">
+                            <div class="sub-heading d-inline-flex align-items-center">
+                                <i class="flaticon-sparkler"></i>
+                                <span class="sub-title">Explore Our Blogs</span>
+                            </div>
+                            <h2>Explore Our Blogs</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="blogs-arrows d-flex style-one mb-60" data-aos="fade-left"
+                            data-aos-duration="1200"></div>
+                    </div>
+                </div>
+                <!--=== Blog Slider ===-->
+                <div class="blogs-slider-one" data-aos="fade-up" data-aos-duration="1400">
+                    <!--=== Blog Post Item ===-->
+                    <div class="blog-post-item style-three mb-30">
+                        <div class="post-thumbnail">
+                            <img src="assets/images/blog/blog-1.jpg" alt="Post Thumbnail">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span><a href="#">WordPress</a></span>
+                                <span><a href="#">Aug 29, 2024</a></span>
+                            </div>
+                            <h3 class="title"><a href="blog-details.html">10 must-have fashion trends for this
+                                    season. Those should be outstanding look</a></h3>
+                            <a href="blog-details.html" class="theme-btn style-one">Reed More</a>
+                        </div>
+                    </div>
+                    <!--=== Blog Post Item ===-->
+                    <div class="blog-post-item style-three mb-30">
+                        <div class="post-thumbnail">
+                            <img src="assets/images/blog/blog-2.jpg" alt="Post Thumbnail">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span><a href="#">WordPress</a></span>
+                                <span><a href="#">Aug 29, 2024</a></span>
+                            </div>
+                            <h3 class="title"><a href="blog-details.html">How to style your wardrobe on a budget.
+                                    Make it easy for you to look great.</a></h3>
+                            <a href="blog-details.html" class="theme-btn style-one">Reed More</a>
+                        </div>
+                    </div>
+                    <!--=== Blog Post Item ===-->
+                    <div class="blog-post-item style-three mb-30">
+                        <div class="post-thumbnail">
+                            <img src="assets/images/blog/blog-3.jpg" alt="Post Thumbnail">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span><a href="#">WordPress</a></span>
+                                <span><a href="#">Aug 29, 2024</a></span>
+                            </div>
+                            <h3 class="title"><a href="blog-details.html">top 5 accessories to elevate any outfit.
+                                    the ultimate guide to sustainable fashion</a></h3>
+                            <a href="blog-details.html" class="theme-btn style-one">Reed More</a>
+                        </div>
+                    </div>
+                    <!--=== Blog Post Item ===-->
+                    <div class="blog-post-item style-three mb-30">
+                        <div class="post-thumbnail">
+                            <img src="assets/images/blog/blog-4.jpg" alt="Post Thumbnail">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span><a href="#">WordPress</a></span>
+                                <span><a href="#">Aug 29, 2024</a></span>
+                            </div>
+                            <h3 class="title"><a href="blog-details.html">Effortless fashion tips for everyone. How
+                                    to style your wardrobe on a budget. </a></h3>
+                            <a href="blog-details.html" class="theme-btn style-one">Reed More</a>
+                        </div>
+                    </div>
+                    <!--=== Blog Post Item ===-->
+                    <div class="blog-post-item style-three mb-30">
+                        <div class="post-thumbnail">
+                            <img src="assets/images/blog/blog-2.jpg" alt="Post Thumbnail">
+                        </div>
+                        <div class="post-content">
+                            <div class="post-meta">
+                                <span><a href="#">WordPress</a></span>
+                                <span><a href="#">Aug 29, 2024</a></span>
+                            </div>
+                            <h3 class="title"><a href="blog-details.html">How to style your wardrobe on a budget.
+                                    Make it easy for you to look great.</a></h3>
+                            <a href="blog-details.html" class="theme-btn style-one">Reed More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> --}}
+
+        <!--====== Start Newsletter Section ======-->
+        <section class="newsletter-section  pt-110 pb-10">
+            <div class="newsletter-wrapper-two p-r z-1 pt-20 pb-10">
+                <div class="newsletter-image-two" data-aos="fade-left" data-aos-duration="1200"><img
+                        src="assets/images/newsletter/newsletter-2.jpg" alt="newsletter image"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="section-content-box" data-aos="fade-up" data-aos-duration="1000">
+                                <!--=== Section Title  ===-->
+                                <div class="section-title">
+                                    <div class="sub-heading d-inline-flex align-items-center">
+                                        <i class="flaticon-sparkler"></i>
+                                        <span class="sub-title">Our Blogs</span>
+                                    </div>
+                                    <h2>Subscribe <span>newsletter</span> <br> to & get Every day discount</h2>
+                                </div>
+                                <form>
+                                    <input type="email" class="form_control"
+                                        placeholder="Write your Email Address" name="email" required>
+                                    <button class="theme-btn style-one">Subscribe</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--====== End Newsletter Section ======-->
+        <!--====== Start Features Section ======-->
+        <section class="features-section pt-10 pb-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <!--=== Iconic Box Item ===-->
+                        <div class="iconic-box-item style-three mb-25" data-aos="fade-up" data-aos-duration="800">
+                            <div class="icon">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <div class="content">
+                                <h5>Free Shipping</h5>
+                                <p>You get your items delivered without any extra cost.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <!--=== Iconic Box Item ===-->
+                        <div class="iconic-box-item style-three mb-25" data-aos="fade-up"
+                            data-aos-duration="1000">
+                            <div class="icon">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div class="content">
+                                <h5>Great Support 24/7</h5>
+                                <p>Our customer support team is available around the clock </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <!--=== Iconic Box Item ===-->
+                        <div class="iconic-box-item style-three mb-25" data-aos="fade-up"
+                            data-aos-duration="1200">
+                            <div class="icon">
+                                <i class="far fa-handshake"></i>
+                            </div>
+                            <div class="content">
+                                <h5>Return Available</h5>
+                                <p>Making it easy to return any items if you're not satisfied.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <!--=== Iconic Box Item ===-->
+                        <div class="iconic-box-item style-three mb-25" data-aos="fade-up"
+                            data-aos-duration="1400">
+                            <div class="icon">
+                                <i class="fas fa-sack-dollar"></i>
+                            </div>
+                            <div class="content">
+                                <h5>Secure Payment</h5>
+                                <p>Shop with confidence knowing that our secure payment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!--====== End Features Section ======-->
+    </main>
 </x-layout>

@@ -75,7 +75,8 @@
                     <div class="flex flex-wrap gap-2 mt-4 space-y-10">
                         <template x-for="(image, index) in images" :key="index">
                             <div class="relative">
-                                <img :src="image" class="image-preview" alt="Preview">
+                                <img :src="image.startsWith('products') ? '/' + image : image" class="image-preview"
+                                    alt="Preview">
                                 <input type="hidden" :name="'images[]'" :value="image">
                                 <!-- Remove Button -->
                                 <button type="button" @click="removeImage(index)" class="remove-btn">X</button>
@@ -167,6 +168,7 @@
                     </div>
                     <template x-for="(size, index) in sizes" :key="index">
                         <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-12 ">
+                            <input type="hidden" x-model="size.id" name="size_ids[]" />
                             <div class="sm:col-span-5">
                                 <label for="size" class="block text-sm/6 font-medium text-gray-900">Product
                                     Size</label>
@@ -222,15 +224,18 @@
 
                 </div>
 
-                {{-- <div class="mt-10 space-y-10 border-t border-gray-900/10">
+                <div class="mt-10 space-y-10 border-t border-gray-900/10">
                     <fieldset>
                         <div class="mt-6 space-y-6">
                             <div class="flex gap-3">
                                 <div class="flex h-6 shrink-0 items-center">
                                     <div class="group grid size-4 grid-cols-1">
+                                        <input type="hidden" name="featured" value="0">
+
                                         <input id="featured" aria-describedby="featured" name="featured"
-                                            type="checkbox"
-                                            class="col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                            type="checkbox" value="1"
+                                            {{ old('featured', $product->featured) ? 'checked' : '' }}
+                                            class="cursor-pointer col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
                                         <svg class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25"
                                             viewBox="0 0 14 14" fill="none">
                                             <path class="opacity-0 group-has-checked:opacity-100" d="M3 8L6 11L11 3.5"
@@ -250,7 +255,7 @@
                     </fieldset>
 
 
-                </div> --}}
+                </div>
             </div>
 
             <div class="mt-6 flex items-center justify-end gap-x-6">
@@ -273,18 +278,17 @@
     </script>
 
     <script>
-
-
-
         function productForm() {
             const existingSizes = @json($product->sizes);
             return {
                 sizes: existingSizes.length > 0 ? existingSizes : [{
+                    id: '',
                     size: '',
                     price: ''
                 }],
                 addSize() {
                     this.sizes.push({
+                        id: '',
                         size: '',
                         price: ''
                     });
@@ -296,8 +300,10 @@
         }
 
         function imageUploader() {
+            const existingImages = @json($product->images).map(image => image.path);
+
             return {
-                images: [],
+                images: existingImages.length > 0 ? existingImages : [],
                 // Handle image selection (multiple files allowed)
                 uploadImages(event) {
                     const files = event.target.files;

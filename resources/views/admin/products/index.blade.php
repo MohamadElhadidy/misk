@@ -65,7 +65,7 @@
                             </th>
                             <th scope="row"
                                 class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                <img src="{{ '/storage/' . $product->images->first()->path }}" class="w-24 " />
+                                <img src="{{ '/storage/' . $product->images->first()?->path }}" class="w-24 " />
 
                             </th>
                             <th scope="row"

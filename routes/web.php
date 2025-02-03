@@ -8,11 +8,12 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
-Route::view('/', 'home');
+Route::get('/', [HomeController::class, 'index']);
 
 
 
@@ -57,10 +58,10 @@ Route::view('/locations', 'pages.locations');
 Route::middleware('guest')->group(function () {
     //get routes
     Route::view('/login', 'auth.login')->name('login');
-    Route::view('/register', 'auth.register');
+    Route::view('/register', 'auth.register')->name('register');
 
     //forget password
-    Route::view('/forgot-password', 'auth.forgot-password');
+    Route::view('/forgot-password', 'auth.forgot-password')->name('password.request');
     Route::post('/forgot-password', [ResetPasswordController::class, 'sendResetLink']);
     Route::view('/reset-password/{token}', 'auth.reset-password')->name('password.reset');
     Route::post('/reset-password', [ResetPasswordController::class, 'resetPassword'])->name('password.update');
