@@ -71,7 +71,56 @@
             </div>
         </section><!--====== End Hero Section ======-->
         <!--===== Start Banner Section  ======-->
-        <section class="banner-promo-section pt-130">
+          <!--===== Start Category Section  ======-->
+        <section class="category-section pt-90 pb-20">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <!--=== Section Title  ===-->
+                        <div class="section-title  text-center text-md-start mb-50" data-aos="fade-right"
+                            data-aos-delay="10" data-aos-duration="1000">
+                            <div class="sub-heading d-inline-flex align-items-center">
+                                <i class="flaticon-sparkler"></i>
+                                <span class="sub-title">Categories</span>
+                            </div>
+                            <h2>Browse Top Category</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <!--=== Category Button  ===-->
+                        <div class="category-button text-center float-md-end mb-60" data-aos="fade-left"
+                            data-aos-delay="15" data-aos-duration="1200">
+                            <a href="shops.html" class="theme-btn style-one">View All <i
+                                    class="far fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--====== Start Category Wrapper ======-->
+                <div class="category-wrapper">
+                    <div class="row justify-content-center">
+
+                        @foreach ($categories as $category)
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                            <!--=== Category Item  ===-->
+                            <div class="category-item style-two mb-110" data-aos="fade-up" data-aos-delay="10"
+                                data-aos-duration="800">
+                                <a href='/' class="category-img">
+                                    <img src="{{ '/storage/' . $category->image }}" alt="Category Thumbnail">
+                                </a>
+                                <div class="category-content">
+                                    <a href='/' class="category-btn">{{$category->name}}</a>
+                                    {{-- <span>10 items</span> --}}
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--===== End Category Section  ======-->
+        {{-- <section class="banner-promo-section pt-130">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -152,55 +201,9 @@
                     </div>
                 </div>
             </div>
-        </section><!--===== End Banner Section  ======-->
-        <!--===== Start Category Section  ======-->
-        <section class="category-section pt-90 pb-20">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <!--=== Section Title  ===-->
-                        <div class="section-title  text-center text-md-start mb-50" data-aos="fade-right"
-                            data-aos-delay="10" data-aos-duration="1000">
-                            <div class="sub-heading d-inline-flex align-items-center">
-                                <i class="flaticon-sparkler"></i>
-                                <span class="sub-title">Categories</span>
-                            </div>
-                            <h2>Browse Top Category</h2>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <!--=== Category Button  ===-->
-                        <div class="category-button text-center float-md-end mb-60" data-aos="fade-left"
-                            data-aos-delay="15" data-aos-duration="1200">
-                            <a href="shops.html" class="theme-btn style-one">View All <i
-                                    class="far fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!--====== Start Category Wrapper ======-->
-                <div class="category-wrapper">
-                    <div class="row justify-content-center">
+        </section> --}}
+        <!--===== End Banner Section  ======-->
 
-                        @foreach ($categories as $category)
-                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                            <!--=== Category Item  ===-->
-                            <div class="category-item style-two mb-110" data-aos="fade-up" data-aos-delay="10"
-                                data-aos-duration="800">
-                                <a href='/' class="category-img">
-                                    <img src="{{ '/storage/' . $category->image }}" alt="Category Thumbnail">
-                                </a>
-                                <div class="category-content">
-                                    <a href='/' class="category-btn">{{$category->name}}</a>
-                                    {{-- <span>10 items</span> --}}
-                                </div>
-                            </div>
-                        </div>
-                        @endforeach
-
-                    </div>
-                </div>
-            </div>
-        </section><!--===== End Category Section  ======-->
         <!--===== Start Features Section  ======-->
         <section class="features-products-section pb-120">
             <div class="container">
