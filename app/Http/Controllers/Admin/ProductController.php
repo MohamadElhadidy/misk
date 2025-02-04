@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
@@ -104,35 +105,17 @@ class ProductController extends Controller
             return back()->with('success', 'Product created successfully!');
         } catch (\Throwable $th) {
             DB::rollBack();
-            dd($th);
-        }
 
+            Log::error('Something went wrong!', ['exception' => $th]);
 
-
-
-        //begin transacyiom
-        //insert product
-        //insert price and sizes
-        //insert images
-
-    }
-
-    private function cleanTempFiles()
-    {
-        $tempPath = storage_path('app/temp');
-        if (file_exists($tempPath)) {
-            array_map('unlink', glob("$tempPath/*"));
+            return back()->with('error', 'Something went wrong! Please try again.');
         }
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
+    public function show(Product $product)
     {
         //
     }
-
     /**
      * Show the form for editing the specified resource.
      */
@@ -237,15 +220,6 @@ class ProductController extends Controller
             DB::rollBack();
             dd($th);
         }
-
-
-
-
-        //begin transacyiom
-        //insert product
-        //insert price and sizes
-        //insert images
-
     }
 
     /**
@@ -289,5 +263,13 @@ class ProductController extends Controller
             null,
             true // Keep the original file
         );
+    }
+
+    private function cleanTempFiles()
+    {
+        $tempPath = storage_path('app/temp');
+        if (file_exists($tempPath)) {
+            array_map('unlink', glob("$tempPath/*"));
+        }
     }
 }

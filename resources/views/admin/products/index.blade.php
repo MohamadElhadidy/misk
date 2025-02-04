@@ -1,12 +1,12 @@
 <x-adminLayout>
-     <x-slot:title>
+    <x-slot:title>
         Products Management
     </x-slot>
     <x-slot:header>
         <x-admin.heading>Products Management</x-admin.heading>
         <x-admin.button href="/admin/products/create">Create Product</x-admin.button>
     </x-slot>
-      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
         <h1 class="text-red-600 m-2">{{ session('success') }}</h1>
         <div class="pb-4 bg-white dark:bg-gray-900 mx-2">
             <label for="table-search" class="sr-only">Search</label>

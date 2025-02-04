@@ -91,18 +91,21 @@
                         <label for="name" class="block text-sm/6 font-medium text-gray-900">Product Name</label>
                         <div class="mt-2">
                             <input type="text" name="name" id="name" autocomplete="name"
+                                value="{{ old('name') }}" required
                                 class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                         </div>
                     </div>
                     <div class="sm:col-span-3">
                         <label for="category_id" class="block text-sm/6 font-medium text-gray-900">Category</label>
                         <div class="mt-2 grid grid-cols-1">
-                            <select id="category_id" name="category_id" autocomplete="category_id"
+                            <select id="category_id" name="category_id" autocomplete="category_id" required
                                 class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                                 <option value="" disabled selected>Choose a category</option>
 
                                 @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    <option value="{{ $category->id }}"
+                                        {{ old('category_id') == $category->id ? 'selected' : '' }}>
+                                        {{ $category->name }}</option>
                                 @endforeach
 
 
@@ -115,11 +118,71 @@
                             </svg>
                         </div>
                     </div>
+                    <div class="sm:col-span-2">
+                        <label for="name" class="block text-sm/6 font-medium text-gray-900">Product Stock</label>
+                        <div class="mt-2">
+                            <input type="text" name="stock" id="stock" autocomplete="stock"
+                                value="{{ old('stock', 0) }}" required
+                                class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2  flex items-end space-x-4">
+                        <div class="flex gap-3">
+                            <div class="flex h-6 shrink-0 items-center">
+                                <div class="group grid size-4 grid-cols-1">
+                                    <input type="hidden" name="track_stock" value="0">
+                                    <input id="track_stock" aria-describedby="track_stock" name="track_stock"
+                                        type="checkbox" value="1" {{ old('track_stock', 1) ? 'checked' : '' }}
+                                        class="cursor-pointer col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                    <svg class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25"
+                                        viewBox="0 0 14 14" fill="none">
+                                        <path class="opacity-0 group-has-checked:opacity-100" d="M3 8L6 11L11 3.5"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path class="opacity-0 group-has-indeterminate:opacity-100" d="M3 7H11"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="text-sm/6">
+                                <label for="track_stock" class="font-medium text-gray-900">Track Stock</label>
+                            </div>
+                        </div>
+
+
+                        <div class="flex gap-3">
+                            <div class="flex h-6 shrink-0 items-center">
+                                <div class="group grid size-4 grid-cols-1">
+                                    <input type="hidden" name="show_out_of_stock" value="0">
+                                    <input id="show_out_of_stock" aria-describedby="show_out_of_stock"
+                                        name="show_out_of_stock" type="checkbox" value="1"
+                                        {{ old('show_out_of_stock', 1) ? 'checked' : '' }}
+                                        class="cursor-pointer col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
+                                    <svg class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25"
+                                        viewBox="0 0 14 14" fill="none">
+                                        <path class="opacity-0 group-has-checked:opacity-100" d="M3 8L6 11L11 3.5"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path class="opacity-0 group-has-indeterminate:opacity-100" d="M3 7H11"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="text-sm/6">
+                                <label for="show_out_of_stock" class="font-medium text-gray-900">Show Out
+                                    Stock</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
                     <div class="sm:col-span-6">
                         <label for="first-name" class="block text-sm/6 font-medium text-gray-900">Product
                             Description</label>
-                        <div class="mt-2" id="editor"></div>
-                        <input type="hidden" name="description" id="quillContent">
+                        <div class="mt-2" id="editor">{!! old('description') !!}</div>
+                        <input type="hidden" name="description" id="quillContent" required>
                     </div>
 
 
@@ -133,8 +196,8 @@
                         product.</p>
                     <div class="mt-6">
                         <button type="button" class="flex items-center space-x-2" @click="addSize()">
-                            <svg class="w-8" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                            <svg class="w-8" viewBox="0 0 32 32" version="1.1"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000">
 
                                 <g id="SVGRepo_bgCarrier" stroke-width="0" />
@@ -145,8 +208,8 @@
                                     <title>plus</title>
                                     <desc>Created with Sketch Beta.</desc>
                                     <defs> </defs>
-                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
-                                        sketch:type="MSPage">
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                        fill-rule="evenodd" sketch:type="MSPage">
                                         <g id="Icon-Set" sketch:type="MSLayerGroup"
                                             transform="translate(-360.000000, -1035.000000)" fill="#008421">
                                             <path
@@ -166,8 +229,8 @@
                                 <label for="size" class="block text-sm/6 font-medium text-gray-900">Product
                                     Size</label>
                                 <div class="mt-2">
-                                    <input type="text" name="sizes[]" x-model="size.name" id="size"
-                                        autocomplete="sizes[]"
+                                    <input type="text" name="sizes[]" x-model="size.sizes" id="size"
+                                        required autocomplete="sizes[]"
                                         class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                                 </div>
                             </div>
@@ -176,7 +239,7 @@
                                     Price</label>
                                 <div class="mt-2">
                                     <input type="text" name="prices[]" x-model="size.price" id="price"
-                                        autocomplete="prices[]"
+                                        required autocomplete="prices[]"
                                         class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                                 </div>
                             </div>
@@ -225,8 +288,7 @@
                                     <div class="group grid size-4 grid-cols-1">
                                         <input type="hidden" name="featured" value="0">
                                         <input id="featured" aria-describedby="featured" name="featured"
-                                            type="checkbox" value="1"
-                                              {{ old('featured') ? 'checked' : '' }}
+                                            type="checkbox" value="1" {{ old('featured') ? 'checked' : '' }}
                                             class="cursor-pointer col-start-1 row-start-1 appearance-none rounded-sm border border-gray-300 bg-white checked:border-indigo-600 checked:bg-indigo-600 indeterminate:border-indigo-600 indeterminate:bg-indigo-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:border-gray-300 disabled:bg-gray-100 disabled:checked:bg-gray-100 forced-colors:appearance-auto">
                                         <svg class="pointer-events-none col-start-1 row-start-1 size-3.5 self-center justify-self-center stroke-white group-has-disabled:stroke-gray-950/25"
                                             viewBox="0 0 14 14" fill="none">
@@ -239,8 +301,8 @@
                                 </div>
                                 <div class="text-sm/6">
                                     <label for="featured" class="font-medium text-gray-900">Featured Product</label>
-                                    <p id="featured" class="text-gray-500">Here is your Featured Product To
-                                        On The Home Page.</p>
+                                    <p id="featured" class="text-gray-500">This is your featured product to display
+                                        on the homepage.</p>
                                 </div>
                             </div>
                         </div>
@@ -270,16 +332,30 @@
     </script>
 
     <script>
+        const old_sizes = @json(old('sizes'))
+        const old_prices = @json(old('prices'))
+
+        console.log(old_sizes);
+        console.log(old_prices);
+
+
+        // const s = sizes.map((size, index) => ({
+        //     size: size,
+        //     price: prices[index]
+        // }));
+
+
+
         function productForm() {
             return {
                 sizes: [{
-                        name: '',
+                        size: '',
                         price: ''
                     } // Default size field
                 ],
                 addSize() {
                     this.sizes.push({
-                        name: '',
+                        size: '',
                         price: ''
                     });
                 },

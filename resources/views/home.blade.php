@@ -71,7 +71,7 @@
             </div>
         </section><!--====== End Hero Section ======-->
         <!--===== Start Banner Section  ======-->
-          <!--===== Start Category Section  ======-->
+        <!--===== Start Category Section  ======-->
         <section class="category-section pt-90 pb-20">
             <div class="container">
                 <div class="row">
@@ -100,19 +100,19 @@
                     <div class="row justify-content-center">
 
                         @foreach ($categories as $category)
-                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                            <!--=== Category Item  ===-->
-                            <div class="category-item style-two mb-110" data-aos="fade-up" data-aos-delay="10"
-                                data-aos-duration="800">
-                                <a href='/' class="category-img">
-                                    <img src="{{ '/storage/' . $category->image }}" alt="Category Thumbnail">
-                                </a>
-                                <div class="category-content">
-                                    <a href='/' class="category-btn">{{$category->name}}</a>
-                                    {{-- <span>10 items</span> --}}
+                            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                                <!--=== Category Item  ===-->
+                                <div class="category-item style-two mb-110" data-aos="fade-up" data-aos-delay="10"
+                                    data-aos-duration="800">
+                                    <a href='/' class="category-img">
+                                        <img src="{{ '/storage/' . $category->image }}" alt="Category Thumbnail">
+                                    </a>
+                                    <div class="category-content">
+                                        <a href='/' class="category-btn">{{ $category->name }}</a>
+                                        {{-- <span>10 items</span> --}}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
 
                     </div>
@@ -224,43 +224,52 @@
                 <div class="products-item-wrapper">
                     <!--=== Product Item  ===-->
                     @foreach ($featured as $product)
-                    <div class="product-item style-three" data-aos="fade-up" data-aos-duration="1100">
-                        <div class="product-thumbnail">
-                            <img src="{{ '/storage/' . $product->images->first()?->path }}" alt="Products">
-                            {{-- <div class="discount">20% Off</div> --}}
-                            <div class="hover-content">
-                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i></a>
-                                <a href="assets/images/products/feature-product-7.png" class="img-popup icon-btn"><i
-                                        class="fa fa-eye"></i></a>
+                        <div class="product-item style-three" data-aos="fade-up" data-aos-duration="1100">
+                            <div class="product-thumbnail">
+                                <img class="" src="{{ '/storage/' . $product->images->first()?->path }}"
+                                    alt="Products">
+                                {{-- <div class="discount">20% Off</div> --}}
+
+
+                                <div class="hover-content">
+                                    <a href="#" class="icon-btn "><i class="fa fa-heart"></i></a>
+                                    <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i></a>
+                                    <a href="/products/{{ $product->id }}" class="icon-btn"><i
+                                            class="fa fa-eye"></i></a>
+                                </div>
                             </div>
-                        </div>
-                        @php
-                            $sizes = $product->sizes()->orderBy('price')->get()
-                        @endphp
-                        <div class="product-info-wrap">
-                            <div class="product-info">
-                                <div class="product-meta d-flex">
-                                    <span><a href="#">{{$product->category->name}}</a></span>
-                                    {{-- <ul class="ratings rating4">
+                            @php
+                                $sizes = $product->sizes()->orderBy('price')->get();
+                            @endphp
+                            <div class="product-info-wrap">
+                                <div class="product-info">
+                                    <div class="product-meta d-flex">
+                                        <span><a
+                                                href="/categories/{{ $product->category->id }}">{{ $product->category->name }}</a></span>
+                                        {{-- <ul class="ratings rating4">
                                         <li><i class="fas fa-star"></i></li>
                                         <li><i class="fas fa-star"></i></li>
                                         <li><i class="fas fa-star"></i></li>
                                         <li><i class="fas fa-star"></i></li>
                                         <li><i class="fas fa-star"></i></li>
                                     </ul> --}}
+                                    </div>
+                                    <h4 class="title"><a href="/products/{{ $product->id }}">{{ $product->name }}
+                                        </a></h4>
                                 </div>
-                                <h4 class="title"><a href="shop-details.html">{{$product->name}}
-                                    </a></h4>
-                            </div>
-                            <div class="product-price">
-                                <span class="price new-price">{{$sizes->first()->price}} <span class="currency">SAR</span></span>
-                                <span class="price new-price">-</span>
-                                <span class="price new-price">{{$sizes->last()->price}} <span class="currency">SAR</span></span>
-                                {{-- <span class="price prev-price"><span class="currency">$</span>{{$sizes->last()->price}}</span> --}}
+                                <div class="product-price">
+
+                                    <span class="price new-price">{{ $sizes->first()->price }} <span
+                                            class="currency">SAR</span></span>
+                                    @if ($sizes->first()->price != $sizes->last()->price)
+                                        <span class="price new-price">-</span>
+                                        <span class="price new-price">{{ $sizes->last()->price }} <span
+                                                class="currency">SAR</span></span>
+                                    @endif
+                                    {{-- <span class="price prev-price"><span class="currency">$</span>{{$sizes->last()->price}}</span> --}}
+                                </div>
                             </div>
                         </div>
-                    </div>
                     @endforeach
 
                 </div>
@@ -498,7 +507,8 @@
                         <div class="pesco-tabs style-one mb-50" data-aos="fade-left" data-aos-duration="1200">
                             <ul class="nav nav-tabs">
                                 <li>
-                                    <a href='#' class="nav-link active" data-bs-toggle="tab" data-bs-target="#cat1">See More</a>
+                                    <a href='#' class="nav-link active" data-bs-toggle="tab"
+                                        data-bs-target="#cat1">See More</a>
                                 </li>
                                 {{-- <li>
                                     <button class="nav-link" data-bs-toggle="tab" data-bs-target="#cat2">New
@@ -522,44 +532,53 @@
                                 <div class="products-item-wrapper">
                                     <!--=== Product Item  ===-->
                                     @foreach ($products as $product)
-                    <div class="product-item style-three" data-aos="fade-up" data-aos-duration="1100">
-                        <div class="product-thumbnail">
-                            <img src="{{ '/storage/' . $product->images->first()?->path }}" alt="Products">
-                            {{-- <div class="discount">20% Off</div> --}}
-                            <div class="hover-content">
-                                <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i></a>
-                                <a href="assets/images/products/feature-product-7.png" class="img-popup icon-btn"><i
-                                        class="fa fa-eye"></i></a>
-                            </div>
-                        </div>
-                        @php
-                            $sizes = $product->sizes()->orderBy('price')->get()
-                        @endphp
-                        <div class="product-info-wrap">
-                            <div class="product-info">
-                                <div class="product-meta d-flex">
-                                    <span><a href="#">{{$product->category->name}}</a></span>
-                                    {{-- <ul class="ratings rating4">
+                                        <div class="product-item style-three" data-aos="fade-up"
+                                            data-aos-duration="1100">
+                                            <div class="product-thumbnail">
+                                                <img class=""
+                                                    src="{{ '/storage/' . $product->images->first()?->path }}"
+                                                    alt="Products">
+                                                {{-- <div class="discount">20% Off</div> --}}
+                                                <div class="hover-content">
+                                                    <a href="#" class="icon-btn"><i
+                                                            class="fa fa-heart"></i></a>
+                                                    <a href="#" class="cart-btn"><i
+                                                            class="far fa-shopping-basket"></i></a>
+                                                    <a href="/products/{{ $product->id }}" class="icon-btn"><i
+                                                            class="fa fa-eye"></i></a>
+                                                </div>
+                                            </div>
+                                            @php
+                                                $sizes = $product->sizes()->orderBy('price')->get();
+                                            @endphp
+                                            <div class="product-info-wrap">
+                                                <div class="product-info">
+                                                    <div class="product-meta d-flex">
+                                                        <span><a
+                                                                href="/categories/{{ $product->category->id }}">{{ $product->category->name }}</a></span>
+                                                        {{-- <ul class="ratings rating4">
                                         <li><i class="fas fa-star"></i></li>
                                         <li><i class="fas fa-star"></i></li>
                                         <li><i class="fas fa-star"></i></li>
                                         <li><i class="fas fa-star"></i></li>
                                         <li><i class="fas fa-star"></i></li>
                                     </ul> --}}
-                                </div>
-                                <h4 class="title"><a href="shop-details.html">{{$product->name}}
-                                    </a></h4>
-                            </div>
-                            <div class="product-price">
-                                <span class="price new-price">{{$sizes->first()->price}} <span class="currency">SAR</span></span>
-                                <span class="price new-price">-</span>
-                                <span class="price new-price">{{$sizes->last()->price}} <span class="currency">SAR</span></span>
-                                {{-- <span class="price prev-price"><span class="currency">$</span>{{$sizes->last()->price}}</span> --}}
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
+                                                    </div>
+                                                    <h4 class="title"><a
+                                                            href="/products/{{ $product->id }}">{{ $product->name }}
+                                                        </a></h4>
+                                                </div>
+                                                <div class="product-price">
+                                                    <span class="price new-price">{{ $sizes->first()->price }} <span
+                                                            class="currency">SAR</span></span>
+                                                    <span class="price new-price">-</span>
+                                                    <span class="price new-price">{{ $sizes->last()->price }} <span
+                                                            class="currency">SAR</span></span>
+                                                    {{-- <span class="price prev-price"><span class="currency">$</span>{{$sizes->last()->price}}</span> --}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                             <!--=== Tab Pane  ===-->
@@ -575,7 +594,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-9.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -611,7 +630,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-5.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -646,7 +665,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-6.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -682,7 +701,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-7.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -717,7 +736,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-11.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -752,7 +771,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-18.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -788,7 +807,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-13.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -824,7 +843,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-10.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -859,7 +878,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-12.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -895,7 +914,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-14.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -936,7 +955,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-11.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -972,7 +991,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-5.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -1007,7 +1026,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-6.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -1043,7 +1062,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-7.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -1078,7 +1097,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-18.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -1114,7 +1133,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-13.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -1149,7 +1168,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-9.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -1185,7 +1204,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-10.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -1220,7 +1239,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-12.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -1256,7 +1275,7 @@
                                                 <a href="#" class="cart-btn"><i
                                                         class="far fa-shopping-basket"></i></a>
                                                 <a href="assets/images/products/feature-product-14.png"
-                                                    class="img-popup icon-btn"><i class="fa fa-eye"></i></a>
+                                                    class="icon-btn"><i class="fa fa-eye"></i></a>
                                             </div>
                                         </div>
                                         <div class="product-info-wrap">
@@ -1567,8 +1586,8 @@
                                     <h2>Subscribe <span>newsletter</span> <br> to & get Every day discount</h2>
                                 </div>
                                 <form>
-                                    <input type="email" class="form_control"
-                                        placeholder="Write your Email Address" name="email" required>
+                                    <input type="email" class="form_control" placeholder="Write your Email Address"
+                                        name="email" required>
                                     <button class="theme-btn style-one">Subscribe</button>
                                 </form>
                             </div>
@@ -1576,7 +1595,8 @@
                     </div>
                 </div>
             </div>
-        </section><!--====== End Newsletter Section ======-->
+        </section>
+        <!--====== End Newsletter Section ======-->
         <!--====== Start Features Section ======-->
         <section class="features-section pt-10 pb-10">
             <div class="container">
@@ -1595,8 +1615,7 @@
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <!--=== Iconic Box Item ===-->
-                        <div class="iconic-box-item style-three mb-25" data-aos="fade-up"
-                            data-aos-duration="1000">
+                        <div class="iconic-box-item style-three mb-25" data-aos="fade-up" data-aos-duration="1000">
                             <div class="icon">
                                 <i class="fas fa-microphone"></i>
                             </div>
@@ -1608,8 +1627,7 @@
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <!--=== Iconic Box Item ===-->
-                        <div class="iconic-box-item style-three mb-25" data-aos="fade-up"
-                            data-aos-duration="1200">
+                        <div class="iconic-box-item style-three mb-25" data-aos="fade-up" data-aos-duration="1200">
                             <div class="icon">
                                 <i class="far fa-handshake"></i>
                             </div>
@@ -1621,8 +1639,7 @@
                     </div>
                     <div class="col-lg-3 col-sm-6">
                         <!--=== Iconic Box Item ===-->
-                        <div class="iconic-box-item style-three mb-25" data-aos="fade-up"
-                            data-aos-duration="1400">
+                        <div class="iconic-box-item style-three mb-25" data-aos="fade-up" data-aos-duration="1400">
                             <div class="icon">
                                 <i class="fas fa-sack-dollar"></i>
                             </div>
