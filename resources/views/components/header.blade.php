@@ -202,12 +202,8 @@
                                 <!--=== Main Menu ===-->
                                 <nav class="main-menu d-none d-lg-block">
                                     <ul>
-                                        <li class="menu-item has-children"><a href="#">Home</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="index.html">Home 01</a></li>
-                                                <li><a href="index-2.html">Home 02</a></li>
-                                            </ul>
-                                        </li>
+                                        <li class="menu-item"><a href="/">Home</a></li>
+
                                         <li class="menu-item has-children"><a href="#">Shop</a>
                                             <ul class="sub-menu">
                                                 <li><a href="shops-grid.html">Shop Grid</a></li>
@@ -231,7 +227,7 @@
                                                 <li><a href="faq.html">Faqs</a></li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                                        <li class="menu-item"><a href="/contact">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -241,13 +237,35 @@
                     <div class="nav-right-item style-one">
                         <ul>
                             <li>
-                                <div class="deals d-lg-block d-none"><i class="far fa-fire-alt"></i>Deal</div>
+                                @guest
+                                    <a href="/login" class="deals d-lg-block d-none text-md"><i
+                                            class="far fa-user-alt"></i>Login</a>
+                                @else
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <button type="submit" class="deals d-lg-block d-none text-md"><i
+                                                class="far fa-logout-alt"></i>Logout</button>
+                                    </form>
+
+                                @endguest
+
+
                             </li>
 
                             @php
                                 $wishlist = auth()->check()
                                     ? auth()->user()->wishlist()->count()
-                                    : count(session('wishlist', []));
+                                    : count(session('wishlist') ?? []);
+
+                                $cart = session('cart') ?? [];
+                                $totalQuantity = 0;
+
+                                foreach ($cart as $productSizes) {
+                                    foreach ($productSizes as $item) {
+                                        $totalQuantity += (int) $item['quantity'];
+                                    }
+                                }
+
                             @endphp
                             <li>
                                 <a href="/wishlist" class="wishlist-btn d-lg-block d-none"><i
@@ -256,11 +274,12 @@
 
                             </li>
                             <li>
-                                <div class="cart-button d-flex align-items-center">
+                                <a href="/cart" class="cart-button d-flex align-items-center">
                                     <div class="icon">
-                                        <i class="fas fa-shopping-bag"></i><span class="pro-count">1</span>
+                                        <i class="fas fa-shopping-bag"></i><span
+                                            class="pro-count">{{ $totalQuantity }}</span>
                                     </div>
-                                </div>
+                                </a>
                             </li>
 
                             @admin

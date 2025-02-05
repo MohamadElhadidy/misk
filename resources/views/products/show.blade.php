@@ -30,7 +30,8 @@
                             </div>
                         </div>
                         <div class="col-xl-6">
-                            <div class="product-info mb-50" data-aos="fade-up" data-aos-duration="1400">
+                            <div class="product-info mb-50" data-aos="fade-up" data-aos-duration="1400"
+                                x-data="productData({{ $product->sizes }})">
                                 {{-- <span class="sale"><i class="fas fa-tags"></i>SALE 70% OFF</span> --}}
                                 <h4 class="title">{{ $product->name }}</h4>
                                 {{-- <ul class="ratings rating5">
@@ -42,9 +43,16 @@
                                     <li><a href="#">(45 Reviews)</a></li>
                                 </ul> --}}
                                 <p>{!! $product->description !!}</p>
+
+
+                                <!-- Product Price -->
                                 <div class="product-price">
-                                    <span class="price prev-price"><span class="currency">$</span>70.00</span>
-                                    <span class="price new-price"><span class="currency">$</span>40.00</span>
+                                    {{-- <span class="price prev-price"><span class="currency">$</span>70.00</span> --}}
+                                    <span class="price new-price">
+
+                                        <span x-text="selectedPrice ? selectedPrice : sizes[0].price"></span>
+                                        <span class="currency">SAR</span>
+                                    </span>
                                 </div>
                                 {{-- <div class="product-color">
                                     <h4 class="mb-15">Color</h4>
@@ -90,73 +98,65 @@
                                 <div class="product-size">
                                     <h4 class="mb-15">Size</h4>
                                     <ul class="size-list mb-30">
-                                        <li>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="radio"
-                                                    value="Slim Fit" id="size2">
-                                                <label class="form-check-label" for="size2">
-                                                    S
-                                                </label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="radio"
-                                                    value="Slim Fit" id="size3">
-                                                <label class="form-check-label" for="size3">
-                                                    M
-                                                </label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="radio"
-                                                    value="Slim Fit" id="size4">
-                                                <label class="form-check-label" for="size4">
-                                                    L
-                                                </label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="radio"
-                                                    value="Slim Fit" id="size5">
-                                                <label class="form-check-label" for="size5">
-                                                    XL
-                                                </label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="radio" name="radio"
-                                                    value="Slim Fit" id="size6">
-                                                <label class="form-check-label" for="size6">
-                                                    2XL
-                                                </label>
-                                            </div>
-                                        </li>
+                                        <template x-for="size in sizes" :key="size.id">
+                                            <li>
+                                                {{-- <input class="form-check-input" type="radio" name="size"
+                                                        :value="size" x-model="selectedSize"
+                                                        :id="'size' + size.id"> --}}
+
+
+                                                <div class="form-check">
+                                                    {{-- <input class="form-check-input" type="radio" name="radio"
+                                                        value="Slim Fit" id="size2"> --}}
+
+                                                    <input class="form-check-input" type="radio"
+                                                        :value="size.size" @click="updatePrice(size)"
+                                                        :id="'size' + size.id" x-model="selectedSize">
+                                                    <label class="form-check-label" :for="'size' + size.id"
+                                                        x-text="size.size">
+                                                    </label>
+                                                </div>
+                                            </li>
+                                        </template>
+
                                     </ul>
                                 </div>
+
+
                                 <div class="product-cart-variation">
-                                    <ul>
-                                        <li>
+                                    <ul x-data="{ quantity: 1 }">
+
+
+                                        <li >
                                             <div class="quantity-input">
-                                                <button class="quantity-down"><i class="far fa-minus"></i></button>
-                                                <input class="quantity" type="text" value="1" name="quantity">
-                                                <button class="quantity-up"><i class="far fa-plus"></i></button>
+                                                <button type="button" class="quantity-down"
+                                                    @click="if (quantity > 1) quantity--"><i
+                                                        class="far fa-minus"></i></button>
+                                                <input class="quantity" type="text" :value="quantity"
+                                                    x-model="quantity" >
+                                                <button type="button" class="quantity-up" @click="quantity++"><i
+                                                        class="far fa-plus"></i></button>
                                             </div>
                                         </li>
                                         <li>
-                                            <a href="#" class="theme-btn style-one">Add To cart</a>
+                                            <form action="{{ route('cart.add', [$product->id]) }}" method="post">
+                                                @csrf
+                                                <input type="hidden" name="sizeId" :value="selectedID">
+                                                <input type="hidden" name="quantity" :value="quantity">
+                                                <button type="submit" class="theme-btn style-one">Add To cart</button>
+                                            </form>
                                         </li>
+
+
                                         @php
+
                                             $isInWishlist = auth()->check()
                                                 ? auth()
                                                     ->user()
                                                     ->wishlist()
                                                     ->where('product_id', $product->id)
                                                     ->exists()
-                                                : in_array($product->id, session('wishlist', []));
+                                                : in_array($product->id, session('wishlist') ?? []);
 
                                         @endphp
 
@@ -177,6 +177,7 @@
                                         </li> --}}
                                     </ul>
                                 </div>
+
                                 <div class="product-meta">
                                     <ul>
                                         {{-- <li><span>SKU :</span>KE-91039</li> --}}
@@ -478,5 +479,20 @@
         </section><!--====== End Product Section ======-->
     </main>
 
+    <script>
+        function productData(sizes) {
+            return {
+                sizes: sizes,
+                selectedID : sizes.length > 0 ? sizes[0].id : null,
+                selectedSize: sizes.length > 0 ? sizes[0].size : null,
+                selectedPrice: sizes.length > 0 ? sizes[0].price : null,
+                updatePrice(size) {
+                    this.selectedID = size.id
+                    this.selectedSize = size.size
+                    this.selectedPrice = size.price
+                }
+            };
+        }
+    </script>
 
 </x-layout>

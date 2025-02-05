@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OrderController;
@@ -38,7 +39,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
 //authenticated users
 Route::middleware(['auth'])->group(function () {
     Route::view('/profile', 'user.profile')->middleware('verified');
-    Route::post('/logout', LogoutController::class);
+    Route::post('/logout', LogoutController::class)->name('logout');
 
     // Email verification
     Route::get('/email/verify', fn() => view('auth.verify-email'))->name('verification.notice');
@@ -48,6 +49,9 @@ Route::middleware(['auth'])->group(function () {
 
 });
 Route::post('/wishlist', [WishlistController::class, 'store']);
+
+Route::post('/cart/add/{productId}', [CartController::class, 'add'])->name('cart.add');
+Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 
 
 Route::resource('products', ProductController::class);

@@ -23,16 +23,23 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials, request('remember_me'))) {
 
-            $sessionWishlist = Session::get('wishlist', []);
+            $sessionWishlist = Session::get('wishlist') ?? [];
+
             if (!empty($sessionWishlist)) {
-                auth()->user()->wishlist()->syncWithoutDetaching($sessionWishlist);
+
+                foreach ($sessionWishlist as $productId) {
+                    auth()->user()->wishlist()->firstOrCreate([
+                        'product_id' => $productId
+                    ]);
+                }
+
                 Session::forget('wishlist'); // Clear session wishlist after merging
             }
 
 
             $request->session()->regenerate();
 
-            return redirect()->intended('/');
+            return redirect()->intended();
         }
 
         return back()->withErrors([

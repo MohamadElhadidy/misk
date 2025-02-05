@@ -50,13 +50,15 @@ class WishlistController extends Controller
                 }
             } else {
 
-                $wishlist = Session::get('wishlist', []);
+                $wishlist = Session::get('wishlist') ?? [];
 
                 if (in_array($request->product_id, $wishlist)) {
                     $wishlist = array_diff($wishlist, [$request->product_id]);
                 } else {
                     $wishlist[] = $request->product_id;
                 }
+
+                Session::put('wishlist', $wishlist);
             }
 
 

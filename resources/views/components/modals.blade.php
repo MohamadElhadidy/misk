@@ -1,4 +1,4 @@
- <div class="sidemenu-wrapper-cart">
+ {{-- <div class="sidemenu-wrapper-cart">
             <div class="sidemenu-content">
                 <div class="widget widget-shopping-cart">
                     <h4>My cart</h4>
@@ -49,4 +49,4 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
