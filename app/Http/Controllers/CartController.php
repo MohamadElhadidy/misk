@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product; // assuming you have a Product model
+use App\Models\ProductSize;
 
 class CartController extends Controller
 {
@@ -12,31 +13,38 @@ class CartController extends Controller
      */
     public function index(Request $request)
     {
-        $cart = session()->get('cart', []);
+        $carts = session()->get('cart', []);
         $totalQuantity = 0;
         $totalPrice = 0;
+        $cart = [];
 
-        foreach ($cart as $productSizes) {
-            foreach ($productSizes as $item) {
+        foreach ($carts as $key1 => $productSizes) {
+            $product =  Product::find($key1);
+
+            foreach ($productSizes as $key2 =>  $item) {
+
+                $size = ProductSize::find($key2);
+                $quantity = $item['quantity'];
                 $totalQuantity += $item['quantity'];
-                $totalPrice += $item['quantity'] * $item['price'];
+
+                $cart[] = [
+                    'product' => $product,
+                    'size' => $size,
+                    'quantity' => $quantity,
+                ];
+
+                $totalPrice += $quantity * $size->price;
             }
         }
 
-        return view('cart.index', compact('cart', 'totalQuantity', 'totalPrice'));
+        return view('cart.index', compact('cart',  'totalPrice', 'totalQuantity'));
     }
 
     // In CartController.php
     public function add(Request $request, $productId)
     {
-        // Retrieve the product from the database
-        $product = Product::findOrFail($productId);
-
-        // Retrieve the selected size
-        $size = $product->sizes()->findOrFail($request->sizeId);
-
         // Retrieve the current cart from the session or initialize a new one
-        $cart = session()->get('cart', []);
+        $cart = session()->get('cart') ?? [];
 
 
         // Check if the product with the selected size is already in the cart
@@ -46,18 +54,14 @@ class CartController extends Controller
         } else {
             // Add the product with the selected size and price to the cart
             $cart[$productId][$request->sizeId] = [
-                "id" => $product->id,
-                "name" => $product->name,
-                "size" => $size->name,
                 "quantity" => $request->quantity,
-                "price" => $size->price, // Assuming the size has a price field
-                "image" => $product->image, // if you want to store an image URL
             ];
         }
 
+
         // Update the session with the new cart
         session()->put('cart', $cart);
-
+        // dd($cart);
 
         // Redirect back to the cart page with a success message
         return back();
@@ -88,15 +92,25 @@ class CartController extends Controller
     /**
      * Remove an item from the cart.
      */
-    public function remove(Request $request, $id)
+    public function destroy(Request $request)
     {
-        $cart = session()->get('cart', []);
+        $cart = session()->get('cart') ?? [];
 
-        if (isset($cart[$id])) {
-            unset($cart[$id]);
+        if (isset($cart[$request->productId][$request->sizeId])) {
+            unset($cart[$request->productId][$request->sizeId]);
             session()->put('cart', $cart);
             return redirect()->route('cart.index')->with('success', 'Product removed from cart.');
         }
+
+        return redirect()->route('cart.index')->with('error', 'Product not found in cart.');
+    }
+
+    /**
+     * Remove an item from the cart.
+     */
+    public function clear()
+    {
+        session()->put('cart', []);
 
         return redirect()->route('cart.index')->with('error', 'Product not found in cart.');
     }

@@ -239,12 +239,12 @@
                             <li>
                                 @guest
                                     <a href="/login" class="deals d-lg-block d-none text-md"><i
-                                            class="far fa-user-alt"></i>Login</a>
+                                            class="far fa-user-alt"></i></a>
                                 @else
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
                                         <button type="submit" class="deals d-lg-block d-none text-md"><i
-                                                class="far fa-logout-alt"></i>Logout</button>
+                                                class="far fa-logout-alt"></i></button>
                                     </form>
 
                                 @endguest

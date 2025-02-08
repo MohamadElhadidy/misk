@@ -5,7 +5,7 @@
 =======================----*/
 
 
-/* Cart Page */ 
+/* Cart Page */
 
 .cart-wrapper{
     .table>:not(caption)>*>*{
@@ -114,7 +114,6 @@
                 max-width: 35px;
                 border: none;
                 height: 40px;
-                width: 30px;
                 text-align: center;
 
             }
@@ -177,7 +176,7 @@
             }
             & .sub-total,
             & .price-total{
-                
+
                 & span{
                     float: right;
                     font-weight: 500;

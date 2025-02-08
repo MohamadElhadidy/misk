@@ -54,6 +54,8 @@ Route::delete('/wishlist', [WishlistController::class, 'destroy'])->name('wishli
 
 Route::post('/cart/add/{productId}', [CartController::class, 'add'])->name('cart.add');
 Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+Route::delete('/cart', [CartController::class, 'destroy'])->name('cart.destroy');
+Route::delete('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
 
 
 Route::resource('products', ProductController::class);

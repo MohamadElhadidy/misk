@@ -1,11 +1,11 @@
 /*-----------------------------------------------------------------------------------
-    
+
     Template Name: Pesco - eCommerce HTML Template
-    URI: site.com 
+    URI: site.com
     Description: Pesco is a clean, modern, and elegant fashion e-commerce HTML template. It allows you to easily create a well-designed e-commerce website that is easily customizable to fit your brand colors and requirements.
     Author: Pixelfit
     Author URI: https://themeforest.net/user/pixelfit
-    Version: 1.0 
+    Version: 1.0
 
     Note: This is Main Js file
 -----------------------------------------------------------------------------------
@@ -25,7 +25,7 @@
     ## Simply Countdown Js
     ## Show More Active JS
     ## AOS Js
-    
+
 -----------------------------------------------------------------------------------*/
 
 (function($) {
@@ -33,7 +33,7 @@
 
     //===== Main Menu
     function mainMenu() {
-        
+
         // Variables
         var var_window = $(window),
         navContainer = $('.header-navigation'),
@@ -65,7 +65,7 @@
                 }
             }
         });
-        
+
         // expands the dropdown menu on each click
 
         navMenu.find(".dd-trigger").on('click', function(e) {
@@ -76,21 +76,24 @@
         });
 
     };
-    
+
     // Offcanvas Overlay
 
     function offCanvas(){
-        $(".cart-button").on("click", function() {
-            $(".sidemenu-wrapper-cart").addClass("info-open");
-        });
-        $(".navbar-toggler, .offcanvas__overlay,.cart-button").on('click', function (e) {
+        // $(".cart-button").on("click", function() {
+        //     $(".sidemenu-wrapper-cart").addClass("info-open");
+        // });
+
+      //  ,.cart - button
+        $(".navbar-toggler, .offcanvas__overlay").on('click', function (e) {
             $(".offcanvas__overlay").toggleClass("overlay-open");
         });
+
         $(".offcanvas__overlay").on('click', function (e) {
             $(".navbar-toggler").removeClass("active");
             $(".pesco-nav-menu").removeClass("menu-on");
             $(".sidemenu-wrapper-cart").removeClass("info-open");
-        }); 
+        });
         $(".sidemenu-cart-close").on("click", function() {
             $(".sidemenu-wrapper-cart").removeClass("info-open");
             $(".offcanvas__overlay").removeClass("overlay-open");
@@ -110,7 +113,7 @@
         $('.preloader').delay(500).fadeOut(500);
     })
 
-    
+
     //===== Sticky
 
     $(window).on('scroll', function(event) {
@@ -139,7 +142,7 @@
     });
 
     //===== Magnific-popup js
-    
+
     if ($('.video-popup').length){
         $('.video-popup').magnificPopup({
             type: 'iframe',
@@ -151,18 +154,18 @@
     if ($('.img-popup').length){
         $(".img-popup").magnificPopup({
             type: "image",
-             gallery: { 
-              enabled: true 
+             gallery: {
+              enabled: true
             }
         });
     }
 
     //===== Nice select js
-    
+
     if ($('select').length){
         $('select').niceSelect();
     }
-    
+
     //===== Slick slider js
 
     if ($('.hero-slider-one').length) {
@@ -614,7 +617,7 @@
         });
     }
     //======= Quantity Number js
-    
+
     $('.quantity-down').on('click', function(){
         var numProduct = Number($(this).next().val());
         if(numProduct > 1) $(this).next().val(numProduct - 1);
@@ -625,7 +628,7 @@
     });
 
     //===== Slider Range
-    
+
     $( "#slider-range" ).slider({
         range: true,
         min: 0,
@@ -638,8 +641,8 @@
     $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) + " - $" + $( "#slider-range" ).slider( "values", 1 ) );
 
 
-    
-        
+
+
     //===== Simply Countdown
 
     if ($('.simply-countdown').length){

@@ -1,20 +1,20 @@
-/*----------------------------------------------------------------------------------- 
+/*-----------------------------------------------------------------------------------
 
 Template Name: Pesco - eCommerce HTML Template
-URI: site.com 
+URI: site.com
 Description: Pesco is a clean, modern, and elegant fashion e-commerce HTML template. It allows you to easily create a well-designed e-commerce website that is easily customizable to fit your brand colors and requirements.
 Author: Pixelfit
 Author URI: https://themeforest.net/user/pixelfit
-Version: 1.0 
+Version: 1.0
 
 
 ------------------------------------------------------
    CSS INDEX
 -----------------------------------------------------
 
-   01. Base css 
+   01. Base css
 
-   02. Elements 
+   02. Elements
      # Common css
      # Header css
      # Hero css
@@ -172,7 +172,7 @@ h6 {
 }
 
 /*---========================
-        01. Base css 
+        01. Base css
 =======================----*/
 /*===== Base CSS =====*/
 :root {
@@ -3267,7 +3267,6 @@ button {
   max-width: 35px;
   border: none;
   height: 40px;
-  width: 30px;
   text-align: center;
 }
 .cart-wrapper .total-price {
