@@ -224,52 +224,7 @@
                 <div class="products-item-wrapper">
                     <!--=== Product Item  ===-->
                     @foreach ($featured as $product)
-                        <div class="product-item style-three" data-aos="fade-up" data-aos-duration="1100">
-                            <div class="product-thumbnail">
-                                <img class="" src="{{ '/storage/' . $product->images->first()?->path }}"
-                                    alt="Products">
-                                {{-- <div class="discount">20% Off</div> --}}
-
-
-                                <div class="hover-content">
-                                    <a href="#" class="icon-btn "><i class="fa fa-heart"></i></a>
-                                    <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i></a>
-                                    <a href="/products/{{ $product->id }}" class="icon-btn"><i
-                                            class="fa fa-eye"></i></a>
-                                </div>
-                            </div>
-                            @php
-                                $sizes = $product->sizes()->orderBy('price')->get();
-                            @endphp
-                            <div class="product-info-wrap">
-                                <div class="product-info">
-                                    <div class="product-meta d-flex">
-                                        <span><a
-                                                href="/categories/{{ $product->category->id }}">{{ $product->category->name }}</a></span>
-                                        {{-- <ul class="ratings rating4">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul> --}}
-                                    </div>
-                                    <h4 class="title"><a href="/products/{{ $product->id }}">{{ $product->name }}
-                                        </a></h4>
-                                </div>
-                                <div class="product-price">
-
-                                    <span class="price new-price">{{ $sizes->first()->price }} <span
-                                            class="currency">SAR</span></span>
-                                    @if ($sizes->first()->price != $sizes->last()->price)
-                                        <span class="price new-price">-</span>
-                                        <span class="price new-price">{{ $sizes->last()->price }} <span
-                                                class="currency">SAR</span></span>
-                                    @endif
-                                    {{-- <span class="price prev-price"><span class="currency">$</span>{{$sizes->last()->price}}</span> --}}
-                                </div>
-                            </div>
-                        </div>
+                        <x-product-card :product="$product" />
                     @endforeach
 
                 </div>
@@ -532,52 +487,7 @@
                                 <div class="products-item-wrapper">
                                     <!--=== Product Item  ===-->
                                     @foreach ($products as $product)
-                                        <div class="product-item style-three" data-aos="fade-up"
-                                            data-aos-duration="1100">
-                                            <div class="product-thumbnail">
-                                                <img class=""
-                                                    src="{{ '/storage/' . $product->images->first()?->path }}"
-                                                    alt="Products">
-                                                {{-- <div class="discount">20% Off</div> --}}
-                                                <div class="hover-content">
-                                                    <a href="#" class="icon-btn"><i
-                                                            class="fa fa-heart"></i></a>
-                                                    <a href="#" class="cart-btn"><i
-                                                            class="far fa-shopping-basket"></i></a>
-                                                    <a href="/products/{{ $product->id }}" class="icon-btn"><i
-                                                            class="fa fa-eye"></i></a>
-                                                </div>
-                                            </div>
-                                            @php
-                                                $sizes = $product->sizes()->orderBy('price')->get();
-                                            @endphp
-                                            <div class="product-info-wrap">
-                                                <div class="product-info">
-                                                    <div class="product-meta d-flex">
-                                                        <span><a
-                                                                href="/categories/{{ $product->category->id }}">{{ $product->category->name }}</a></span>
-                                                        {{-- <ul class="ratings rating4">
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul> --}}
-                                                    </div>
-                                                    <h4 class="title"><a
-                                                            href="/products/{{ $product->id }}">{{ $product->name }}
-                                                        </a></h4>
-                                                </div>
-                                                <div class="product-price">
-                                                    <span class="price new-price">{{ $sizes->first()->price }} <span
-                                                            class="currency">SAR</span></span>
-                                                    <span class="price new-price">-</span>
-                                                    <span class="price new-price">{{ $sizes->last()->price }} <span
-                                                            class="currency">SAR</span></span>
-                                                    {{-- <span class="price prev-price"><span class="currency">$</span>{{$sizes->last()->price}}</span> --}}
-                                                </div>
-                                            </div>
-                                        </div>
+                                        <x-product-card :product="$product" />
                                     @endforeach
                                 </div>
                             </div>

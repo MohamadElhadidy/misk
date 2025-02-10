@@ -431,47 +431,7 @@
                 <div class="releted-product-slider">
                     <!--=== Project Item  ===-->
                     @foreach ($featured as $product)
-                        <div class="product-item style-one mb-40" data-aos="fade-up" data-aos-delay="90"
-                            data-aos-duration="1500">
-                            <div class="product-thumbnail">
-                                <img src="{{ '/storage/' . $product->images->first()?->path }}" alt="Products">
-                                {{-- <div class="discount">80% Off</div> --}}
-                                <div class="hover-content">
-                                    <a href="#" class="icon-btn"><i class="fa fa-heart"></i></a>
-                                    <a href="/products/{{ $product->id }}" class=" icon-btn"><i
-                                            class="fa fa-eye"></i></a>
-                                </div>
-                                <div class="cart-button">
-                                    <a href="#" class="cart-btn"><i class="far fa-shopping-basket"></i> <span
-                                            class="text">Add To Cart</span></a>
-                                </div>
-                            </div>
-                            <div class="product-info-wrap">
-                                <div class="product-info">
-                                    {{-- <ul class="ratings rating4">
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><i class="fas fa-star"></i></li>
-                                    <li><a href="#">(50)</a></li>
-                                </ul> --}}
-                                    <h4 class="title"><a href="shop-details.html">Cozy knit sweater with pockets</a>
-                                    </h4>
-                                </div>
-                                @php
-                                    $sizes = $product->sizes()->orderBy('price')->get();
-                                @endphp
-                                <div class="product-price">
-                                    <span class="price new-price">{{ $sizes->first()->price }} <span
-                                            class="currency">SAR</span></span>
-                                    @if ($sizes->first()->price != $sizes->last()->price)
-                                        <span class="price new-price">{{ $sizes->last()->price }} <span
-                                                class="currency">SAR</span></span>
-                                    @endif
-                                </div>
-                            </div>
-                        </div>
+                       <x-product-card :product="$product" />
                     @endforeach
 
                 </div>

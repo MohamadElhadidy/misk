@@ -257,12 +257,17 @@
                                     ? auth()->user()->wishlist()->count()
                                     : count(session('wishlist') ?? []);
 
-                                $cart = session('cart') ?? [];
-                                $totalQuantity = 0;
+                                $cart = auth()->check() ? auth()->user()->cart()->get()  : session('cart') ?? [];
 
+
+                                $totalQuantity = 0;
                                 foreach ($cart as $productSizes) {
-                                    foreach ($productSizes as $item) {
-                                        $totalQuantity += (int) $item['quantity'];
+                                    if (auth()->check()) {
+                                        $totalQuantity += $productSizes->quantity;
+                                    } else {
+                                        foreach ($productSizes as $item) {
+                                            $totalQuantity += (int) $item['quantity'];
+                                        }
                                     }
                                 }
 

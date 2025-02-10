@@ -79,12 +79,7 @@ class WishlistController extends Controller
 
     public function destroy(Request $request)
     {
-        // Validate that a product_id was provided (optional but recommended)
-        // $request->validate([
-        //     'product_id' => 'required|integer'
-        // ]);
 
-        // Find the product to ensure it exists.
         $product = Product::find($request->product_id);
         if (!$product) {
             return back()->with('error', 'Product not found.');

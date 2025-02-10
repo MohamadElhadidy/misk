@@ -162,10 +162,10 @@
 
     //===== Nice select js
 
-    if ($('select').length){
-        $('select').niceSelect();
-    }
-
+    // if ($('select').length){
+    //     $('select').niceSelect();
+    // }
+    $('#country').niceSelect();
     //===== Slick slider js
 
     if ($('.hero-slider-one').length) {

@@ -8,7 +8,7 @@
                 <div class="row">
                     <div class="col-xl-8">
                         <div class="cart-wrapper mb-40" data-aos="fade-up" data-aos-duration="1200">
-                            <h3 class="mb-20">Total Cart Item: {{$totalQuantity}}</h3>
+                            <h3 class="mb-20">Total Cart Item: {{ $totalQuantity }}</h3>
                             <div class="cart-list table-responsive">
                                 <table class="table">
                                     <thead>
@@ -77,9 +77,10 @@
                             </div>
                             <div class="cart-bottom d-flex align-items-center justify-content-between mt-40">
                                 <div class="ct-shopping">
-                                    <button class="theme-btn style-one">Continue Shopping</button>
+                                    <a href="/shop" class="theme-btn style-one">Continue Shopping</a>
 
                                 </div>
+                                @if ($totalPrice != 0)
                                 <div class="cl-cart">
                                     <form action="{{ route('cart.clear') }}" method="POST">
                                         @csrf
@@ -87,6 +88,7 @@
                                         <button type="submit" class="theme-btn style-one">Clear Cart</button>
                                     </form>
                                 </div>
+                                @endif
                             </div>
                         </div>
                     </div>
@@ -95,22 +97,23 @@
                         <div class="cart-sidebar-area">
                             <!--=== Cart Widget  ===-->
                             <!--=== Cart Widget  ===-->
-                            <div class="cart-widget cart-total-widget mt-60 mb-40" data-aos="fade-up"
-                                data-aos-duration="1400">
-                                <h4>Cart Totals</h4>
-                                <div class="sub-total">
-                                    <h5>Subtotal <span class="price">{{ $totalPrice }} SAR</span></h5>
-                                </div>
-                                <div class="shipping-cart">
-                                    <h4>Shipping</h4>
-                                    <div class="single-radio">
-                                        <input class="form-check-input" type="radio" name="radio" checked
-                                            value="Slim Fit" id="radio1">
-                                        <label class="form-check-label" for="radio1">
-                                            Delivery <span class="price">30 SAR</span>
-                                        </label>
+                            @if ($totalPrice != 0)
+                                <div class="cart-widget cart-total-widget mt-60 mb-40" data-aos="fade-up"
+                                    data-aos-duration="1400">
+                                    <h4>Cart Totals</h4>
+                                    <div class="sub-total">
+                                        <h5>Subtotal <span class="price">{{ $totalPrice }} SAR</span></h5>
                                     </div>
-                                    {{-- <div class="single-radio">
+                                    <div class="shipping-cart">
+                                        <h4>Shipping</h4>
+                                        <div class="single-radio">
+                                            <input class="form-check-input" type="radio" name="radio" checked
+                                                value="Slim Fit" id="radio1">
+                                            <label class="form-check-label" for="radio1">
+                                                Delivery <span class="price">30 SAR</span>
+                                            </label>
+                                        </div>
+                                        {{-- <div class="single-radio">
                                             <input class="form-check-input" type="radio" name="radio" value="Slim Fit" id="radio2">
                                             <label class="form-check-label" for="radio1">
                                                 Flat Rate <span class="price">$890.00</span>
@@ -122,14 +125,15 @@
                                                 Local Area <span class="price">$890.00</span>
                                             </label>
                                         </div> --}}
+                                    </div>
+                                    <div class="price-total">
+                                        <h5>Total <span class="price">{{ $totalPrice + 30 }} SAR</span></h5>
+                                    </div>
+                                    <div class="proceced-checkout">
+                                        <a href="/checkout" class="theme-btn style-one">Proceed to checkout</a>
+                                    </div>
                                 </div>
-                                <div class="price-total">
-                                    <h5>Total <span class="price">{{ $totalPrice + 30 }} SAR</span></h5>
-                                </div>
-                                <div class="proceced-checkout">
-                                    <a href="#" class="theme-btn style-one">Proceed to checkout</a>
-                                </div>
-                            </div>
+                            @endif
                         </div>
                     </div>
                 </div>
