@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Cart;
 use App\Models\Product;
 use App\Models\ProductSize;
+use App\Models\UserAddress; 
+use App\Models\Order;
+use App\Models\OrderDetail;
 use Illuminate\Http\Request;
 
 class CheckoutController extends Controller
@@ -20,7 +23,6 @@ class CheckoutController extends Controller
         $totalPrice = 0;
         $cart = [];
 
-        if (auth()->check()) {
             // Process database cart
             foreach ($carts as $item) {
                 $product = Product::find($item->product_id);
@@ -29,6 +31,7 @@ class CheckoutController extends Controller
 
 
                 $cart[] = [
+                    'id' => $item->id,
                     'product' => $product,
                     'size' => $size,
                     'quantity' => $quantity,
@@ -37,27 +40,62 @@ class CheckoutController extends Controller
                 $totalQuantity += $quantity;
                 $totalPrice += $quantity * $size->price;
             }
-        } else {
-            // Process session cart
-            foreach ($carts as $key1 => $productSizes) {
-                $product = Product::find($key1);
-
-                foreach ($productSizes as $key2 => $item) {
-                    $size = ProductSize::find($key2);
-                    $quantity = $item['quantity'];
-                    $totalQuantity += $quantity;
-
-                    $cart[] = [
-                        'product' => $product,
-                        'size' => $size,
-                        'quantity' => $quantity,
-                    ];
-
-                    $totalPrice += $quantity * $size->price;
-                }
-            }
-        }
+        
 
         return view('checkout.index', compact('cart', 'totalPrice', 'totalQuantity'));
     }
+
+    public function store(Request $request){
+        //create new address if address = new
+        if($request->address == 'new') {
+            //validate address 
+            $request->validate([
+                'country' => 'required',
+                'city' => 'required',
+                'address_line_1' => 'required',
+                'phone_number' => 'required',
+                'postal_code' => 'required',
+            ]);
+
+            $address = UserAddress::create([
+                'user_id' => auth()->id(),
+                'country' => $request->country,
+                'city' => $request->city,
+                'address_line_1' => $request->address_line_1,
+                'address_line_2' => $request->address_line_2,
+                'phone_number' => $request->phone_number,
+                'postal_code' => $request->postal_code,
+            ]);
+        }else{
+            $address = UserAddress::find($request->address);
+        }
+        //create new order
+        $order = Order::create([
+            'user_id' => auth()->id(),
+            'address_id' => $address->id,
+            'total_price' => $request->total_price,
+            'status' => 'pending',
+        ]);
+        //convert $cart to array
+        $request->cart = json_decode($request->cart, true);
+
+        //create new order detail
+        foreach ($request->cart as $item) {
+            OrderDetail::create([
+                'order_id' => $order->id,
+                'product_id' => $item['product']['id'],
+                'size' => $item['size']['size'],
+                'price' => $item['size']['price'],
+                'quantity' => $item['quantity'],
+            ]);
+        }
+        //delete cart
+        if (auth()->check()) {
+            Cart::where('user_id', auth()->id())->delete();
+        } else {
+            session()->forget('cart');
+        }
+        //redirect to thank you page
+        return redirect()->route('checkout.success');
+    } 
 }

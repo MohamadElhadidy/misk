@@ -16,7 +16,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 
@@ -32,11 +32,6 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
 
 
 
-
-
-
-
-
 //authenticated users
 Route::middleware(['auth'])->group(function () {
     Route::view('/profile', 'user.profile')->middleware('verified');
@@ -45,11 +40,14 @@ Route::middleware(['auth'])->group(function () {
     // Email verification
     Route::get('/email/verify', fn() => view('auth.verify-email'))->name('verification.notice');
     Route::get('/email/verify/{id}/{hash}', [VerifyEmailController::class, 'verifyEmail'])->middleware('signed')->name('verification.verify');
-    Route::get('/email/verification-notification', [VerifyEmailController::class, 'sendVerificationEmail'])->middleware('throttle:6,1')->name('verification.send');
+    Route::post('/email/verification-notification', [VerifyEmailController::class, 'sendVerificationEmail'])->middleware('throttle:6,1')->name('verification.send');
 
     Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
+    Route::post('/checkout', [CheckoutController::class, 'store'])->name('checkout.store');
+    Route::get('/checkout/success', fn() => view('checkout.success'))->name('checkout.success');
 
 });
+
 Route::get('/wishlist', [WishlistController::class, 'index']);
 Route::post('/wishlist', [WishlistController::class, 'store']);
 Route::delete('/wishlist', [WishlistController::class, 'destroy'])->name('wishlist.destroy');

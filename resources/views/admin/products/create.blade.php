@@ -118,16 +118,16 @@
                             </svg>
                         </div>
                     </div>
-                    <div class="sm:col-span-2">
+                    <!-- <div class="sm:col-span-2">
                         <label for="name" class="block text-sm/6 font-medium text-gray-900">Product Stock</label>
                         <div class="mt-2">
                             <input type="text" name="stock" id="stock" autocomplete="stock"
                                 value="{{ old('stock', 0) }}" required
                                 class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="sm:col-span-2  flex items-end space-x-4">
+                    <!-- <div class="sm:col-span-2  flex items-end space-x-4">
                         <div class="flex gap-3">
                             <div class="flex h-6 shrink-0 items-center">
                                 <div class="group grid size-4 grid-cols-1">
@@ -172,7 +172,7 @@
                                     Stock</label>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
 
 
@@ -332,8 +332,8 @@
     </script>
 
     <script>
-        const old_sizes = @json(old('sizes'))
-        const old_prices = @json(old('prices'))
+        const old_sizes = @json(old('sizes'));
+        const old_prices = @json(old('prices'));
 
         console.log(old_sizes);
         console.log(old_prices);
