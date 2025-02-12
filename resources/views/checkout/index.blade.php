@@ -70,7 +70,7 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <div class="col-lg-12">
                                                         <div class="form-group">
                                                             <label>Town / City <span>*</span></label>
@@ -87,7 +87,7 @@
                                                                 placeholder="Ex:  Muizz Street"  x-bind:required="showNewAddressForm">
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <div class="col-lg-6">
                                                         <div class="form_group">
                                                             <label>Phone Number <span>*</span></label>
@@ -105,7 +105,7 @@
                                                     </div>
                                                 </div>
 
-                                            
+
                                         </div>
 
                                     </div>
@@ -117,7 +117,7 @@
                                                     <div class="item-title">Product</div>
                                                     <div class="subtotal">Subtotal</div>
                                                 </div>
-                                               
+
                                                 @foreach ($cart as $item)
 
                                                     <div class="product-item">
@@ -126,22 +126,22 @@
                                                             <span>x{{ $item['quantity'] }}</span>
                                                         </div>
                                                         <div class="product-total">
-                                                            {{ $item['size']->price * $item['quantity'] }} SAR</div>
+                                                            {{ $item['size']->price * $item['quantity'] }} {{ config('app.currency') }}</div>
                                                     </div>
                                                 @endforeach
 
                                                 <div class="list-item">
                                                     <div class="subtotal">Subtotal</div>
-                                                    <div class="product-total">{{ $totalPrice }} SAR</div>
+                                                    <div class="product-total">{{ $totalPrice }} {{ config('app.currency') }}</div>
                                                 </div>
                                                 <div class="list-item">
                                                     <div class="shipping">Shipping</div>
-                                                    <div class="shipping-total">30 SAR</div>
+                                                    <div class="shipping-total">30 {{ config('app.currency') }}</div>
                                                 </div>
 
                                                 <div class="list-item">
                                                     <div class="total">Total</div>
-                                                    <div class="product-total">{{ $totalPrice + 30 }} SAR</div>
+                                                    <div class="product-total">{{ $totalPrice + 30 }} {{ config('app.currency') }}</div>
                                                 </div>
                                             </div>
                                         </div>

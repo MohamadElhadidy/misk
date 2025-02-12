@@ -45,11 +45,11 @@
 
                                                     <div class="price"> <span
                                                             class="price new-price">{{ $sizes->first()->price }} <span
-                                                                class="currency">SAR</span></span>
+                                                                class="currency">{{ config('app.currency') }}</span></span>
                                                         @if ($sizes->first()->price != $sizes->last()->price)
                                                             <span class="price new-price">-</span>
                                                             <span class="price new-price">{{ $sizes->last()->price }}
-                                                                <span class="currency">SAR</span></span>
+                                                                <span class="currency">{{ config('app.currency') }}</span></span>
                                                         @endif
                                                     </div>
                                                 </td>

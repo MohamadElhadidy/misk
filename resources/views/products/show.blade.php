@@ -51,7 +51,7 @@
                                     <span class="price new-price">
 
                                         <span x-text="selectedPrice ? selectedPrice : sizes[0].price"></span>
-                                        <span class="currency">SAR</span>
+                                        <span class="currency">{{ config('app.currency') }}</span>
                                     </span>
                                 </div>
                                 {{-- <div class="product-color">

@@ -37,7 +37,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="price" x-text="item.size.price + ' SAR'"></div>
+                                                    <div class="price" x-text="item.size.price + ' {{ config('app.currency') }}'"></div>
                                                 </td>
                                                 <td>
                                                     <div class="action-cart">
@@ -52,7 +52,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="total-price" x-text="(item.size.price * item.quantity) + ' SAR'"></div>
+                                                    <div class="total-price" x-text="(item.size.price * item.quantity) + ' {{ config('app.currency') }}'"></div>
                                                 </td>
                                             </tr>
                                         </template>
@@ -70,16 +70,16 @@
                             <div class="cart-widget cart-total-widget mt-60 mb-40" data-aos="fade-up" data-aos-duration="1400">
                                 <h4>Cart Totals</h4>
                                 <div class="sub-total">
-                                    <h5>Subtotal <span class="price" x-text="totalPrice + ' SAR'"></span></h5>
+                                    <h5>Subtotal <span class="price" x-text="totalPrice + ' {{ config('app.currency') }}'"></span></h5>
                                 </div>
                                 <div class="shipping-cart">
                                     <h4>Shipping</h4>
                                     <label>
-                                        Delivery <span class="price">30 SAR</span>
+                                        Delivery <span class="price">30 {{ config('app.currency') }}</span>
                                     </label>
                                 </div>
                                 <div class="price-total">
-                                    <h5>Total <span class="price" x-text="(totalPrice + 30) + ' SAR'"></span></h5>
+                                    <h5>Total <span class="price" x-text="(totalPrice + 30) + ' {{ config('app.currency') }}'"></span></h5>
                                 </div>
                                 <button class="theme-btn style-one">Proceed to checkout</button>
                             </div>

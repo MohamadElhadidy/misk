@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
+use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerifyEmailController;
@@ -11,7 +12,6 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\WishlistController;
 use Illuminate\Support\Facades\Route;
@@ -27,6 +27,11 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
 
     Route::resource('/products', AdminProductController::class);
     Route::resource('/categories', AdminCategoryController::class);
+
+    Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
+    Route::put('/orders/{id}/status', [OrderController::class, 'updateStatus'])->name('orders.updateStatus');
+    Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
+
 });
 
 
@@ -60,7 +65,6 @@ Route::delete('/cart/clear', [CartController::class, 'clear'])->name('cart.clear
 
 Route::resource('products', ProductController::class);
 Route::resource('categories', CategoryController::class);
-Route::resource('orders', OrderController::class);
 
 
 //links

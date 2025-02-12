@@ -39,7 +39,7 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="price">{{ $item['size']->price }} SAR</div>
+                                                    <div class="price">{{ $item['size']->price }} {{ config('app.currency') }}</div>
                                                 </td>
                                                 <td>
                                                     <div class="action-cart">
@@ -68,7 +68,7 @@
                                                 </td>
                                                 <td>
                                                     <div class="total-price">
-                                                        {{ $item['size']->price * $item['quantity'] }} SAR</div>
+                                                        {{ $item['size']->price * $item['quantity'] }} {{ config('app.currency') }}</div>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -102,7 +102,7 @@
                                     data-aos-duration="1400">
                                     <h4>Cart Totals</h4>
                                     <div class="sub-total">
-                                        <h5>Subtotal <span class="price">{{ $totalPrice }} SAR</span></h5>
+                                        <h5>Subtotal <span class="price">{{ $totalPrice }} {{ config('app.currency') }}</span></h5>
                                     </div>
                                     <div class="shipping-cart">
                                         <h4>Shipping</h4>
@@ -110,7 +110,7 @@
                                             <input class="form-check-input" type="radio" name="radio" checked
                                                 value="Slim Fit" id="radio1">
                                             <label class="form-check-label" for="radio1">
-                                                Delivery <span class="price">30 SAR</span>
+                                                Delivery <span class="price">30 {{ config('app.currency') }}</span>
                                             </label>
                                         </div>
                                         {{-- <div class="single-radio">
@@ -127,7 +127,7 @@
                                         </div> --}}
                                     </div>
                                     <div class="price-total">
-                                        <h5>Total <span class="price">{{ $totalPrice + 30 }} SAR</span></h5>
+                                        <h5>Total <span class="price">{{ $totalPrice + 30 }} {{ config('app.currency') }}</span></h5>
                                     </div>
                                     <div class="proceced-checkout">
                                         <a href="/checkout" class="theme-btn style-one">Proceed to checkout</a>

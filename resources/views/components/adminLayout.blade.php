@@ -28,6 +28,8 @@
                                     Management</x-admin.nav-link>
                                 <x-admin.nav-link href="/admin/categories" :active="str()->startsWith(request()->path(), 'admin/categories')">Categories
                                     Management</x-admin.nav-link>
+                                <x-admin.nav-link href="/admin/orders" :active="str()->startsWith(request()->path(), 'admin/orders')">Orders
+                                    Management</x-admin.nav-link>
                             </div>
                         </div>
                     </div>
