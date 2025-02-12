@@ -620,7 +620,8 @@
 
     $('.quantity-down').on('click', function() {
 
-        var inputField = $("input[name='quantity']");
+        var inputField = $(this).closest('form').find("input[name='quantity']");
+        console.log(inputField)
         var numProduct = Number(inputField.val()); // Get value first, then convert to number
 
         if (numProduct > 1) {
@@ -630,7 +631,7 @@
 
 
     $('.quantity-up').on('click', function(){
-        var inputField = $("input[name='quantity']");
+        var inputField = $(this).siblings("input[name='quantity']");
 
         var numProduct = Number(inputField.val()); // Get value first, then convert to number
         inputField.val(numProduct + 1).change();

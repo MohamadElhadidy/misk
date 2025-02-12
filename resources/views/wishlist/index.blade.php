@@ -20,24 +20,24 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach ($wishlist as $product)
+                                        @foreach ($wishlist as $item)
                                             <tr>
                                                 <td>
                                                     <div class="product-thumb-item">
                                                         <div class="product-img">
-                                                            <img src="{{ '/storage/' . $product->images->first()?->path }}"
+                                                            <img src="{{ '/storage/' . $item->product->images->first()?->path }}"
                                                                 alt="Product Thumbnail">
                                                         </div>
                                                         <div class="product-info">
                                                             <h4 class="title"><a
-                                                                    href="/products/{{ $product->id }}">{{ $product->name }}</a>
+                                                                    href="/products/{{ $item->product->id }}">{{ $item->product->name }}</a>
                                                             </h4>
                                                         </div>
                                                     </div>
                                                 </td>
                                                 <td>
                                                     @php
-                                                        $sizes = $product->sizes()->orderBy('price')->get();
+                                                        $sizes = $item->product->sizes()->orderBy('price')->get();
                                                     @endphp
 
 
@@ -72,7 +72,7 @@
                                                                 @csrf
                                                                 @method('DELETE')
                                                                 <input type="hidden" name="product_id"
-                                                                    value="{{ $product->id }}">
+                                                                    value="{{ $item->product->id }}">
                                                                 <button type="submit"><i class="far fa-times"></i></button>
                                                             </form>
                                                         </div>
