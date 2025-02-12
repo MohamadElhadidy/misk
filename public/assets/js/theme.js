@@ -618,13 +618,23 @@
     }
     //======= Quantity Number js
 
-    $('.quantity-down').on('click', function(){
-        var numProduct = Number($(this).next().val());
-        if(numProduct > 1) $(this).next().val(numProduct - 1);
+    $('.quantity-down').on('click', function() {
+
+        var inputField = $("input[name='quantity']");
+        var numProduct = Number(inputField.val()); // Get value first, then convert to number
+
+        if (numProduct > 1) {
+            inputField.val(numProduct - 1).change(); // Update value and trigger form submission
+        }
     });
+
+
     $('.quantity-up').on('click', function(){
-        var numProduct = Number($(this).prev().val());
-        $(this).prev().val(numProduct + 1);
+        var inputField = $("input[name='quantity']");
+
+        var numProduct = Number(inputField.val()); // Get value first, then convert to number
+        inputField.val(numProduct + 1).change();
+
     });
 
     //===== Slider Range

@@ -129,23 +129,43 @@ class CartController extends Controller
     /**
      * Update an item’s quantity.
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        // Validate the request
-        $request->validate([
-            'quantity' => 'required|integer|min:1'
-        ]);
+        try {
+            DB::beginTransaction();
 
-        $cart = session()->get('cart', []);
+            $productId = $request->productId;
+            $sizeId = $request->sizeId;
+            $newQuantity = max(1, $request->quantity); // Ensure at least 1
+            if (auth()->check()) {
+                // Logged-in user: Update in database
+                $cart = Cart::where('user_id', auth()->id())
+                    ->where('product_id', $productId)
+                    ->where('product_size_id', $sizeId)
+                    ->first();
 
-        if (isset($cart[$id])) {
-            $cart[$id]['quantity'] = $request->quantity;
-            session()->put('cart', $cart);
-            return redirect()->route('cart.index')->with('success', 'Cart updated!');
+                if ($cart) {
+                    $cart->update(['quantity' => $newQuantity]);
+                }
+            } else {
+                // Guest user: Update in session
+                $cart = session()->get('cart') ?? [];
+
+                if (isset($cart[$productId][$sizeId])) {
+                    $cart[$productId][$sizeId]['quantity'] = $newQuantity;
+                    session()->put('cart', $cart);
+                }
+            }
+
+            DB::commit();
+            return back()->with('success', 'Cart updated successfully!');
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            Log::error('Cart update failed!', ['exception' => $th]);
+            return back()->with('error', 'Something went wrong! Please try again.');
         }
-
-        return redirect()->route('cart.index')->with('error', 'Product not found in cart.');
     }
+
 
     /**
      * Remove an item from the cart.

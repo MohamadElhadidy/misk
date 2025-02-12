@@ -44,12 +44,22 @@
                                                 <td>
                                                     <div class="action-cart">
                                                         <div class="quantity-input">
-                                                            <button class="quantity-down"><i
+
+                                                            <button type="button" class="quantity-down"><i
                                                                     class="far fa-minus"></i></button>
+                                                            <form action="/cart/update" method="POST">
+                                                                @csrf
+                                                                @method('PUT')
+                                                                <input type="hidden" name="productId"
+                                                                       value="{{ $item['product']->id }}">
+                                                                <input type="hidden" name="sizeId"
+                                                                       value="{{ $item['size']->id }}">
                                                             <input class="quantity" class="!w-auto" type="text"
-                                                                value="{{ $item['quantity'] }}" name="quantity">
-                                                            <button class="quantity-up"><i
+                                                                value="{{ $item['quantity'] }}" name="quantity" onchange="this.form.submit()">
+                                                            </form>
+                                                            <button type="button" class="quantity-up"><i
                                                                     class="far fa-plus"></i></button>
+
                                                         </div>
                                                         <div class="cart-remove">
                                                             <form action="{{ route('cart.destroy') }}" method="POST">
