@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\OrderController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerifyEmailController;
@@ -21,9 +22,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
-    Route::get('/', function () {
-        return view('admin.dashboard');
-    })->name('admin');
+    Route::get('/', DashboardController::class)->name('admin');
 
     Route::resource('/products', AdminProductController::class);
     Route::resource('/categories', AdminCategoryController::class);

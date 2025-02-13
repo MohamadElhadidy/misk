@@ -72,5 +72,27 @@ class Order extends Model
         });
     }
 
+    /**
+     * Get total count of delivered orders.
+     */
+    public static function getDeliveredOrdersCount()
+    {
+        return self::where('status', 'delivered')->count();
+    }
 
+    /**
+     * Get total revenue from delivered orders.
+     */
+    public static function getTotalRevenue()
+    {
+        return self::where('status', 'delivered')->sum('total_price');
+    }
+
+    /**
+     * Get total count of customers who have placed at least one order.
+     */
+    public static function getCustomerCount()
+    {
+        return self::distinct('user_id')->count('user_id');
+    }
 }
