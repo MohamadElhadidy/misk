@@ -41,8 +41,6 @@
                                                     @endphp
 
 
-
-
                                                     <div class="price"> <span
                                                             class="price new-price">{{ $sizes->first()->price }} <span
                                                                 class="currency">{{ config('app.currency') }}</span></span>
