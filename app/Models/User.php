@@ -64,4 +64,27 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(UserAddress::class);
     }
 
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function totalOrders()
+    {
+        return $this->orders()->where('status', 'delivered')->count();
+    }
+
+    public function totalSpend()
+    {
+        return $this->orders()->where('status', 'delivered')->sum('total_price');
+    }
+
+    public function lastOrderDate()
+    {
+        $lastOrder = $this->orders()->where('status', 'delivered')->latest('created_at')->first();
+        return $lastOrder ? $lastOrder->created_at : null;
+    }
+
+
+
 }
