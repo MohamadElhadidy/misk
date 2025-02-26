@@ -12,7 +12,7 @@ class OrderController extends Controller
     public function index() : View
     {
         if (request()->has('q')) {
-            $orders = Order::whereHas('user', function ($query) {
+            $orders = Order::whereHas('customer', function ($query) {
                 $query->where('name', 'like', '%' . request('q') . '%'); // Searching by user's name
             })
                 ->orWhere('status', 'like', '%' . request('q') . '%') // Searching by order's status

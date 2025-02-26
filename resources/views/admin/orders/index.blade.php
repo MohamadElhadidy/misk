@@ -71,11 +71,11 @@
 
                         <th scope="row"
                             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white underline">
-                            <a href="{{route('orders.show', $order->id)}}" class="hover:text-blue-600" target="_blank">{{ $order->order_id}}</a>
+                            <a href="{{route('orders.show', $order->order_id)}}" class="hover:text-blue-600" target="_blank">{{ $order->order_id}}</a>
                         </th>
                         <th scope="row"
                             class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            {{ $order->user->name }}
+                            {{ $order->customer->name }}
                         </th>
 
                         <th scope="row"

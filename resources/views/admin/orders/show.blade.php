@@ -15,7 +15,7 @@
                 <div class="space-y-4 border-b  border-gray-200 py-8 dark:border-gray-700 ">
                     <h4 class="text-lg font-semibold text-gray-900 dark:text-white">Billing & Delivery information</h4>
                     <dl>
-                        <dd class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400"> {{$order->user->name}} - {{$order->address->phone_number}}, {{$order->address->city}}, {{$order->address->country}}, {{$order->address->address_line_1}} - {{$order->address->address_line_2}}, {{$order->address->postal_code}}</dd>
+                        <dd class="mt-1 text-base font-normal text-gray-500 dark:text-gray-400"> {{$order->customer->name}} - {{$order->address->phone_number}}, {{$order->address->city}}, {{$order->address->country}}, {{$order->address->address_line_1}} - {{$order->address->address_line_2}}, {{$order->address->postal_code}}</dd>
                     </dl>
                 </div>
 
