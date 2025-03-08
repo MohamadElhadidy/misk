@@ -199,9 +199,9 @@
                                         <p class="text-sm font-medium text-gray-900 truncate">
                                             {{ $product->name }}
                                         </p>
-                                        {{--                                <p class="text-sm text-gray-500 truncate">--}}
-                                        {{--                                    <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="17727a767e7b57607e7973646372653974787a">[email&#160;protected]</a>--}}
-                                        {{--                                </p>--}}
+                                        {{-- <p class="text-sm text-gray-500 truncate">--}}
+                                        {{--<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="17727a767e7b57607e7973646372653974787a">[email&#160;protected]</a>--}}
+                                        {{-- </p>--}}
                                     </div>
                                     <div class="inline-flex items-center text-base font-semibold text-gray-900">
                                         {{ $product->total_sales }} {{ config('app.currency') }}

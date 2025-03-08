@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\CustomerController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\Admin\OrderController as AdminOrderController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\SettingsController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\VerifyEmailController;
@@ -33,8 +34,11 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
 
     Route::get('/orders', [AdminOrderController::class, 'index'])->name('orders.index');
     Route::put('/orders/{id}/status', [AdminOrderController::class, 'updateStatus'])->name('orders.updateStatus');
-    Route::get('/orders/{order}', [AdminOrderController::class, 'show'])->name('orders.show');
+    Route::get('/orders/{order:order_id}', [AdminOrderController::class, 'show'])->name('orders.show');
 
+    Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
+    Route::post('/settings/update', [SettingsController::class, 'update'])->name('settings.update');
+    Route::get('/settings/localization', [SettingsController::class, 'localization'])->name('settings.localization');
 });
 
 
@@ -55,8 +59,6 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/checkout/success', fn() => view('checkout.success'))->name('checkout.success');
 
     Route::get('/orders/{order:order_id}', [OrderController::class, 'show']);
-
-
 });
 
 Route::get('/wishlist', [WishlistController::class, 'index']);

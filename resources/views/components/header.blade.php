@@ -236,22 +236,6 @@
                     <!--=== Nav Right Item ===-->
                     <div class="nav-right-item style-one">
                         <ul>
-                            <li>
-                                @guest
-                                    <a href="/login" class="deals d-lg-block d-none text-md"><i
-                                            class="far fa-user-alt"></i></a>
-                                @else
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
-                                        <button type="submit" class="deals d-lg-block d-none text-md"><i
-                                                class="far fa-logout-alt"></i></button>
-                                    </form>
-
-                                @endguest
-
-
-                            </li>
-
                             @php
                                 $wishlist = auth()->check()
                                     ? auth()->user()->wishlist()->count()
@@ -286,15 +270,31 @@
                                     </div>
                                 </a>
                             </li>
-
-                            @admin
-                                <li>
-                                    <div class="deals d-lg-block d-none">
+                            <li>
+                                <div class="deals d-lg-block d-none">
+                            @guest
+                                        <a href="/login" target="_blank"
+                                           class="rounded-md bg-black px-3 py-2 text-sm  text-gray-200 shadow-xs hover:bg-gray-800 focus-visible:outline-2 ">Login</a>
+                            @else
+                                        @admin
                                         <a href="{{ route('admin') }}" target="_blank"
-                                            class="rounded-md bg-black px-3 py-2 text-sm  text-gray-200 shadow-xs hover:bg-gray-800 focus-visible:outline-2 ">Admin</a>
-                                    </div>
-                                </li>
-                            @endadmin
+                                           class="rounded-md bg-black px-3 py-2 text-sm  text-gray-200 shadow-xs hover:bg-gray-800 focus-visible:outline-2 ">Admin</a>
+                                       @else
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button type="submit" class="hover:text-[#cc0d39] transition-all duration-300 ease-out rounded-md bg-black px-3 py-2 text-sm  text-gray-200 shadow-xs hover:bg-gray-800 focus-visible:outline-2 ">
+                                                Logout</button>
+                                        </form>
+                                        @endadmin
+
+
+
+
+
+                            @endguest
+                                </div>
+                            </li>
+
                         </ul>
                         <div class="navbar-toggler d-block d-lg-none">
                             <span></span>
