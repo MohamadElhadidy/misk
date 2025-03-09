@@ -7,7 +7,7 @@
                 <div class="search-header-inner">
                     <!--=== Site Branding  ===-->
                     <div class="site-branding">
-                        <a href="index.html" class="brand-logo"><img src="/assets/images/logo/logo-main.png"
+                        <a href="/" class="brand-logo"><img src="{{$settings->get('store_logo')}}"
                                 alt="Logo"></a>
                     </div>
                     <!--===  Product Search Category  ===-->

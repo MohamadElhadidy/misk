@@ -335,17 +335,6 @@
         const old_sizes = @json(old('sizes'));
         const old_prices = @json(old('prices'));
 
-        console.log(old_sizes);
-        console.log(old_prices);
-
-
-        // const s = sizes.map((size, index) => ({
-        //     size: size,
-        //     price: prices[index]
-        // }));
-
-
-
         function productForm() {
             return {
                 sizes: [{

@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Setting;
 use App\Models\Wishlist;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Blade;
@@ -27,5 +28,12 @@ class AppServiceProvider extends ServiceProvider
         Blade::if('admin', function () {
             return Auth::check() && Auth::user()->role === 'admin';
         });
+
+        app()->singleton('settings', function () {
+            return new Setting();
+        });
+
+        View::share('settings', app('settings'));
+
     }
 }

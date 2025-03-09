@@ -21,7 +21,6 @@ use App\Http\Controllers\OrderController;
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 
@@ -38,14 +37,19 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
 
     Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
     Route::post('/settings/update', [SettingsController::class, 'update'])->name('settings.update');
-    Route::get('/settings/localization', [SettingsController::class, 'localization'])->name('settings.localization');
+    Route::get('/settings/shipping', [SettingsController::class, 'shipping'])->name('settings.shipping');
+    Route::get('/settings/seo_social_media', [SettingsController::class, 'seo_social_media'])->name('settings.seo_social_media');
+    Route::get('/settings/appearance', [SettingsController::class, 'appearance'])->name('settings.appearance');
+    Route::get('/settings/users', [SettingsController::class, 'users'])->name('settings.users');
+    Route::get('/settings/security', [SettingsController::class, 'security'])->name('settings.security');
 });
 
 
 
 
+
 //authenticated users
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth', 'checkMaintenance'])->group(function () {
     Route::view('/profile', 'user.profile')->middleware('verified');
     Route::post('/logout', LogoutController::class)->name('logout');
 
@@ -61,30 +65,37 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/orders/{order:order_id}', [OrderController::class, 'show']);
 });
 
-Route::get('/wishlist', [WishlistController::class, 'index']);
-Route::post('/wishlist', [WishlistController::class, 'store']);
-Route::delete('/wishlist', [WishlistController::class, 'destroy'])->name('wishlist.destroy');
+Route::middleware(['checkMaintenance'])->group(function () {
+    Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::post('/cart/add/{productId}', [CartController::class, 'add'])->name('cart.add');
-Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
-Route::delete('/cart', [CartController::class, 'destroy'])->name('cart.destroy');
-Route::delete('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
-Route::put('/cart/update', [CartController::class, 'update'])->name('cart.update');
+    Route::get('/wishlist', [WishlistController::class, 'index']);
+    Route::post('/wishlist', [WishlistController::class, 'store']);
+    Route::delete('/wishlist', [WishlistController::class, 'destroy'])->name('wishlist.destroy');
+
+    Route::post('/cart/add/{productId}', [CartController::class, 'add'])->name('cart.add');
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::delete('/cart', [CartController::class, 'destroy'])->name('cart.destroy');
+    Route::delete('/cart/clear', [CartController::class, 'clear'])->name('cart.clear');
+    Route::put('/cart/update', [CartController::class, 'update'])->name('cart.update');
 
 
-Route::resource('products', ProductController::class);
-Route::resource('categories', CategoryController::class);
+    Route::resource('products', ProductController::class);
+    Route::resource('categories', CategoryController::class);
 
 
-//links
-Route::view('/about', 'pages.about');
-Route::view('/contact', 'pages.contact');
-Route::view('/locations', 'pages.locations');
+    //links
+    Route::view('/about', 'pages.about');
+    Route::view('/contact', 'pages.contact');
+    Route::view('/locations', 'pages.locations');
+
+});
+
+Route::view('/login', 'auth.login')->name('login')->middleware('guest');
+Route::post('/login', LoginController::class)->middleware('guest');
 
 //guest users
-Route::middleware('guest')->group(function () {
+Route::middleware(['guest', 'checkMaintenance'])->group(function () {
     //get routes
-    Route::view('/login', 'auth.login')->name('login');
     Route::view('/register', 'auth.register')->name('register');
 
     //forget password
@@ -95,5 +106,4 @@ Route::middleware('guest')->group(function () {
 
     //post routes
     Route::post('/register', RegisterController::class);
-    Route::post('/login', LoginController::class);
 });

@@ -16,8 +16,9 @@ return new class extends Migration {
 
         // Insert default settings
         DB::table('settings')->insert([
-            ['key_name' => 'store_name', 'value' => 'My eCommerce Store'],
-            ['key_name' => 'store_logo', 'value' => '/uploads/logo.png'],
+            ['key_name' => 'store_name', 'value' => 'Name'],
+            ['key_name' => 'store_title', 'value' => 'Title'],
+            ['key_name' => 'store_logo', 'value' => ''],
             ['key_name' => 'favicon', 'value' => '/uploads/favicon.ico'],
             ['key_name' => 'banner_1', 'value' => '/uploads/banner1.jpg'],
             ['key_name' => 'banner_2', 'value' => '/uploads/banner2.jpg'],
@@ -33,7 +34,8 @@ return new class extends Migration {
             ['key_name' => 'social_instagram', 'value' => 'https://instagram.com/yourstore'],
             ['key_name' => 'social_twitter', 'value' => 'https://twitter.com/yourstore'],
             ['key_name' => 'social_linkedin', 'value' => 'https://linkedin.com/company/yourstore'],
-            ['key_name' => 'meta_title', 'value' => 'Welcome to My eCommerce Store'],
+            ['key_name' => 'social_tiktok', 'value' => ''],
+            ['key_name' => 'social_snapchat', 'value' => ''],
             ['key_name' => 'meta_description', 'value' => 'Best products at the best prices.'],
             ['key_name' => 'maintenance_mode', 'value' => '0'],
         ]);

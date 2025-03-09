@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Product;
@@ -168,7 +169,7 @@ class ProductController extends Controller
             if ($newImages) {
                 try {
                     foreach ($newImages as $base64Image) {
-                        $image = $this->base64ToUploadedFile($base64Image);
+                        $image = Helper::base64ToUploadedFile($base64Image);
 
                         $path = $image->store('products');
 
@@ -178,7 +179,7 @@ class ProductController extends Controller
                         ]);
                     }
                 } finally {
-                    $this->cleanTempFiles();
+                    Helper::cleanTempFiles();
                 }
             }
 
@@ -232,44 +233,5 @@ class ProductController extends Controller
         $product->sizes()->delete();
 
         return back()->with('success', 'Product deleted successfully!');
-    }
-
-    private function base64ToUploadedFile($base64String)
-    {
-        // Extract image data
-        $imageData = explode(',', $base64String);
-        $imageContent = base64_decode($imageData[1]);
-
-        // Determine file extension
-        $mimeType = explode(':', explode(';', $imageData[0])[0])[1];
-        $extension = explode('/', $mimeType)[1];
-
-        // Create a unique filename
-        $filename = Str::random(40) . '.' . $extension;
-
-        // Store the file in Laravel's temporary directory
-        if (! File::exists(storage_path('app/temp'))) {
-            File::makeDirectory(storage_path('app/temp'), 0777, true);
-        }
-
-        $tempPath = storage_path('app/temp/' . $filename);
-        file_put_contents($tempPath, $imageContent);
-
-        // Create UploadedFile instance
-        return new UploadedFile(
-            $tempPath,
-            $filename,
-            $mimeType,
-            null,
-            true // Keep the original file
-        );
-    }
-
-    private function cleanTempFiles()
-    {
-        $tempPath = storage_path('app/temp');
-        if (file_exists($tempPath)) {
-            array_map('unlink', glob("$tempPath/*"));
-        }
     }
 }
