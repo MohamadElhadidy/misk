@@ -49,110 +49,78 @@
     <x-slot:header>
         <x-admin.heading>Settings</x-admin.heading>
     </x-slot>
-    <div class="flex min-h-screen">
+    <div class="flex flex-col md:flex-row min-h-screen">
         <!-- Sidebar -->
         <x-admin.sidebar-settings/>
 
         <!-- Content -->
-        <main class="flex-1 p-6">
-            <div class="bg-white p-6 rounded-lg shadow-md">
+        <main class="flex-1 p-4 sm:p-6">
+            <div class="bg-white p-4 sm:p-6 rounded-lg shadow-md">
                 <h2 class="text-xl font-semibold mb-4">General Settings</h2>
 
-                <form method="POST"  action="{{ route('settings.update') }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('settings.update') }}" enctype="multipart/form-data">
                     @csrf
 
                     <div class="space-y-12">
                         <div class="border-b border-gray-900/10 pb-12">
                             <h1 class="text-green-600 my-6">{{ session('success') }}</h1>
-                            <div x-data="imageUploader()" class="max-w-3xl p-6 bg-white shadow-md rounded-lg">
+                            <div x-data="imageUploader()" class="max-w-full sm:max-w-3xl p-4 sm:p-6 bg-white shadow-md rounded-lg">
                                 <h2 class="text-xl font-semibold mb-4">Store Logo</h2>
 
-                                <!-- File Input (Hidden and triggered by the button) -->
                                 <input type="file" @change="uploadImage" x-ref="fileInput" class="hidden" accept="image/*">
+                                <button type="button" @click="$refs.fileInput.click()" class="upload-btn">Upload Logo</button>
 
-                                <!-- Upload Button -->
-                                <button type="button" @click="$refs.fileInput.click()" class="upload-btn">
-                                    Upload Logo
-                                </button>
-
-                                <!-- Uploaded Image Preview -->
                                 <div class="mt-4" x-show="image">
                                     <div class="relative">
-                                        <img :src="image" class="image-preview " alt="Preview">
+                                        <img :src="image" class="image-preview max-w-full h-auto" alt="Preview">
                                         <input type="hidden" name="store_logo" :value="image">
-                                        <!-- Remove Button -->
                                         <button type="button" @click="removeImage()" class="remove-btn">X</button>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                                <div class="sm:col-span-3">
-                                    <label for="store_name" class="block text-sm/6 font-medium text-gray-900">Store Name</label>
-                                    <div class="mt-2">
-                                        <input type="text" name="store_name" id="store_name" autocomplete="store_name"
-                                               value="{{ old('store_name', $settings->get('store_name')) }}" required
-                                               class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                                    </div>
+                            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8">
+                                <div>
+                                    <label for="store_name" class="block text-sm font-medium text-gray-900">Store Name</label>
+                                    <input type="text" name="store_name" id="store_name" value="{{ old('store_name', $settings->get('store_name')) }}" required
+                                           class="w-full mt-2 rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
                                 </div>
-                                <div class="sm:col-span-3">
-                                    <label for="store_email" class="block text-sm/6 font-medium text-gray-900">Store Email</label>
-                                    <div class="mt-2">
-                                        <input type="text" name="store_email" id="store_email" autocomplete="store_email"
-                                               value="{{ old('store_email', $settings->get('store_email')) }}" required
-                                               class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                                    </div>
+                                <div>
+                                    <label for="store_email" class="block text-sm font-medium text-gray-900">Store Email</label>
+                                    <input type="text" name="store_email" id="store_email" value="{{ old('store_email', $settings->get('store_email')) }}" required
+                                           class="w-full mt-2 rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
                                 </div>
                             </div>
 
-
-                            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                                <div class="sm:col-span-3">
-                                    <label for="store_phone" class="block text-sm/6 font-medium text-gray-900">Store Phone</label>
-                                    <div class="mt-2">
-                                        <input type="text" name="store_phone" id="store_phone" autocomplete="store_phone"
-                                               value="{{ old('store_phone', $settings->get('store_phone')) }}" required
-                                               class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                                    </div>
+                            <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8">
+                                <div>
+                                    <label for="store_phone" class="block text-sm font-medium text-gray-900">Store Phone</label>
+                                    <input type="text" name="store_phone" id="store_phone" value="{{ old('store_phone', $settings->get('store_phone')) }}" required
+                                           class="w-full mt-2 rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
                                 </div>
-                                <div class="sm:col-span-3">
-                                    <label for="store_address" class="block text-sm/6 font-medium text-gray-900">Store Address</label>
-                                    <div class="mt-2">
-                                        <input type="text" name="store_address" id="store_address" autocomplete="store_address"
-                                               value="{{ old('store_address', $settings->get('store_address')) }}" required
-                                               class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                                    </div>
+                                <div>
+                                    <label for="store_address" class="block text-sm font-medium text-gray-900">Store Address</label>
+                                    <input type="text" name="store_address" id="store_address" value="{{ old('store_address', $settings->get('store_address')) }}" required
+                                           class="w-full mt-2 rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
                                 </div>
                             </div>
-                            <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                                <div class="sm:col-span-3">
-                                    <label for="default_currency" class="block text-sm/6 font-medium text-gray-900">Default Currency</label>
-                                    <div class="mt-2">
-                                        <input type="text" name="default_currency" id="default_currency" autocomplete="default_currency"
-                                               value="{{ old('default_currency', $settings->get('default_currency')) }}" required
-                                               class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                                    </div>
-                                </div>
-                                <div class="sm:col-span-3">
-                                    <label for="default_language" class="block text-sm/6 font-medium text-gray-900">Default Language</label>
-                                    <div class="mt-2">
-                                        <input type="text" name="default_language" id="default_language" autocomplete="default_language"
-                                               value="{{ old('default_language', $settings->get('default_language')) }}" required
-                                               class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                                    </div>
-                                </div>
+
+                            <div class="mt-10">
+                                <label for="default_currency" class="block text-sm font-medium text-gray-900">Default Currency</label>
+                                <input type="text" name="default_currency" id="default_currency" value="{{ old('default_currency', $settings->get('default_currency')) }}" required
+                                       class="w-full mt-2 rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
                             </div>
                         </div>
 
-                        <div class="mt-6 flex items-center justify-end gap-x-6">
+                        <div class="mt-6 flex justify-end">
                             <button type="submit"
-                                    class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Update</button>
+                                    class="bg-indigo-600 text-white px-4 py-2 rounded-md shadow hover:bg-indigo-500 focus:outline-none">Update
+                            </button>
                         </div>
+                    </div>
 
                 </form>
-
             </div>
-
 
         </main>
     </div>

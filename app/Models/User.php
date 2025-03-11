@@ -85,6 +85,29 @@ class User extends Authenticatable implements MustVerifyEmail
         return $lastOrder ? $lastOrder->created_at : null;
     }
 
+    public function promote()
+    {
+        $this->role = 'admin';
+        $this->save();
+    }
+
+    public function downgrade()
+    {
+        $this->role = 'user';
+        $this->save();
+    }
+
+    public function ban()
+    {
+        $this->banned = true;
+        $this->save();
+    }
+
+    public function unban()
+    {
+        $this->banned = false;
+        $this->save();
+    }
 
 
 }

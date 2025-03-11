@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 
 
 
-Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
+Route::prefix('admin')->middleware(['auth', 'admin', 'banned'])->group(function () {
     Route::get('/', DashboardController::class)->name('admin');
 
     Route::resource('/products', AdminProductController::class);
@@ -42,6 +42,12 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::get('/settings/appearance', [SettingsController::class, 'appearance'])->name('settings.appearance');
     Route::get('/settings/users', [SettingsController::class, 'users'])->name('settings.users');
     Route::get('/settings/security', [SettingsController::class, 'security'])->name('settings.security');
+
+    Route::post('/settings/user/promote/{user}', [SettingsController::class, 'promote'])->name('user.promote');
+    Route::post('/settings/user/ban/{user}', [SettingsController::class, 'ban'])->name('user.ban');
+    Route::post('/settings/user/unban/{user}', [SettingsController::class, 'unban'])->name('user.unban');
+    Route::post('/settings/user/downgrade/{user}', [SettingsController::class, 'downgrade'])->name('user.downgrade');
+
 });
 
 
@@ -49,7 +55,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
 
 
 //authenticated users
-Route::middleware(['auth', 'checkMaintenance'])->group(function () {
+Route::middleware(['auth', 'checkMaintenance', 'banned'])->group(function () {
     Route::view('/profile', 'user.profile')->middleware('verified');
     Route::post('/logout', LogoutController::class)->name('logout');
 
@@ -65,7 +71,7 @@ Route::middleware(['auth', 'checkMaintenance'])->group(function () {
     Route::get('/orders/{order:order_id}', [OrderController::class, 'show']);
 });
 
-Route::middleware(['checkMaintenance'])->group(function () {
+Route::middleware(['checkMaintenance', 'banned'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
     Route::get('/wishlist', [WishlistController::class, 'index']);

@@ -5,7 +5,7 @@
     <x-slot:header>
         <x-admin.heading>Settings</x-admin.heading>
     </x-slot>
-    <div class="flex min-h-screen">
+    <div class="flex flex-col md:flex-row min-h-screen">
         <!-- Sidebar -->
         <x-admin.sidebar-settings/>
 

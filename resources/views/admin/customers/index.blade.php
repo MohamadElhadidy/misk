@@ -4,7 +4,7 @@
     </x-slot>
 
     <x-slot:header>
-        <x-admin.heading>Customers List</x-admin.heading>
+        <x-admin.heading class="text-lg sm:text-xl">Customers List</x-admin.heading>
     </x-slot>
 
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">

@@ -1,7 +1,6 @@
 @props(['title'])
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +10,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Aoboshi+One&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
+
+
+
     <link rel="stylesheet" href="/assets/fonts/flaticon/flaticon_pesco.css">
     <link rel="stylesheet" href="/assets/fonts/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
@@ -20,15 +22,11 @@
     <link rel="stylesheet" href="/assets/vendor/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="/assets/vendor/aos/aos.css">
     <link rel="stylesheet" href="/assets/css/default.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-
-
-
 
     @vite('resources/css/app.css')
 
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-
 <body>
     <div class="preloader">
         <div class="loader">
@@ -45,7 +43,6 @@
     <x-modals />
 
     <div class="back-to-top"><i class="far fa-angle-up"></i></div>
-
 
     <script src="/assets/vendor/jquery-3.7.1.min.js"></script>
     <script src="/assets/vendor/popper/popper.min.js"></script>

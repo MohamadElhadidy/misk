@@ -1,4 +1,4 @@
-<aside class="w-64 bg-white p-6 shadow-md">
+<aside class="bg-white p-6 shadow-md">
     <ul class="space-y-3">
         <x-admin.sidebar-nav-link href="/admin/settings" :active="request()->is('admin/settings')">General Settings</x-admin.sidebar-nav-link>
         <x-admin.sidebar-nav-link href="/admin/settings/shipping" :active="request()->is('admin/settings/shipping')">Shipping Settings</x-admin.sidebar-nav-link>
