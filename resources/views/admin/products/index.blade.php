@@ -52,7 +52,7 @@
                                 {{ $loop->iteration + ($products->currentPage() - 1) * $products->perPage() }}
                             </td>
                             <td class="px-4 py-3">
-                                <img src="{{ '/storage/' . $product->images->first()?->path }}" class="w-24 h-auto" />
+                                <img src="{{  $product->images->first()?->path }}" class="w-24 h-auto" />
                             </td>
                             <td class="px-4 py-3 font-medium text-gray-900 dark:text-white">
                                 {{ $product->name }}

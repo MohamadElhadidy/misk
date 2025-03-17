@@ -10,13 +10,18 @@ use Illuminate\Support\Str;
 class Helper
 {
 
-    public static function UploadBase64($base64String, $directory)
-    {
-        self::deleteAllImagesInDirectory($directory);
+    public static function UploadBase64($base64String, $directory, $old = null){
+
+        $oldPath =  Str::replace('/storage/', '', $old);
+        if (Storage::exists($oldPath)) {
+            Storage::delete($oldPath);
+        }
 
         $image = self::base64ToUploadedFile($base64String);
 
-        $path = $image->store($directory);
+        $path = $image->store($directory, 'public');
+
+        self::cleanTempFiles();
 
         return "/storage/{$path}";
     }

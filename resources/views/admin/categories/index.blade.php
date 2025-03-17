@@ -5,7 +5,7 @@
 
     <x-slot:header>
         <x-admin.heading class="text-lg sm:text-xl">Categories Management</x-admin.heading>
-        <x-admin.button href="/admin/products/create">Create Product</x-admin.button>
+        <x-admin.button href="/admin/categories/create">Create Category</x-admin.button>
     </x-slot>
 
     <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -51,7 +51,7 @@
                                 {{ $loop->iteration + ($categories->currentPage() - 1) * $categories->perPage() }}
                             </th>
                             <th scope="row" class="px-2 py-4 sm:px-6">
-                                <img src="{{ '/storage/' . $category->image }}" class="w-12 sm:w-24" />
+                                <img src="{{ $category->image }}" class="w-12 sm:w-24" />
                             </th>
                             <th scope="row" class="px-2 py-4 text-sm font-medium text-gray-900 whitespace-nowrap dark:text-white sm:px-6">
                                 {{ $category->name }}

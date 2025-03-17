@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Dotenv\Exception\ValidationException;
@@ -41,13 +42,13 @@ class CategoryController extends Controller
     {
         $request->validate([
             'name' => 'unique:categories|required|max:255',
-            'image' => 'image|required|max:2048',
+            'image' => 'required',
         ]);
 
         try {
             DB::beginTransaction();
 
-            $image = $request->file('image')->storePublicly('categories');
+            $image = Helper::UploadBase64($request->image, 'categories');
 
             Category::create([
                 'name' => $request->name,
@@ -95,11 +96,8 @@ class CategoryController extends Controller
             DB::beginTransaction();
 
             if ($request->image) {
-                $request->validate([
-                    'image' => 'image'
-                ]);
 
-                $image = $request->file('image')->storePublicly('categories');
+                $image = Helper::UploadBase64($request->image, 'categories', $category->image);
 
                 Storage::delete($category->image);
 
@@ -143,4 +141,7 @@ class CategoryController extends Controller
             return back()->with('error', 'Something went wrong! Please try again.');
         }
     }
+
+
+
 }

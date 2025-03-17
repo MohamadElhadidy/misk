@@ -12,21 +12,14 @@
                     </div>
                     <!--===  Product Search Category  ===-->
                     <div class="product-search-category">
-                        <form action="#">
-                            <select class="wide">
-                                <option>All Categories</option>
-                                <option>Man Shirts</option>
-                                <option>Denim Jeans</option>
-                                <option>Casual Suit</option>
-                                <option>Summer Dress</option>
-                                <option>Sweaters</option>
-                                <option>Jackets</option>
-                            </select>
-                            <div class="form-group">
-                                <input type="text" placeholder="Enter Search Products">
-                                <button class="search-btn"><i class="far fa-search"></i></button>
+
+                        <form class="w-full mx-auto">
+                            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+                            <div class="relative">
+                                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search Products..." required />
                             </div>
                         </form>
+
                     </div>
                     <!--===  Hotline Support  ===-->
                     <div class="hotline-support item-rtl">
@@ -35,7 +28,7 @@
                         </div>
                         <div class="info">
                             <span>24/7 Support</span>
-                            <h5><a href="tel:+941234567894">+94 123 4567 894</a></h5>
+                            <h5><a href="tel:{{$settings->get('store_phone')}}" dir="ltr">{{$settings->get('store_phone')}}</a></h5>
                         </div>
                     </div>
                 </div>
@@ -52,52 +45,6 @@
                     </div>
                     <!--=== Nav Inner Menu ===-->
                     <div class="nav-inner-menu">
-                        <!--=== Main Category ===-->
-                        <div class="main-categories-wrap d-none d-lg-block">
-                            <a class="categories-btn-active" href="#">
-                                <span class="fas fa-list"></span><span class="text">Products Category<i
-                                        class="fas fa-angle-down"></i></span>
-                            </a>
-                            <div class="categories-dropdown-wrap categories-dropdown-active">
-                                <div class="categori-dropdown-item">
-                                    <ul>
-                                        <li>
-                                            <a href="shops.html"> <img src="/assets/images/icon/shirt.png"
-                                                    alt="Shirts">Man Shirts</a>
-                                        </li>
-                                        <li>
-                                            <a href="shops.html"> <img src="/assets/images/icon/denim.png"
-                                                    alt="Jeans">Denim Jeans</a>
-                                        </li>
-                                        <li>
-                                            <a href="shops.html"> <img src="/assets/images/icon/suit.png"
-                                                    alt="Suit">Casual Suit</a>
-                                        </li>
-                                        <li>
-                                            <a href="shops.html"> <img src="/assets/images/icon/dress.png"
-                                                    alt="Dress">Summer Dress</a>
-                                        </li>
-                                        <li>
-                                            <a href="shops.html"> <img src="/assets/images/icon/sweaters.png"
-                                                    alt="Sweaters">Sweaters</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="more_slide_open">
-                                    <div class="categori-dropdown-item">
-                                        <ul>
-                                            <li>
-                                                <a href="#"><img src="/assets/images/icon/jacket.png"
-                                                        alt="Jackets">Jackets</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="more_categories"><span class="icon"></span> <span>Show more...</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!--=== Pesco Nav Main ===-->
                         <div class="pesco-nav-main">
                             <!--=== Pesco Nav Menu ===-->
                             <div class="pesco-nav-menu">
@@ -204,7 +151,7 @@
                                     <ul>
                                         <li class="menu-item"><a href="/">Home</a></li>
 
-                                        <li class="menu-item has-children"><a href="#">Shop</a>
+                                        <li class="menu-item has-children"><a href="#">Categories</a>
                                             <ul class="sub-menu">
                                                 <li><a href="shops-grid.html">Shop Grid</a></li>
                                                 <li><a href="shops.html">Shop left Sidebar</a></li>
@@ -215,24 +162,15 @@
                                                 <li><a href="wishlists.html">Wishlist</a></li>
                                             </ul>
                                         </li>
-                                        <li class="menu-item has-children"><a href="#">Blog</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="blogs.html">Our Blog</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item has-children"><a href="#">Pages</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="about-us.html">About Us</a></li>
-                                                <li><a href="faq.html">Faqs</a></li>
-                                            </ul>
-                                        </li>
+
+                                        <li class="menu-item"><a href="/about">About Us</a></li>
                                         <li class="menu-item"><a href="/contact">Contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                     </div>
+
                     <!--=== Nav Right Item ===-->
                     <div class="nav-right-item style-one">
                         <ul>

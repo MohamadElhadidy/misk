@@ -50,7 +50,7 @@
     </x-slot>
 
 
-    <form method="POST" action="/admin/products/{{ $product->id }}" enctype="multipart/form-data">
+    <form method="POST" action="/admin/products/{{ $product->id }}" enctype="multipart/form-data" id="MyForm">
         @csrf
         @method('PUT')
 
@@ -75,7 +75,7 @@
                     <div class="flex flex-wrap gap-2 mt-4 space-y-10">
                         <template x-for="(image, index) in images" :key="index">
                             <div class="relative">
-                                <img :src="image.startsWith('products') ? '/storage/' + image : image" class="image-preview"
+                                <img :src="image" class="image-preview"
                                     alt="Preview">
                                 <input type="hidden" :name="'images[]'" :value="image">
                                 <!-- Remove Button -->
@@ -263,7 +263,7 @@
                 <button type="submit"
                     class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
             </div>
-
+        </div>
     </form>
 
 
@@ -272,7 +272,7 @@
             theme: 'snow'
         });
 
-        document.querySelector('form').onsubmit = function() {
+        document.querySelector('#MyForm').onsubmit = function() {
             document.getElementById('quillContent').value = quill.root.innerHTML;
         };
     </script>
@@ -312,8 +312,20 @@
                     // Iterate through each selected file and preview them one by one
                     for (let i = 0; i < files.length; i++) {
                         let reader = new FileReader();
+                        const img = new Image();
+
                         reader.onload = (e) => {
-                            this.images.push(e.target.result); // Add each image to the list
+                            const img = new Image();
+                            img.src = e.target.result;
+
+                            img.onload = () => {
+                                // Validate image dimensions
+                                if (img.width >= 646 && img.height >= 735) {
+                                    this.images.push(e.target.result); // Valid image, add to preview list
+                                } else {
+                                    alert(`The minimum allowed size of 646x735px`);
+                                }
+                            };
                         };
                         reader.readAsDataURL(files[i]);
                     }

@@ -1,48 +1,11 @@
 <x-adminLayout>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-
-    <style>
-        :root {
-            --min-width: 200px;
-            --min-height: 60px;
-        }
-        .image-preview {
-            width: var(--min-width);
-            height: var(--min-height);
-            object-fit: cover;
-            border-radius: 8px;
-            margin-right: 10px;
-        }
-
-        .remove-btn {
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            background-color: rgb(126, 4, 4);
-            color: white;
-            font-size: 12px;
-            border-radius: 35px;
-            width: 20px;
-            height: 20px;
-            text-align: center;
-            cursor: pointer;
-        }
-
-        .upload-btn {
-            padding: 10px;
-            background-color: #1c1d1d;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .upload-btn:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-        }
-    </style>
-
+<style>
+    :root {
+        --min-width: 200px;
+        --min-height: 60px;
+    }
+</style>
     <x-slot:title>
         General Settings
     </x-slot>

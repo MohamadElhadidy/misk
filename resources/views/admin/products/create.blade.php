@@ -50,7 +50,7 @@
     </x-slot>
 
 
-    <form method="POST" action="/admin/products" enctype="multipart/form-data">
+    <form method="POST" action="/admin/products" enctype="multipart/form-data" id="MyForm">
         @csrf
 
         <div class="space-y-12">
@@ -126,7 +126,6 @@
                                 class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
                         </div>
                     </div> -->
-
                     <!-- <div class="sm:col-span-2  flex items-end space-x-4">
                         <div class="flex gap-3">
                             <div class="flex h-6 shrink-0 items-center">
@@ -173,21 +172,13 @@
                             </div>
                         </div>
                     </div> -->
-
-
-
-
-
                     <div class="sm:col-span-6">
                         <label for="first-name" class="block text-sm/6 font-medium text-gray-900">Product
                             Description</label>
                         <div class="mt-2" id="editor">{!! old('description') !!}</div>
                         <input type="hidden" name="description" id="quillContent" required>
                     </div>
-
-
                 </div>
-
                 <div class="border-b border-gray-900/10 pb-12 mt-12"></div>
 
                 <div class="pt-6" x-data="productForm()">
@@ -197,8 +188,7 @@
                     <div class="mt-6">
                         <button type="button" class="flex items-center space-x-2" @click="addSize()">
                             <svg class="w-8" viewBox="0 0 32 32" version="1.1"
-                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000">
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
 
                                 <g id="SVGRepo_bgCarrier" stroke-width="0" />
 
@@ -276,8 +266,6 @@
 
                         </div>
                     </template>
-
-
                 </div>
 
                 <div class="mt-10 space-y-10 border-t border-gray-900/10">
@@ -307,8 +295,6 @@
                             </div>
                         </div>
                     </fieldset>
-
-
                 </div>
             </div>
 
@@ -317,7 +303,7 @@
                 <button type="submit"
                     class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
             </div>
-
+        </div>
     </form>
 
 
@@ -326,7 +312,7 @@
             theme: 'snow'
         });
 
-        document.querySelector('form').onsubmit = function() {
+        document.querySelector('#MyForm').onsubmit = function() {
             document.getElementById('quillContent').value = quill.root.innerHTML;
         };
     </script>
@@ -362,23 +348,35 @@
                     const files = event.target.files;
                     if (!files.length) return;
 
-                    // Iterate through each selected file and preview them one by one
                     for (let i = 0; i < files.length; i++) {
-                        let reader = new FileReader();
+                        const file = files[i];
+
+                        // Check if the image size is correct
+                        const img = new Image();
+                        const reader = new FileReader();
+
                         reader.onload = (e) => {
-                            this.images.push(e.target.result); // Add each image to the list
+                            img.src = e.target.result;
+                            img.onload = () => {
+                                if (img.width >= 646 && img.height >= 735) {
+                                    // If the size is correct, add the image
+                                    this.images.push(e.target.result);
+                                } else {
+                                    alert(`Image size must be exactly 1292x1464. The uploaded image is ${img.width}x${img.height}.`);
+                                }
+                            };
                         };
-                        reader.readAsDataURL(files[i]);
+
+                        reader.readAsDataURL(file);
                     }
-
-
                 },
 
                 // Remove selected image
                 removeImage(index) {
-                    this.images.splice(index, 1); // Remove image from the preview list
+                    this.images.splice(index, 1);
                 }
             };
         }
+
     </script>
 </x-adminLayout>

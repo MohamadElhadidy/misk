@@ -9,7 +9,7 @@
                 <div class="hero-shape bg_cover d-none d-xl-block" style="background-image: url(assets/images/hero/hero-two-shape1.png);"></div>
                 <!--=== Hero Image ===-->
                 <div class="hero-image d-none d-xl-block">
-                    <img src="assets/images/hero/hero-two_img1.jpg" alt="Hero Image">
+                    <img src="{{$settings->get('banner_1')}}" alt="Hero Image">
                     <div class="hero-img-shape"><img src="assets/images/hero/hero-two-img-shape1.png" alt="Image Shape"></div>
                 </div>
                 <div class="container">
@@ -32,7 +32,7 @@
                                         <span class="tag-line"><i class="flaticon-star-2"></i><b>Best for your categories</b><i class="flaticon-star-2"></i></span>
                                         <h1><span>Get 20% Off</span> Women Cloth Collections</h1>
                                         <p>Enjoy 20% off on our entire Women’s Clothing Collection! Discover stylish outfits for every occasion and save on your favorite pieces. </p>
-                                        <a href="shops.html" class="theme-btn style-one">Shop Now</a>
+                                        <a href="/" class="theme-btn style-one">Shop Now</a>
                                     </div>
                                 </div>
                                 <!--=== Single Post Slider ===-->
@@ -41,7 +41,7 @@
                                         <span class="tag-line"><i class="flaticon-star-2"></i><b>Best for your categories</b><i class="flaticon-star-2"></i></span>
                                         <h1><span>Get 20% Off</span> Women Cloth Collections</h1>
                                         <p>Enjoy 20% off on our entire Women’s Clothing Collection! Discover stylish outfits for every occasion and save on your favorite pieces. </p>
-                                        <a href="shops.html" class="theme-btn style-one">Shop Now</a>
+                                        <a href="/" class="theme-btn style-one">Shop Now</a>
                                     </div>
                                 </div>
                                 <!--=== Single Post Slider ===-->
@@ -50,7 +50,7 @@
                                         <span class="tag-line"><i class="flaticon-star-2"></i><b>Best for your categories</b><i class="flaticon-star-2"></i></span>
                                         <h1><span>Get 20% Off</span> Women Cloth Collections</h1>
                                         <p>Enjoy 20% off on our entire Women’s Clothing Collection! Discover stylish outfits for every occasion and save on your favorite pieces. </p>
-                                        <a href="shops.html" class="theme-btn style-one">Shop Now</a>
+                                        <a href="/" class="theme-btn style-one">Shop Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -60,9 +60,10 @@
                     </div>
                 </div>
             </div>
-        </section><!--====== End Hero Section ======-->
+        </section>
         <!--====== End Hero Section ======-->
-        <!--===== Start Banner Section  ======-->
+
+
         <!--===== Start Category Section  ======-->
         <section class="category-section pt-90 pb-20">
             <div class="container">
@@ -82,7 +83,7 @@
                         <!--=== Category Button  ===-->
                         <div class="category-button text-center float-md-end mb-60" data-aos="fade-left"
                             data-aos-delay="15" data-aos-duration="1200">
-                            <a href="shops.html" class="theme-btn style-one">View All <i
+                            <a href="/" class="theme-btn style-one">View All <i
                                     class="far fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -97,11 +98,11 @@
                                 <div class="category-item style-two mb-110" data-aos="fade-up" data-aos-delay="10"
                                     data-aos-duration="800">
                                     <a href='/' class="category-img">
-                                        <img src="{{ '/storage/' . $category->image }}" alt="Category Thumbnail">
+                                        <img src="{{ $category->image }}" alt="Category Thumbnail" class="w-[181px] h-[180px]">
                                     </a>
                                     <div class="category-content">
                                         <a href='/' class="category-btn">{{ $category->name }}</a>
-                                        {{-- <span>10 items</span> --}}
+                                         <span>{{$category->getcount()}} items</span>
                                     </div>
                                 </div>
                             </div>
@@ -160,7 +161,7 @@
                                     <div class="simply-countdown-two"></div>
                                 </div>
                                 <div class="shop-button">
-                                    <a href="shops.html" class="theme-btn style-one">Shop Now</a>
+                                    <a href="/" class="theme-btn style-one">Shop Now</a>
                                 </div>
                             </div>
                         </div>

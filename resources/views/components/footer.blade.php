@@ -13,34 +13,56 @@
                                 <!--=== Footer Widget  ===-->
                                 <div class="footer-widget about-company-widget mb-40" data-aos="fade-up" data-aos-delay="10" data-aos-duration="1000">
                                     <div class="widget-content">
-                                        <a href="index.html" class="footer-logo"><img src="/assets/images/logo/logo-main.png" alt="Brand Logo"></a>
-                                        <p>Pesco is an exciting International brand we provide high quality cloths</p>
+                                        <a href="index.html" class="footer-logo"><img src="{{$settings->get('store_logo')}}" alt="Brand Logo"></a>
+                                        <p>{{$settings->get('meta_description')}}</p>
                                         <ul class="ct-info-list mb-30">
                                             <li>
                                                 <i class="fas fa-envelope"></i>
-                                                <a href="mailto:info@mydomain.com">info@mydomain.com</a>
+                                                <a href="mailto:{{$settings->get('store_email')}}">{{$settings->get('store_email')}}</a>
                                             </li>
                                             <li>
                                                 <i class="fas fa-phone-alt"></i>
-                                                <a href="mailto:info@mydomain.com">info@mydomain.com</a>
+                                                <a href="#">{{$settings->get('store_address')}}</a>
                                             </li>
                                         </ul>
                                         <ul class="social-link">
                                             <li>
                                                 <span>Find Us:</span>
                                             </li>
+
+                                            @if($settings->get('social_facebook'))
                                             <li>
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                                <a href="{{$settings->get('social_facebook')}}"><i class="fab fa-facebook-f"></i></a>
                                             </li>
-                                            <li>
-                                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                            </li>
-                                            <li>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                            </li>
+                                            @endif
+
+                                            @if($settings->get('social_tiktok'))
+                                                <li>
+                                                    <a href="{{$settings->get('social_tiktok')}}"><i class="fab fa-tiktok"></i></a>
+                                                </li>
+                                            @endif
+
+                                            @if($settings->get('social_instagram'))
+                                                <li>
+                                                    <a href="{{$settings->get('social_instagram')}}"><i class="fab fa-instagram"></i></a>
+                                                </li>
+                                            @endif
+
+                                            @if($settings->get('social_linkedin'))
+                                                <li>
+                                                    <a href="{{$settings->get('social_linkedin')}}"><i class="fab fa-linkedin-in"></i></a>
+                                                </li>
+                                            @endif
+                                            @if($settings->get('social_twitter'))
+                                                <li>
+                                                    <a href="{{$settings->get('social_twitter')}}"><i class="fab fa-twitter"></i></a>
+                                                </li>
+                                            @endif
+                                            @if($settings->get('social_snapchat'))
+                                                <li>
+                                                    <a href="{{$settings->get('social_snapchat')}}"><i class="fab fa-snapchat"></i></a>
+                                                </li>
+                                            @endif
                                         </ul>
                                     </div>
                                 </div>

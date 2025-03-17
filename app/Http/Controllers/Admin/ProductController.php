@@ -47,15 +47,11 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //    dd($request->all());
-
-        //validate product data (name - category - descriprion)
-        //validate price and sizes
-        //validate images
-
 
         try {
             DB::beginTransaction();
+
+            $uploadedImages = []; // Array to keep track of uploaded images
 
             $product = Product::create([
                 'name' => $request->name,
@@ -75,37 +71,33 @@ class ProductController extends Controller
 
 
             if ($request->has('images')) {
-                try {
                     // Process images
                     foreach ($request->input('images') as $base64Image) {
-                        // Convert base64 to UploadedFile instance
-                        $image = $this->base64ToUploadedFile($base64Image);
 
                         // Store the image
-                        $path = $image->store('products');
+                        $path = Helper::UploadBase64($base64Image,'products');
+                        $uploadedImages[] = $path; // Add path to the array
 
                         ProductImage::create([
                             'product_id' => $product->id,
                             'path' => $path,
                         ]);
                     }
-
-                    // Process other data...
-
-                } finally {
-                    // Clean up temporary files
-                    $this->cleanTempFiles();
-                }
             }
-
-
-
 
             DB::commit();
 
             return back()->with('success', 'Product created successfully!');
         } catch (\Throwable $th) {
             DB::rollBack();
+
+            foreach ($uploadedImages as $imagePath) {
+                $path =  Str::replace('/storage/', '', $imagePath);
+
+                if (Storage::exists($path)) {
+                    Storage::delete($path);
+                }
+            }
 
             Log::error('Something went wrong!', ['exception' => $th]);
 
@@ -132,10 +124,10 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        // dd($request->all());
 
         try {
             DB::beginTransaction();
+            $uploadedImages = []; // Array to keep track of uploaded images
 
             $product->update([
                 'name' => $request->name,
@@ -147,8 +139,10 @@ class ProductController extends Controller
 
 
             $existingImages = array_filter($request->images, function ($image) {
-                return strpos($image, 'products/') === 0;
+                return strpos($image, '/storage/products/') === 0;
             }) ?? [];
+
+
 
 
 
@@ -156,9 +150,13 @@ class ProductController extends Controller
                 ->whereNotIn('path', $existingImages)
                 ->get();
 
-
+//            dd($existingImages, $deletedImages);
             foreach ($deletedImages as $image) {
-                Storage::delete('public/' . $image->image_path);
+                $deletedPath =  Str::replace('/storage/', '', $image->path);
+                if (Storage::exists($deletedPath)) {
+                    Storage::delete($deletedPath);
+                }
+
                 $image->delete();
             }
 
@@ -169,9 +167,10 @@ class ProductController extends Controller
             if ($newImages) {
                 try {
                     foreach ($newImages as $base64Image) {
-                        $image = Helper::base64ToUploadedFile($base64Image);
 
-                        $path = $image->store('products');
+                        $path = Helper::UploadBase64($base64Image,'products');
+
+                        $uploadedImages[] = $path; // Add path to the array
 
                         ProductImage::create([
                             'product_id' => $product->id,
@@ -219,7 +218,18 @@ class ProductController extends Controller
             return back()->with('success', 'Product updated successfully!');
         } catch (\Throwable $th) {
             DB::rollBack();
-            dd($th);
+
+            foreach ($uploadedImages as $imagePath) {
+                $path =  Str::replace('/storage/', '', $imagePath);
+
+                if (Storage::exists($path)) {
+                    Storage::delete($path);
+                }
+            }
+
+            Log::error('Something went wrong!', ['exception' => $th]);
+
+            return back()->with('error', 'Something went wrong! Please try again.');
         }
     }
 

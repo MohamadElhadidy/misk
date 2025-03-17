@@ -19,7 +19,7 @@ class SettingsController extends Controller
         foreach ($request->except('_token') as $key => $value) {
 
             if (Helper::isBase64Image($value)) {
-                $value = Helper::UploadBase64($value, 'store/logo');
+                $value = Helper::UploadBase64($value, 'store', Setting::get($key));
             }
 
             Setting::set($key, $value);
